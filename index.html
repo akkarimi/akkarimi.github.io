@@ -13,7 +13,7 @@
 <body>
   
 
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -22,7 +22,7 @@
               <p style="text-align:center">
                 <name>Akbar Karimi</name>
               </p>
-              <p>I'm a postdoctoral researcher at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, where I, along with researchers at <a href="https://caisa-lab.github.io/"> Conversational AI and Social Analytics (CAISA) </a> lab led by <a href="https://caisa-lab.github.io/members/lucie-flek.html">Prof. Lucie Flek</a>, work on natural language processing and machine learning.
+              <p>I'm a postdoctoral researcher at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, studying robustness in natural language processing and machine learning at <a href="https://caisa-lab.github.io/"> Conversational AI and Social Analytics (CAISA) </a> lab led by <a href="https://caisa-lab.github.io/members/lucie-flek.html">Prof. Lucie Flek</a>.
               </p>
               <p>I did my PhD at the <a href="https://www.unipr.it/en">University of Parma</a> under the supervision of <a href="https://scholar.google.com/citations?user=PJAxU3QAAAAJ&hl=en&oi=ao">Prof. Andrea Prati</a> at <a href="https://implab.ce.unipr.it/">IMP lab</a>, where I did research on making language models more robust using adversarial learning and data augmentation techniques.</p>
               <p style="text-align:center">
@@ -35,7 +35,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/ak.png"><img style="width:90%;max-width:90%" alt="profile photo" src="images/ak.png" class="hoverZoomLink"></a>
+              <a href="images/ak.JPG"><img style="width:90%;max-width:90%" alt="profile photo" src="images/ak.JPG" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -44,20 +44,18 @@
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Research')" id="defaultOpen">Research</button>
   <button class="tablinks" onclick="openCity(event, 'Teaching')">Teaching</button>
-  <button class="tablinks" onclick="openCity(event, 'Supervision')">Supervision</button>
 </div>
       <div id="Research" class="tabcontent">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     
-
           <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle;">
+            <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
                   <source src="images/owl.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video></div>
-                  <img src='images/semeval23.png' width="120">
+                  <img src='images/c3nlp24.png' width="180">
               </div>
               <script type="text/javascript">
                 function db3d_start() {
@@ -70,6 +68,71 @@
                 db3d_stop()
               </script>
             </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://aclanthology.org/2022.smm4h-1.45.pdf">
+                <papertitle>Do Multilingual Large Language Models Mitigate Stereotype Bias?</papertitle>
+              </a>
+              <br>
+              Shangrui Nie,
+              <a href="https://scholar.google.com/citations?user=NL5yVhYAAAAJ&hl=de&oi=sra">Michael Fromm</a>,
+              <a href="https://scholar.google.com/citations?user=yotA3JYAAAAJ&hl=de&oi=sra">Charles Welch</a>,
+              Rebekka Görge,
+              <strong>Akbar Karimi</strong>, 
+              <a href="https://scholar.google.com/citations?hl=de&user=ZWajsOsAAAAJ">Joan Plepi</a> ,
+              Nazia Afsan Mowmita,
+              <a href="https://scholar.google.com/citations?user=twcjkYUAAAAJ&hl=de&oi=ao">Nicolas Flores-Herr</a> ,
+              <a href="https://scholar.google.com/citations?hl=de&user=quD3c8cAAAAJ">Mehdi Ali</a>,
+              <a href="https://scholar.google.com/citations?user=qZCZFp0AAAAJ&hl=en&oi=sra">Lucie Flek</a> 
+              <br>
+              <em>C3NLP @ ACL</em>, 2024
+              <br>
+              <a href="https://arxiv.org/pdf/2407.05740">arXiv</a>
+              <p></p>
+            </td>
+          </tr>
+
+          <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <div class="one">
+                <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/owl.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/semeval23.png' width="120">
+              </div>
+              <script type="text/javascript">
+
+              function openCity(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+                function db3d_start() {
+                  document.getElementById('db3d_image').style.opacity = "1";
+                }
+      
+                function db3d_stop() {
+                  document.getElementById('db3d_image').style.opacity = "0";
+                }
+                db3d_stop()
+              </script>
+            </td>
+
           <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/pdf/2306.00346.pdf">
                 <papertitle>CAISA at SemEval-2023 Task 8: Counterfactual Data Augmentation for Mitigating Class Imbalance in Causal Claim Identification</papertitle>
@@ -93,7 +156,7 @@
                   <source src="images/owl.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video></div>
-                  <img src='images/smm4h.png' width="150">
+                  <img src='images/smm4h.png' width="180">
               </div>
               <script type="text/javascript">
                 function db3d_start() {
@@ -276,38 +339,18 @@
           <div class="two" id='db3d_image'></div>
           <img src='images/aeda.png' width="150">
         </div>
-  <script type="text/javascript">
-          function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+          <script type="text/javascript">
+            function db3d_start() {
+              document.getElementById('db3d_image').style.opacity = "1";
+            }
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+            function db3d_stop() {
+              document.getElementById('db3d_image').style.opacity = "0";
+            }
+            db3d_stop()
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-          function db3d_start() {
-            document.getElementById('db3d_image').style.opacity = "1";
-          }
-
-          function db3d_stop() {
-            document.getElementById('db3d_image').style.opacity = "0";
-          }
-          db3d_stop()
-
-          document.getElementById("defaultOpen").click();
-        </script>
+            document.getElementById("defaultOpen").click();
+          </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
 				<a href="https://arxiv.org/pdf/2108.13230.pdf">
@@ -631,9 +674,10 @@
               <papertitle>Dialog Systems</papertitle>
             </a>
             <br>        
-            <strong>Akbar Karimi</strong>
+            <strong>Akbar Karimi</strong>,
+            <a href="https://scholar.google.com/citations?user=Ikqyo5sAAAAJ&hl=de&oi=ao">Mounika Marreddy</a>
             <br>
-            <em>University of Bonn</em>, 2024 (upcoming)
+            <em>University of Bonn</em>, 2024
             <br>
             <p></p>
           </td>
@@ -710,223 +754,6 @@
       </tr>
 
   </tbody>
-</table>
-</div>
-
-
-<div id="Supervision" class="tabcontent">
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-
-      <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
-              <source src="images/owl.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video></div>
-              <p style="text-align:center;">
-              <img src='images/rwth_logo_3.webp' width="180"></p>
-          </div>
-          <script type="text/javascript">
-            function db3d_start() {
-              document.getElementById('db3d_image').style.opacity = "1";
-            }
-  
-            function db3d_stop() {
-              document.getElementById('db3d_image').style.opacity = "0";
-            }
-            db3d_stop()
-          </script>
-        </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-          <a>
-            <papertitle>Anurag Kotyial</papertitle>
-          </a>
-          <br>        
-          <strong>Data Augmentation and Data Attribution</strong>
-          <br>
-          <em>University of Aachen</em>, 2024 (expected)
-          <br>
-          <p></p>
-        </td>
-      </tr>
-
-
-
-      <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
-              <source src="images/owl.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video></div>
-              <p style="text-align:center;">
-              <img src='images/uni-bonn.png' width="180"></p>
-          </div>
-          <script type="text/javascript">
-            function db3d_start() {
-              document.getElementById('db3d_image').style.opacity = "1";
-            }
-  
-            function db3d_stop() {
-              document.getElementById('db3d_image').style.opacity = "0";
-            }
-            db3d_stop()
-          </script>
-        </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-          <a>
-            <papertitle>Shahzeb Qamar</papertitle>
-          </a>
-          <br>        
-          <strong>Retrieval Augmented Classification</strong>
-          <br>
-          <em>University of Bonn</em>, 2024
-          <br>
-          <p></p>
-        </td>
-      </tr>
-
-
-      <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
-              <source src="images/owl.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video></div>
-              <img src='images/uni-bonn.png' width="180" alignment="center">
-          </div>
-          <script type="text/javascript">
-            function db3d_start() {
-              document.getElementById('db3d_image').style.opacity = "1";
-            }
-
-            function db3d_stop() {
-              document.getElementById('db3d_image').style.opacity = "0";
-            }
-            db3d_stop()
-          </script>
-        </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-          <a>
-            <papertitle>Amirhossein Aliakbarzadeh</papertitle>
-          </a>
-          <br>        
-          <strong>Robustness on Noisy Data</strong>
-          <br>
-          <em>University of Bonn</em>, 2024 (expected)
-          <br>
-          <p></p>
-        </td>
-      </tr>
-
-
-      <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
-              <source src="images/owl.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video></div>
-              <p style="text-align:center;">
-              <img src='images/rwth_logo_3.webp' width="180"></p>
-          </div>
-          <script type="text/javascript">
-            function db3d_start() {
-              document.getElementById('db3d_image').style.opacity = "1";
-            }
-
-            function db3d_stop() {
-              document.getElementById('db3d_image').style.opacity = "0";
-            }
-            db3d_stop()
-          </script>
-        </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-          <a>
-            <papertitle>Pulkit Arora</papertitle>
-          </a>
-          <br>        
-          <strong>Socio-demographic Robustness</strong>
-          <br>
-          <em>University of Aachen</em>, 2024 (expected)
-          <br>
-          <p></p>
-        </td>
-      </tr>
-
-
-    <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
-            <source src="images/owl.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video></div>
-            <img src='images/Uni_Marburg_Logo.svg' width="180">
-        </div>
-        <script type="text/javascript">
-          function db3d_start() {
-            document.getElementById('db3d_image').style.opacity = "1";
-          }
-
-          function db3d_stop() {
-            document.getElementById('db3d_image').style.opacity = "0";
-          }
-          db3d_stop()
-        </script>
-      </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-        <a>
-          <papertitle>Peyman Hasani Jalilian</papertitle>
-        </a>
-        <br>        
-        <strong>A Comparison of Data Augmentation Techniques for Text Classification</strong>
-        <br>
-        <em>University of Marburg</em>, 2023
-        <br>
-        <p></p>
-      </td>
-    </tr>
-
-
-    <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
-            <source src="images/owl.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video></div>
-            <img src='images/UniPr-Universita-degli-studi-di-Parma.png' width="180">
-        </div>
-        <script type="text/javascript">
-          function db3d_start() {
-            document.getElementById('db3d_image').style.opacity = "1";
-          }
-
-          function db3d_stop() {
-            document.getElementById('db3d_image').style.opacity = "0";
-          }
-          db3d_stop()
-        </script>
-      </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-        <a>
-          <papertitle>Pasquale Massimo Caputo</papertitle>
-        </a>
-        <br>        
-        <strong>Text classification using BERT and Capsule Networks</strong> 
-        <br>
-        <em>University of Parma</em>, 2021
-        <br>
-        <p></p>
-      </td>
-    </tr>
-
-
-</tbody>
 </table>
 </div>
 
