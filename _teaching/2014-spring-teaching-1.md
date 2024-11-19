@@ -3,8 +3,8 @@ title: "Dialog Systems"
 collection: teaching
 # type: "Undergraduate course"
 # permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
+venue: "University of Marburg, Department"
+date: 2014
 location: "City, Country"
 ---
 
