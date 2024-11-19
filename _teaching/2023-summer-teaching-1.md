@@ -1,10 +1,10 @@
 ---
-title: "Dialog Systems"
+title: "Introduction to Natural Language Processing"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2022-winter-teaching-1
+permalink: /teaching/2023-summer-teaching-1
 venue: "University of Marburg"
-date: 2022-10-01
+date: 2023-04-01
 location: "City, Country"
 ---
 

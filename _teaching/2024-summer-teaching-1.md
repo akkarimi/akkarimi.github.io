@@ -2,9 +2,9 @@
 title: "Dialog Systems"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2022-winter-teaching-1
-venue: "University of Marburg"
-date: 2022-10-01
+permalink: /teaching/2024-summer-teaching-1
+venue: "University of Bonn"
+date: 2024-04-01
 location: "City, Country"
 ---
 
