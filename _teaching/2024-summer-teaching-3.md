@@ -2,7 +2,7 @@
 title: "Dialog Systems"
 collection: teaching
 # type: "Workshop"
-permalink: /teaching/2024-summer-teaching-1
+permalink: /teaching/2024-summer-teaching-3
 venue: "University of Bonn"
 date: 2024
 # location: "City, Country"

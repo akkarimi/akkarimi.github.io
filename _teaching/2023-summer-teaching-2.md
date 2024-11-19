@@ -2,7 +2,7 @@
 title: "Introduction to Natural Language Processing"
 collection: teaching
 # type: "Workshop"
-permalink: /teaching/2023-summer-teaching-1
+permalink: /teaching/2023-summer-teaching-2
 venue: "University of Marburg"
 date: 2023
 # location: "City, Country"
