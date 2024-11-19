@@ -23,5 +23,5 @@ main:
 #  - title: "CV"
 #    url: /cv/
     
-  - title: "Mentoring"
-    url: /markdown/
+  # - title: "Mentoring"
+    # url: /markdown/
