@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-<div class="wordwrap">Download <a href="akkarimi.github.io/files/paper1.pdf">CV</a>.</div>
+<div class="wordwrap">Download <a href="files/cv.pdf">CV</a>.</div>
 <!-- {% include base_path %}
 
 Education
