@@ -1,13 +1,13 @@
 ---
 layout: archive
 title: "CV"
-permalink: /
+permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-<div class="wordwrap">Download <a href="files/cv.pdf">CV</a>.</div>
+<div class="wordwrap">Download <a href="https://akkarimi.github.io/files/cv.pdf">CV</a>.</div>
 <!-- {% include base_path %}
 
 Education
