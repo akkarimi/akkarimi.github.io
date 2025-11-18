@@ -4,6 +4,7 @@
 
 .archive {
   margin-bottom: 2em;
+  font-size: 0.875em;
 
   @include breakpoint($medium) {
     @include span(12 of 12);
@@ -164,7 +165,7 @@
 
 .feature__item {
   margin-bottom: 2em;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
 
   @include breakpoint($small) {
     margin-bottom: 0;
@@ -178,7 +179,7 @@
 
   &--left {
     @include full();
-    font-size: 1.25rem;
+    font-size: 1.09375rem;
 
     .archive__item-teaser {
       margin-bottom: 2em;
@@ -199,7 +200,7 @@
 
   &--right {
     @include full();
-    font-size: 1.25rem;
+    font-size: 1.09375rem;
 
     .archive__item-teaser {
       margin-bottom: 2em;
@@ -222,7 +223,7 @@
 
   &--center {
     @include full();
-    font-size: 1.25rem;
+    font-size: 1.09375rem;
 
     .archive__item-teaser {
       margin-bottom: 2em;
