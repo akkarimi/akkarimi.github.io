@@ -9,6 +9,8 @@ location: "City, Country"
 ---
 
 <!-- This is a description of a teaching experience. You can use markdown like any other post. -->
+Taught the core concepts of NLP, including TF-IDF, logistic regression, word embeddings, RNNs, and Transformers,
+as well as the applications of NLP methods in conversational systems and computational social science.
 
 <!-- Heading 1 -->
 <!-- ====== -->
