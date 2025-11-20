@@ -11,6 +11,10 @@
     @include prefix(0.5 of 12);
   }
 
+  > * {
+    max-width: 80%;
+  }
+
   a {
     text-decoration: underline;
 

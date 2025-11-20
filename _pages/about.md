@@ -14,7 +14,7 @@ I did my PhD at the [University of Parma](https://www.unipr.it/en) under the sup
 News
 ------
 
-**[Dec 2025]** Presenting [ArithmAttack](https://arxiv.org/pdf/2501.08203) and [Multi-hop Reasoning with Hyperbolic Representations](https://aclanthology.org/2025.findings-acl.908.pdf) at the Ellis UnConference.
+**[Dec 2025]** Attending [Eurips Conference](https://x.com/EurIPSConf) and presenting [ArithmAttack](https://arxiv.org/pdf/2501.08203) and [Multi-hop Reasoning with Hyperbolic Representations](https://aclanthology.org/2025.findings-acl.908.pdf) at the Ellis UnConference.
 
 **[Nov 2025]** New preprint: [More Agents Helps but Adversarial Robustness Gap Persists](https://arxiv.org/pdf/2511.07112).
 
