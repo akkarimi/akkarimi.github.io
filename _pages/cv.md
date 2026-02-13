@@ -8,20 +8,17 @@ redirect_from:
 ---
 
 <div class="wordwrap">Download <a href="https://akkarimi.github.io/files/cv.pdf">CV</a>.</div>
+
 <!-- {% include base_path %}
-
-Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Information Technology, University of Parma, 2022
+* M.S. in Computer Science, Institute for Advanced Studies in Basic Sciences, 2017
 
-Work experience
+Professional experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* *Oct 2023 - Dec 2025: Postdoctoral Researcher & Scientific Coordinator*
+  * University of Bonn
+  * Duties includes: Doing research, supervising students, teaching courses, and coordination of research talks, meetings, and collaborations
 
 * Fall 2015: Research Assistant
   * Github University

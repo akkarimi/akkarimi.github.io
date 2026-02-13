@@ -25,4 +25,3 @@ News
 **[Aug 2025]** Attending Interspeech Conference in Rotterdam to present our recent work on [speech data augmentation for German dialects](https://arxiv.org/pdf/2507.03641).
 
 **[Aug 2025]** Attending ACL Conference in Vienna to present [ArithmAttack](https://arxiv.org/pdf/2501.08203) and [Multi-hop Reasoning with Hyperbolic Representations](https://aclanthology.org/2025.findings-acl.908.pdf).
-

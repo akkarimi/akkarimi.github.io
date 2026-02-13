@@ -1,13 +1,12 @@
 ---
-title: "Paper Title Number 4"
+title: "Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents"
 collection: publications
 category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+permalink: 'To appear at WASSA @ EACL 2026'
+excerpt: 'We propose an agentic data augmentation method for Aspect-Based Sentiment Analysis (ABSA) that uses iterative generation and verification to produce high-quality synthetic training examples.'
+date: 2026-03-24
+venue: 'WASSA @ EACL 2026'
+paperurl: 'To appear at WASSA @ EACL 2026'
+citation: 'Coming soon ...'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
