@@ -22,17 +22,17 @@ checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
 creating Makefile
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.0.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260213-279244-w863nb sitelibdir\=./.gem.20260213-279244-w863nb clean
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-ig2wvd sitelibdir\=./.gem.20260217-143690-ig2wvd clean
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.0.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260213-279244-w863nb sitelibdir\=./.gem.20260213-279244-w863nb
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-ig2wvd sitelibdir\=./.gem.20260217-143690-ig2wvd
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.so
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.0.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260213-279244-w863nb sitelibdir\=./.gem.20260213-279244-w863nb install
-/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20260213-279244-w863nb
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-ig2wvd sitelibdir\=./.gem.20260217-143690-ig2wvd install
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20260217-143690-ig2wvd
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/bigdecimal-4.0.1/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20260213-279244-w863nb sitelibdir\=./.gem.20260213-279244-w863nb clean
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-ig2wvd sitelibdir\=./.gem.20260217-143690-ig2wvd clean

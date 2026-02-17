@@ -4,10 +4,10 @@ checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251215-16912-lmr2qu sitelibdir\=./.gem.20251215-16912-lmr2qu clean
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-3encga sitelibdir\=./.gem.20260217-143690-3encga clean
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251215-16912-lmr2qu sitelibdir\=./.gem.20251215-16912-lmr2qu
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-3encga sitelibdir\=./.gem.20260217-143690-3encga
 compiling arena.c
 compiling autolink.c
 compiling blocks.c
@@ -64,8 +64,8 @@ compiling xml.c
 linking shared-object commonmarker/commonmarker.so
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251215-16912-lmr2qu sitelibdir\=./.gem.20251215-16912-lmr2qu install
-/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20251215-16912-lmr2qu/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-3encga sitelibdir\=./.gem.20260217-143690-3encga install
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20260217-143690-3encga/commonmarker
 
 current directory: /home/ak/6_repos/akkarimi.github.io/vendor/bundle/ruby/3.2.0/gems/commonmarker-0.23.12/ext/commonmarker
-make DESTDIR\= sitearchdir\=./.gem.20251215-16912-lmr2qu sitelibdir\=./.gem.20251215-16912-lmr2qu clean
+make DESTDIR\= sitearchdir\=./.gem.20260217-143690-3encga sitelibdir\=./.gem.20260217-143690-3encga clean
