@@ -9,5 +9,11 @@ group :jekyll_plugins do
   gem 'webrick', '~> 1.8'
 end
 
-gem 'github-pages'
+# gem 'github-pages'
 gem 'connection_pool', '2.5.0'
+
+gem "jekyll-gist", "~> 1.5"
+
+gem "jekyll-paginate", "~> 1.1"
+
+gem "faraday-retry", "~> 2.4"
