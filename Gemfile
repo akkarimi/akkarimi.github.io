@@ -17,3 +17,5 @@ gem "jekyll-gist", "~> 1.5"
 gem "jekyll-paginate", "~> 1.1"
 
 gem "faraday-retry", "~> 2.4"
+
+gem "kramdown-parser-gfm", "~> 1.1"

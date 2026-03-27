@@ -1,0 +1,737 @@
+---
+permalink: /
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akbar Karimi</title>
+  <meta name="description" content="Postdoctoral Researcher at the University of Bonn. Research on LLM robustness, adversarial NLP, and data augmentation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #f5f2ed;
+      --ink:    #100e0c;
+      --soft:   #4d4743;
+      --rule:   #ccc8c2;
+      --accent: #a0522d; /* sienna — warm, bookish, used only on hover */
+      --link:   #1a6fd4; /* bright blue — cool tone for content links */
+      --w:      820px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 52px;
+      font-size: 20px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    /* ─── NAV ──────────────────────────────────────────────── */
+
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 48px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 max(1.5rem, calc((100vw - var(--w)) / 2));
+      z-index: 99;
+    }
+
+    .nav-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-links a.active {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* ─── PAGE WRAPPER ─────────────────────────────────────── */
+
+    main {
+      max-width: var(--w);
+      margin: 0 auto;
+      padding: 6rem 1.5rem 7rem;
+    }
+
+    /* ─── PROFILE ──────────────────────────────────────────── */
+
+    .profile {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 0 2.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .profile-text { grid-column: 1; }
+
+    .profile-photo {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: start;
+    }
+
+    .profile-photo img {
+      display: block;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      filter: saturate(0.85);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.45rem;
+    }
+
+    .profile-role {
+      font-size: 0.83rem;
+      color: var(--soft);
+      margin-bottom: 0.1rem;
+    }
+
+    .profile-role a {
+      color: var(--soft);
+      text-decoration: underline;
+      text-decoration-color: rgba(107,101,96,0.35);
+      text-underline-offset: 2px;
+      transition: color 0.2s;
+    }
+
+    .profile-role a:hover { color: var(--ink); }
+
+    .profile-lab {
+      font-size: 0.83rem;
+      color: var(--soft);
+      margin-bottom: 1.6rem;
+    }
+
+    .profile-lab a {
+      color: var(--soft);
+      text-decoration: underline;
+      text-decoration-color: rgba(107,101,96,0.35);
+      text-underline-offset: 2px;
+      transition: color 0.2s;
+    }
+
+    .profile-lab a:hover { color: var(--ink); }
+
+    .bio {
+      font-size: 0.9rem;
+      line-height: 1.78;
+      color: #252220;
+      margin-bottom: 0.85em;
+    }
+
+    .bio:last-of-type { margin-bottom: 0; }
+
+    .bio a {
+      color: var(--link);
+      text-decoration: underline;
+      text-decoration-color: rgba(26,111,212,0.35);
+      text-underline-offset: 2px;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .bio a:hover {
+      color: var(--accent);
+      text-decoration-color: rgba(160,82,45,0.4);
+    }
+
+    .bio strong { font-weight: 500; }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 1.5rem;
+      margin-top: 1.4rem;
+      font-size: 0.78rem;
+      color: var(--soft);
+    }
+
+    .profile-links a {
+      text-decoration: none;
+      color: var(--soft);
+      transition: color 0.2s;
+    }
+
+    .profile-links a:hover { color: var(--accent); }
+
+    /* ─── DIVIDER ──────────────────────────────────────────── */
+    /*   The one restrained artistic element:
+         a single warm hairline between profile and content.   */
+
+    .page-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 3.75rem;
+    }
+
+    /* ─── SECTIONS ─────────────────────────────────────────── */
+
+    section { margin-bottom: 3.75rem; }
+    section:last-child { margin-bottom: 0; }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.45rem;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      color: var(--ink);
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 1.6rem;
+    }
+
+    /* ─── ROW GRID (news · pubs · teaching) ────────────────── */
+
+    .row {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      column-gap: 1.5rem;
+      margin-bottom: 1.3rem;
+      align-items: baseline;
+    }
+
+    .row:last-child { margin-bottom: 0; }
+
+    .row-label {
+      font-size: 0.7rem;
+      color: var(--soft);
+      text-align: right;
+      letter-spacing: 0.02em;
+      line-height: 1.7;
+    }
+
+    /* ─── NEWS ─────────────────────────────────────────────── */
+
+    .news-text {
+      font-size: 0.86rem;
+      line-height: 1.68;
+      color: #252220;
+    }
+
+    .news-text a {
+      color: var(--link);
+      text-decoration: underline;
+      text-decoration-color: rgba(26,111,212,0.35);
+      text-underline-offset: 2px;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .news-text a:hover {
+      color: var(--accent);
+      text-decoration-color: rgba(160,82,45,0.4);
+    }
+
+    /* ─── PUBLICATIONS ─────────────────────────────────────── */
+
+    .pub-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .pub-title a {
+      color: var(--link);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .pub-title a:hover { color: var(--accent); }
+
+    .pub-venue {
+      font-size: 0.78rem;
+      color: var(--soft);
+      font-style: italic;
+      margin-top: 0.15rem;
+    }
+
+    .pub-desc {
+      font-size: 0.8rem;
+      color: var(--soft);
+      line-height: 1.65;
+      margin-top: 0.3rem;
+    }
+
+    .pub-pdf {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--soft);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .pub-pdf:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ─── TEACHING ─────────────────────────────────────────── */
+
+    .teaching-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .teaching-meta {
+      font-size: 0.78rem;
+      color: var(--soft);
+      margin-top: 0.1rem;
+    }
+
+    .teaching-desc {
+      font-size: 0.83rem;
+      color: #252220;
+      margin-top: 0.35rem;
+      line-height: 1.65;
+    }
+
+    .teaching-desc a { color: var(--link); transition: color 0.2s; }
+    .teaching-desc a:hover { color: var(--accent); }
+
+    /* ─── FOOTER ───────────────────────────────────────────── */
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.72rem;
+      color: var(--soft);
+      opacity: 0.7;
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────── */
+
+    @media (max-width: 540px) {
+      nav { padding: 0 1.25rem; }
+
+      .nav-links { gap: 1.1rem; }
+
+      main { padding: 5rem 1.25rem 5rem; }
+
+      h1 { font-size: 2.1rem; }
+
+      .profile {
+        grid-template-columns: 1fr;
+        gap: 1.5rem 0;
+      }
+
+      .profile-photo {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .profile-text { grid-row: 2; }
+
+      .row {
+        grid-template-columns: 56px 1fr;
+        column-gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+
+  <nav>
+    <a class="nav-name" href="/">Akbar Karimi</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ── PROFILE ──────────────────────────────────────── -->
+
+    <section id="about">
+      <div class="profile">
+        <div class="profile-text">
+          <h1>Akbar Karimi</h1>
+          <p class="profile-role">
+            Postdoctoral Researcher &middot;
+            <a href="https://www.uni-bonn.de/en">University of Bonn</a>
+          </p>
+          <p class="profile-lab">
+            <a href="https://caisa-lab.github.io/">CAISA Lab</a>
+            &mdash; Conversational AI and Social Analytics
+          </p>
+        </div>
+        <div class="profile-photo">
+          <img src="/images/ak.jpeg" alt="Akbar Karimi">
+        </div>
+      </div>
+      <p class="bio">
+        I study AI and language models and their applications in society &mdash;
+        from <a href="https://aclanthology.org/2022.lrec-1.61.pdf">social media analysis</a>
+        to <a href="https://arxiv.org/pdf/2306.00346">health and medical data</a>,
+        and from <a href="https://arxiv.org/pdf/2108.13230">data augmentation</a>
+        to <a href="https://arxiv.org/pdf/2501.08203">model robustness under adversarial perturbations</a>.
+        My goal is to find ways to improve AI models and their benefits to society.
+      </p>
+      <p class="bio">
+        Currently I am a postdoctoral researcher at the
+        <a href="https://www.uni-bonn.de/en">University of Bonn</a>,
+        working on LLM reasoning, robustness, and AI safety at the
+        <a href="https://caisa-lab.github.io/">Conversational AI and Social Analytics (CAISA)</a>
+        Lab led by <a href="https://caisa-lab.github.io/members/lucie-flek.html">Prof.&nbsp;Lucie Flek</a>.
+      </p>
+      <p class="bio">
+        I completed my PhD at the
+        <a href="https://www.unipr.it/en">University of Parma</a> under
+        <a href="https://scholar.google.com/citations?user=PJAxU3QAAAAJ&hl=en&oi=ao">Prof.&nbsp;Andrea Prati</a>
+        at <a href="https://implab.ce.unipr.it/">IMP Lab</a>, where I developed
+        adversarial learning and data augmentation techniques for more robust
+        language models.
+      </p>
+      <div class="profile-links">
+        <a href="mailto:ak.karimi@live.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=_qroDmEAAAAJ&hl=en&oi=ao">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-5132-2435">ORCID</a>
+        <a href="https://github.com/akkarimi">GitHub</a>
+      </div>
+    </section>
+
+    <hr class="page-rule">
+
+    <!-- ── NEWS ─────────────────────────────────────────── -->
+
+    <section id="news">
+      <h2>News</h2>
+
+      <div class="row">
+        <span class="row-label">Dec 2025</span>
+        <span class="news-text">
+          Attending the
+          <a href="https://x.com/EurIPSConf">Eurips Conference</a>
+          and presenting
+          <a href="https://arxiv.org/pdf/2501.08203">ArithmAttack</a>
+          and
+          <a href="https://aclanthology.org/2025.findings-acl.908.pdf">Multi-hop Reasoning with Hyperbolic Representations</a>
+          at the Ellis UnConference.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Nov 2025</span>
+        <span class="news-text">
+          New preprint:
+          <a href="https://arxiv.org/pdf/2511.07112">More Agents Helps but Adversarial Robustness Gap Persists</a>.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Sep 2025</span>
+        <span class="news-text">
+          Attending the ECMLPKDD Conference in Porto to present the results
+          from the
+          <a href="https://collidingadversaries.github.io/">Colliding with Adversaries Challenge</a>.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Aug 2025</span>
+        <span class="news-text">
+          Attending Interspeech Conference in Rotterdam to present our recent
+          work on
+          <a href="https://arxiv.org/pdf/2507.03641">speech data augmentation for German dialects</a>.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Aug 2025</span>
+        <span class="news-text">
+          Attending ACL Conference in Vienna to present
+          <a href="https://arxiv.org/pdf/2501.08203">ArithmAttack</a>
+          and
+          <a href="https://aclanthology.org/2025.findings-acl.908.pdf">Multi-hop Reasoning with Hyperbolic Representations</a>.
+        </span>
+      </div>
+    </section>
+
+    <!-- ── PUBLICATIONS ──────────────────────────────────── -->
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="row">
+        <span class="row-label">2026</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://akkarimi.com">Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents</a>
+          </div>
+          <div class="pub-venue">soon to appear &mdash; WASSA @ EACL 2026</div>
+          <div class="pub-desc">We propose an agentic data augmentation method for Aspect-Based Sentiment Analysis (ABSA) that uses iterative generation and verification to produce high-quality synthetic training examples.</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2025.findings-acl.908.pdf">Multi-Hop Reasoning for Question Answering with Hyperbolic Representations</a>
+          </div>
+          <div class="pub-venue">Findings of ACL</div>
+          <div class="pub-desc">Through a simple integration of hyperbolic representations with an encoder-decoder model, we perform a controlled and comprehensive set of experiments to compare the capacity of hyperbolic space versus Euclidean space in multi-hop reasoning.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2025.findings-acl.908.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2025.llmsec-1.5.pdf">ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving</a>
+          </div>
+          <div class="pub-venue">LLMSEC Workshop @ ACL</div>
+          <div class="pub-desc">We propose ArithmAttack to examine how robust LLMs are when they encounter noisy prompts containing extra punctuation marks — an attack that causes no information loss yet consistently degrades performance across eight models.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2025.llmsec-1.5.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2024</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2024.c3nlp-1.6.pdf">Do Multilingual Large Language Models Mitigate Stereotype Bias?</a>
+          </div>
+          <div class="pub-venue">C3NLP Workshop @ ACL</div>
+          <div class="pub-desc">We investigate the effect of multilingual training on bias mitigation by systematically training six LLMs of identical size (2.6B parameters): five monolingual and one multilingual model, showing that multilingual training consistently reduces bias while improving prediction accuracy.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2024.c3nlp-1.6.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2021</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2021.findings-emnlp.234.pdf">AEDA: An Easier Data Augmentation Technique for Text Classification</a>
+          </div>
+          <div class="pub-venue">Findings of EMNLP</div>
+          <div class="pub-desc">AEDA inserts punctuation marks randomly into text — simpler than EDA, lossless, and consistently superior across five classification datasets.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2021.findings-emnlp.234.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2020</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://arxiv.org/pdf/2001.11316">Adversarial Training for Aspect-Based Sentiment Analysis with BERT</a>
+          </div>
+          <div class="pub-venue">ICPR</div>
+          <div class="pub-desc">We propose BERT Adversarial Training (BAT), a novel architecture that applies adversarial training to Aspect Extraction and Aspect Sentiment Classification, outperforming both general and domain post-trained BERT — the first study of its kind in ABSA.</div>
+          <a class="pub-pdf" href="https://arxiv.org/pdf/2001.11316">PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TEACHING ───────────────────────────────────────── -->
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="teaching-title">Dialog Systems</div>
+          <div class="teaching-meta">Undergraduate &middot; University of Bonn</div>
+          <div class="teaching-desc">
+            Lab sessions on LLM agents, agentic frameworks including SmolAgents,
+            LangChain, and LlamaIndex, and building personal chatbots using small
+            models with internet search and tool-use capabilities.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2024</span>
+        <div>
+          <div class="teaching-title">Dialog Systems</div>
+          <div class="teaching-meta">Undergraduate &middot; University of Bonn</div>
+          <div class="teaching-desc">
+            Core components of a dialog system: ASR, NLU, dialog manager,
+            dialog state tracking, and NLG, and the tasks involved in each module.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2023</span>
+        <div>
+          <div class="teaching-title">Introduction to Natural Language Processing</div>
+          <div class="teaching-meta">Undergraduate &middot; University of Marburg</div>
+          <div class="teaching-desc">
+            Core NLP concepts including TF-IDF, word embeddings, RNNs, and
+            Transformers, as well as evaluation methodologies and applications
+            in conversational systems and computational social science.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2022</span>
+        <div>
+          <div class="teaching-title">Dialog Systems</div>
+          <div class="teaching-meta">Undergraduate &middot; University of Marburg</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CV ────────────────────────────────────────────── -->
+
+    <section id="cv">
+      <h2>CV</h2>
+
+      <div class="row">
+        <span class="row-label" style="text-align:right; padding-top: 0.15rem;">Experience</span>
+        <div>
+          <div class="teaching-title">Postdoctoral Researcher &amp; Scientific Coordinator</div>
+          <div class="teaching-meta">Oct 2023 – Dec 2025 &middot; University of Bonn</div>
+          <div class="teaching-desc">
+            <a href="https://caisa-lab.github.io/">CAISA Lab</a> &mdash;
+            Conversational AI and Social Analytics. Research on LLM robustness,
+            adversarial NLP, and data augmentation; co-coordination of lab activities
+            and student supervision.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label"></span>
+        <div>
+          <div class="teaching-title">Postdoctoral Researcher</div>
+          <div class="teaching-meta">2022 – 2023 &middot; University of Marburg</div>
+          <div class="teaching-desc">
+            Research on data augmentation and entity extraction for BioNLP; teaching Dialog Systems and
+            Introduction to Natural Language Processing.
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 1rem;">
+        <span class="row-label" style="text-align:right; padding-top: 0.15rem;">Education</span>
+        <div>
+          <div class="teaching-title">Ph.D. in Information Technology</div>
+          <div class="teaching-meta">2022 &middot; University of Parma</div>
+          <div class="teaching-desc">
+            Thesis on adversarial learning and data augmentation for robust NLP models,
+            under <a href="https://scholar.google.com/citations?user=PJAxU3QAAAAJ&hl=en&oi=ao">Prof. Andrea Prati</a>
+            at <a href="https://implab.ce.unipr.it/">IMP Lab</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label"></span>
+        <div>
+          <div class="teaching-title">M.S. in Computer Science &mdash; Intelligent Systems</div>
+          <div class="teaching-meta">2017 &middot; IASBS</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label"></span>
+        <div>
+          <div class="teaching-title">B.S. in Computer Engineering &mdash; Software</div>
+          <div class="teaching-meta">2012 &middot; Azad University of Zanjan</div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 1.25rem;">
+        <span class="row-label"></span>
+        <div>
+          <a class="pub-pdf" href="/files/cv.pdf">Download full CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+
+    <footer>
+      &copy; 2025 Akbar Karimi
+    </footer>
+
+  </main>
+
+  <script>
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-48px 0px -60% 0px', threshold: 0 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>

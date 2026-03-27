@@ -1,0 +1,531 @@
+/* ==========================================================================
+   CUSTOM STYLES — "Contrast" Design
+   Dark charcoal profile → clean white body
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   GLOBAL
+   -------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: #1c1917;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+code, pre, tt, kbd, samp {
+  font-family: 'JetBrains Mono', 'Monaco', 'Consolas', monospace;
+}
+
+/* --------------------------------------------------------------------------
+   MASTHEAD — very minimal, blends into the dark hero
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  background: #18181b !important;
+  border-bottom: 1px solid #27272a !important;
+  box-shadow: none !important;
+}
+
+.masthead::after {
+  display: none;
+}
+
+.masthead__inner-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.site-logo-link {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 0.925rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  color: #fafafa !important;
+  text-decoration: none !important;
+}
+
+.masthead__menu-item a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.825rem;
+  font-weight: 400;
+  padding: 0.3rem 0.55rem;
+  border-radius: 4px;
+  color: #a1a1aa !important;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.masthead__menu-item a:hover {
+  color: #fafafa !important;
+  background: transparent;
+}
+
+.masthead__menu-item--lg a {
+  color: #fafafa !important;
+  padding-right: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   SHARED CONTAINER
+   -------------------------------------------------------------------------- */
+
+.sp-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   DARK HERO SECTION
+   -------------------------------------------------------------------------- */
+
+.sp-hero {
+  background: #18181b;
+  padding: 3.5rem 0 3rem;
+}
+
+.sp-hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.sp-hero__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.sp-hero__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.825rem;
+  color: #71717a;
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+.sp-hero__eyebrow a {
+  color: #71717a;
+  text-decoration: underline;
+  text-decoration-color: rgba(113, 113, 122, 0.4);
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+.sp-hero__eyebrow a:hover {
+  color: #a1a1aa;
+}
+
+.sp-hero__name {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1 !important;
+  color: #fafafa !important;
+  margin: 0 0 0.8rem !important;
+}
+
+.sp-hero__lab {
+  font-size: 0.875rem;
+  color: #52525b;
+  margin: 0 0 1.5rem;
+}
+
+.sp-hero__lab a {
+  color: #fbbf24;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.sp-hero__lab a:hover {
+  color: #fcd34d;
+}
+
+/* Profile links — amber outlined chips on dark */
+.sp-hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sp-hero__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.775rem;
+  font-weight: 500;
+  color: #d4d4d8 !important;
+  background: transparent;
+  border: 1px solid #3f3f46;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.sp-hero__link:hover {
+  border-color: #fbbf24;
+  color: #fbbf24 !important;
+}
+
+/* Photo */
+.sp-hero__photo {
+  flex-shrink: 0;
+}
+
+.sp-hero__photo img {
+  width: 156px;
+  height: 156px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #3f3f46;
+  display: block;
+}
+
+/* Bio text in dark section */
+.sp-hero__bio {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #a1a1aa;
+  max-width: 640px;
+  border-top: 1px solid #27272a;
+  padding-top: 1.75rem;
+}
+
+.sp-hero__bio p {
+  margin-bottom: 0.9em;
+}
+
+.sp-hero__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.sp-hero__bio a {
+  color: #fbbf24;
+  text-decoration: underline;
+  text-decoration-color: rgba(251, 191, 36, 0.35);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.sp-hero__bio a:hover {
+  color: #fcd34d;
+}
+
+.sp-hero__bio strong {
+  color: #e4e4e7;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   WHITE BODY — section container
+   -------------------------------------------------------------------------- */
+
+.sp-body {
+  background: #ffffff;
+}
+
+.sp-section {
+  padding: 3.5rem 0;
+  border-top: 1px solid #f4f4f5;
+}
+
+.sp-section:first-child {
+  border-top: none;
+}
+
+/* Section title: label ———— */
+.sp-section__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #71717a;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.sp-section__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e4e4e7;
+}
+
+/* --------------------------------------------------------------------------
+   NEWS
+   -------------------------------------------------------------------------- */
+
+.sp-news {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sp-news__item {
+  display: flex;
+  gap: 1.75rem;
+  align-items: baseline;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.sp-news__date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #a1a1aa;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 70px;
+}
+
+.sp-news__text {
+  color: #3f3f46;
+}
+
+.sp-news__text a {
+  color: #1c1917;
+  text-decoration: underline;
+  text-decoration-color: rgba(28, 25, 23, 0.25);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.sp-news__text a:hover {
+  text-decoration-color: rgba(28, 25, 23, 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   PUBLICATIONS
+   -------------------------------------------------------------------------- */
+
+.sp-pub {
+  display: flex;
+  gap: 1.75rem;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.sp-pub:last-child {
+  border-bottom: none;
+}
+
+.sp-pub__year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #a1a1aa;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.sp-pub__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.sp-pub__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.975rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  color: #1c1917;
+}
+
+.sp-pub__title a {
+  color: #1c1917;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.sp-pub__title a:hover {
+  color: #d97706;
+}
+
+.sp-pub__venue {
+  font-size: 0.825rem;
+  color: #71717a;
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+.sp-pub__links {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.sp-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #52525b !important;
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  text-decoration: none !important;
+  letter-spacing: 0.03em;
+  transition: all 0.15s ease;
+}
+
+.sp-badge:hover {
+  background: #1c1917;
+  border-color: #1c1917;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   TEACHING
+   -------------------------------------------------------------------------- */
+
+.sp-teaching {
+  display: flex;
+  gap: 1.75rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.sp-teaching:last-child {
+  border-bottom: none;
+}
+
+.sp-teaching__year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #a1a1aa;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.sp-teaching__body {
+  flex: 1;
+}
+
+.sp-teaching__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.975rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #1c1917;
+}
+
+.sp-teaching__meta {
+  font-size: 0.825rem;
+  color: #71717a;
+  margin-top: 0.15rem;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
+
+.page__footer {
+  background: #18181b !important;
+  border-top: 1px solid #27272a;
+  margin-top: 0;
+}
+
+.page__footer footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+}
+
+.page__footer-copyright {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: #52525b;
+}
+
+.page__footer-follow {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   NON-HOME PAGES (CV, etc.)
+   -------------------------------------------------------------------------- */
+
+.page__content {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.975rem;
+  line-height: 1.75;
+}
+
+.page__content a {
+  color: #1c1917;
+  text-decoration-color: rgba(28, 25, 23, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.page__content a:hover {
+  text-decoration-color: rgba(28, 25, 23, 0.8);
+}
+
+.page__title {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.author__name {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .sp-hero__top {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .sp-hero__photo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sp-hero__name {
+    font-size: 2.5rem !important;
+  }
+
+  .sp-news__item,
+  .sp-pub,
+  .sp-teaching {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .sp-pub__year,
+  .sp-teaching__year,
+  .sp-news__date {
+    width: auto;
+  }
+}

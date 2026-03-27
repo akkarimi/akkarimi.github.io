@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" class="sp-page">
+
+  <!-- =================== DARK HERO / ABOUT =================== -->
+  <section id="about" class="sp-hero">
+    <div class="sp-container">
+
+      <div class="sp-hero__top">
+        <div class="sp-hero__meta">
+          <p class="sp-hero__eyebrow">Postdoctoral Researcher &middot; <a href="https://www.uni-bonn.de/en">University of Bonn</a></p>
+          <h1 class="sp-hero__name">{{ site.author.name }}</h1>
+          <p class="sp-hero__lab"><a href="https://caisa-lab.github.io/">CAISA Lab</a> &mdash; Conversational AI and Social Analytics</p>
+          <div class="sp-hero__links">
+            {% if site.author.email %}
+            <a href="mailto:{{ site.author.email }}" class="sp-hero__link">
+              <i class="fas fa-fw fa-envelope"></i>Email
+            </a>
+            {% endif %}
+            {% if site.author.googlescholar %}
+            <a href="{{ site.author.googlescholar }}" class="sp-hero__link">
+              <i class="ai ai-google-scholar"></i>Scholar
+            </a>
+            {% endif %}
+            {% if site.author.orcid %}
+            <a href="{{ site.author.orcid }}" class="sp-hero__link">
+              <i class="ai ai-orcid"></i>ORCID
+            </a>
+            {% endif %}
+            {% if site.author.github %}
+            <a href="https://github.com/{{ site.author.github }}" class="sp-hero__link">
+              <i class="fab fa-fw fa-github"></i>GitHub
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="sp-hero__photo">
+          <img src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name }}">
+        </div>
+      </div>
+
+      <div class="sp-hero__bio">
+        {{ content }}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================== WHITE BODY =================== -->
+  <div class="sp-body">
+
+    <!-- NEWS -->
+    {% if site.data.news %}
+    <section id="news" class="sp-section">
+      <div class="sp-container">
+        <h2 class="sp-section__title">News</h2>
+        <div class="sp-news">
+          {% for item in site.data.news %}
+          <div class="sp-news__item">
+            <span class="sp-news__date">{{ item.date }}</span>
+            <span class="sp-news__text">{{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="sp-section">
+      <div class="sp-container">
+        <h2 class="sp-section__title">Publications</h2>
+        {% assign pubs = site.publications | sort: 'date' | reverse %}
+        {% for pub in pubs %}
+        <div class="sp-pub">
+          <div class="sp-pub__year">{{ pub.date | date: "%Y" }}</div>
+          <div class="sp-pub__body">
+            <div class="sp-pub__title">
+              {% if pub.paperurl %}<a href="{{ pub.paperurl }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+            </div>
+            {% if pub.venue %}<div class="sp-pub__venue">{{ pub.venue }}</div>{% endif %}
+            <div class="sp-pub__links">
+              {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="sp-badge">PDF</a>{% endif %}
+              {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" class="sp-badge">Slides</a>{% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching" class="sp-section">
+      <div class="sp-container">
+        <h2 class="sp-section__title">Teaching</h2>
+        {% assign teachings = site.teaching | sort: 'date' | reverse %}
+        {% for item in teachings %}
+        <div class="sp-teaching">
+          <div class="sp-teaching__year">{{ item.date | date: "%Y" }}</div>
+          <div class="sp-teaching__body">
+            <div class="sp-teaching__title">{{ item.title }}</div>
+            <div class="sp-teaching__meta">{{ item.type }} &middot; {{ item.venue }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </div><!-- /.sp-body -->
+
+</div>
