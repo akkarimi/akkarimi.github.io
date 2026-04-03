@@ -1,0 +1,166 @@
+---
+permalink: /projects/
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Akbar Karimi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #fdfbf8;
+      --ink:    #0a0807;
+      --soft:   #3d3935;
+      --rule:   #c8c4be;
+      --accent: #a0522d;
+      --link:   #1a6fd4;
+      --w:      820px;
+    }
+
+    html { font-size: 20px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 48px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 max(1.5rem, calc((100vw - var(--w)) / 2));
+      z-index: 99;
+    }
+
+    .nav-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a.active { color: var(--ink); font-weight: 500; }
+
+    main {
+      max-width: var(--w);
+      margin: 0 auto;
+      padding: 6rem 1.5rem 7rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+    }
+
+    .page-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 3rem;
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: #0f0d0b;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-teams {
+      font-size: 0.78rem;
+      color: var(--soft);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 540px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { gap: 1.1rem; }
+      main { padding: 5rem 1.25rem 5rem; }
+      h1 { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="/">Akbar Karimi</a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#news">News</a></li>
+      <li><a href="/#publications">Publications</a></li>
+      <li><a href="/#teaching">Teaching</a></li>
+      <li><a href="/#cv">CV</a></li>
+      <li><a href="/projects/" class="active">Projects</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Projects</h1>
+    <hr class="page-rule">
+
+    <div class="project-title"><a href="https://football.akkarimi.com" target="_blank" rel="noopener" style="text-decoration: none; color: var(--link);">Football Predictor</a></div>
+    <p class="project-desc">
+      Agentic AI-powered match predictions using live stats, standings, and the
+      latest news for Europe's top clubs.
+    </p>
+    <p class="project-teams">
+      <strong>Tracked teams:</strong>
+      Manchester United &middot; Real Madrid &middot; Barcelona &middot; Arsenal &middot;
+      Chelsea &middot; Manchester City &middot; Bayern Munich &middot; Borussia Dortmund &middot;
+      Inter Milan &middot; Paris Saint-Germain &middot; Liverpool &middot; Atletico Madrid &middot;
+      AC Milan &middot; Napoli &middot; Juventus
+    </p>
+  </main>
+
+</body>
+</html>

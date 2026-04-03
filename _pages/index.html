@@ -16,10 +16,10 @@ layout: none
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:     #f5f2ed;
-      --ink:    #100e0c;
-      --soft:   #4d4743;
-      --rule:   #ccc8c2;
+      --bg:     #fdfbf8;
+      --ink:    #0a0807;
+      --soft:   #3d3935;
+      --rule:   #c8c4be;
       --accent: #a0522d; /* sienna — warm, bookish, used only on hover */
       --link:   #1a6fd4; /* bright blue — cool tone for content links */
       --w:      820px;
@@ -100,15 +100,15 @@ layout: none
 
     .profile {
       display: grid;
-      grid-template-columns: 1fr 160px;
+      grid-template-columns: 160px 1fr;
       gap: 0 2.5rem;
       margin-bottom: 1.4rem;
     }
 
-    .profile-text { grid-column: 1; }
+    .profile-text { grid-column: 2; }
 
     .profile-photo {
-      grid-column: 2;
+      grid-column: 1;
       grid-row: 1;
       align-self: start;
     }
@@ -167,7 +167,7 @@ layout: none
     .bio {
       font-size: 0.9rem;
       line-height: 1.78;
-      color: #252220;
+      color: #0f0d0b;
       margin-bottom: 0.85em;
     }
 
@@ -258,7 +258,7 @@ layout: none
     .news-text {
       font-size: 0.86rem;
       line-height: 1.68;
-      color: #252220;
+      color: #0f0d0b;
     }
 
     .news-text a {
@@ -339,7 +339,7 @@ layout: none
 
     .teaching-desc {
       font-size: 0.83rem;
-      color: #252220;
+      color: #0f0d0b;
       margin-top: 0.35rem;
       line-height: 1.65;
     }
@@ -400,6 +400,8 @@ layout: none
       <li><a href="#publications">Publications</a></li>
       <li><a href="#teaching">Teaching</a></li>
       <li><a href="#cv">CV</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/blog/">Blog</a></li>
     </ul>
   </nav>
 
