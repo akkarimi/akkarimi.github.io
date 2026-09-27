@@ -1,0 +1,13 @@
+---
+title: "Shapes are not enough: CONSERVAttack and its use for finding vulnerabilities and uncertainties in machine learning applications"
+authors: 'P Bechtle, L Flek, PA Jung, <strong>A Karimi</strong>, T Saala, A Schmidt, M Schott, P Soldin, C Wiebusch, U Willemsen'
+collection: publications
+category: manuscripts
+permalink: /publication/2026-03-14-conservattack
+excerpt: 'We propose CONSERVAttack, an adversarial attack whose perturbations stay within simulation-versus-data uncertainty bounds, evading standard validation checks in high energy physics while fooling the model, and discuss strategies to mitigate such vulnerabilities.'
+date: 2026-03-14
+venue: 'arXiv preprint'
+paperurl: 'https://arxiv.org/pdf/2603.13970'
+citation: 'Philip Bechtle, Lucie Flek, Philipp Alexander Jung, Akbar Karimi, Timo Saala, Alexander Schmidt, Matthias Schott, Philipp Soldin, Christopher Wiebusch, and Ulrich Willemsen. 2026. Shapes are not enough: CONSERVAttack and its use for finding vulnerabilities and uncertainties in machine learning applications. <i>arXiv preprint arXiv:2603.13970</i>.'
+---
+In High Energy Physics, as in many other fields of science, the application of machine learning techniques has been crucial in advancing our understanding of fundamental phenomena. Increasingly, deep learning models are applied to analyze both simulated and experimental data. In most experiments, a rigorous regime of testing for physically motivated systematic uncertainties is in place. The numerical evaluation of these tests for differences between the data on the one side and simulations on the other side quantifies the effect of potential sources of mismodelling on the machine learning output. In addition, thorough comparisons of marginal distributions and (linear) feature correlations between data and simulation in "control regions" are applied. However, the guidance by physical motivation, and the need to constrain comparisons to specific regions, does not guarantee that all possible sources of deviations have been accounted for. We therefore propose a new adversarial attack - the CONSERVAttack - designed to exploit the remaining space of hypothetical deviations between simulation and data after the above mentioned tests. The resulting adversarial perturbations are consistent within the uncertainty bounds - evading standard validation checks - while successfully fooling the underlying model. We further propose strategies to mitigate such vulnerabilities and argue that robustness to adversarial effects must be considered when interpreting results from deep learning in particle physics.

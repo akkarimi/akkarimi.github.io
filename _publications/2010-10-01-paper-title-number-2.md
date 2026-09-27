@@ -1,5 +1,6 @@
 ---
 title: "ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving"
+authors: 'Z Ul Abedin, S Qamar, L Flek, <strong>A Karimi</strong>'
 collection: publications
 category: conferences
 permalink: /publication/2010-10-01-paper-title-number-2

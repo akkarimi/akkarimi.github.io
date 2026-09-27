@@ -1,5 +1,6 @@
 ---
 title: "Do Multilingual Large Language Models Mitigate Stereotype Bias?"
+authors: 'S Nie, M Fromm, C Welch, R Görge, <strong>A Karimi</strong>, J Plepi, N Mowmita, N Flores-Herr, M Ali, L Flek'
 collection: publications
 category: conferences
 permalink: /publication/2015-10-01-paper-title-number-3

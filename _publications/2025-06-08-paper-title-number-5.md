@@ -1,5 +1,6 @@
 ---
 title: "AEDA: An Easier Data Augmentation Technique for Text Classification"
+authors: '<strong>A Karimi</strong>, L Rossi, A Prati'
 collection: publications
 category: conferences
 permalink: /publication/2024-02-17-paper-title-number-4

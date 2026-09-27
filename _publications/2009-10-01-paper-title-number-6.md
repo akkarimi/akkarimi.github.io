@@ -1,5 +1,6 @@
 ---
 title: "Adversarial Training for Aspect-Based Sentiment Analysis with BERT"
+authors: '<strong>A Karimi</strong>, L Rossi, A Prati'
 collection: publications
 category: conferences
 permalink: /publication/2009-10-01-paper-title-number-6

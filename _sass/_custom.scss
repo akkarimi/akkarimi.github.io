@@ -200,7 +200,7 @@ code, pre, tt, kbd, samp {
 /* Bio text in dark section */
 .sp-hero__bio {
   font-size: 0.95rem;
-  line-height: 1.75;
+  line-height: 1.6;
   color: #a1a1aa;
   max-width: 640px;
   border-top: 1px solid #27272a;
@@ -278,7 +278,7 @@ code, pre, tt, kbd, samp {
 .sp-news {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 .sp-news__item {
@@ -286,7 +286,7 @@ code, pre, tt, kbd, samp {
   gap: 1.75rem;
   align-items: baseline;
   font-size: 0.9rem;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .sp-news__date {
@@ -322,7 +322,7 @@ code, pre, tt, kbd, samp {
   display: flex;
   gap: 1.75rem;
   align-items: baseline;
-  padding: 1.25rem 0;
+  padding: 0.85rem 0;
   border-bottom: 1px solid #f4f4f5;
 }
 
@@ -349,7 +349,7 @@ code, pre, tt, kbd, samp {
   font-size: 0.975rem;
   font-weight: 600;
   letter-spacing: -0.015em;
-  line-height: 1.4;
+  line-height: 1.3;
   color: #1c1917;
 }
 
@@ -404,7 +404,7 @@ code, pre, tt, kbd, samp {
   display: flex;
   gap: 1.75rem;
   align-items: baseline;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   border-bottom: 1px solid #f4f4f5;
 }
 
@@ -472,7 +472,7 @@ code, pre, tt, kbd, samp {
 .page__content {
   font-family: 'Inter', sans-serif;
   font-size: 0.975rem;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 .page__content a {

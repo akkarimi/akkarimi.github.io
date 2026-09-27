@@ -239,7 +239,7 @@ layout: none
       display: grid;
       grid-template-columns: 68px 1fr;
       column-gap: 1.5rem;
-      margin-bottom: 1.3rem;
+      margin-bottom: 0.85rem;
       align-items: baseline;
     }
 
@@ -290,6 +290,12 @@ layout: none
     }
 
     .pub-title a:hover { color: var(--accent); }
+
+    .pub-authors {
+      font-size: 0.8rem;
+      color: #44403c;
+      margin-top: 0.15rem;
+    }
 
     .pub-venue {
       font-size: 0.78rem;
@@ -465,6 +471,56 @@ layout: none
       <h2>News</h2>
 
       <div class="row">
+        <span class="row-label">Sep 2026</span>
+        <span class="news-text">
+          Attending German Conference in Bioinformatics (GCB) in Saarland Informatics Campus
+          to present our poster:
+          <em>Structural Patterns in Drugs Guide Model Design for Glioblastoma</em>.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Aug 2026</span>
+        <span class="news-text">
+          Attending <em>Ellis Summer School for Trustworthy &amp; Responsible AI in Drug Discovery</em>
+          in Saarland Informatics Campus.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Jun 2026</span>
+        <span class="news-text">
+          Joining LSV Lab at Saarland University to work on chemical/protein language models.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Apr 2026</span>
+        <span class="news-text">
+          Paper accepted to ACL 2026 Findings:
+          <em>More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists</em>.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Mar 2026</span>
+        <span class="news-text">
+          Two papers accepted to DialRes Workshop @ LREC 2026:
+          <em>Can LLM Agents Identify Spoken Dialects like a Linguist?</em>
+          and
+          <em>Speaker Normalization via Voice Conversion Reveals a Human–Machine Dissociation in Dialect Classification</em>.
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="row-label">Jan 2026</span>
+        <span class="news-text">
+          Paper accepted to WASSA Workshop @ EACL 2026 in Rabat, Morocco:
+          <em>Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents</em>.
+        </span>
+      </div>
+
+      <div class="row">
         <span class="row-label">Dec 2025</span>
         <span class="news-text">
           Attending the
@@ -523,10 +579,142 @@ layout: none
         <span class="row-label">2026</span>
         <div>
           <div class="pub-title">
-            <a href="https://akkarimi.com">Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents</a>
+            <a href="https://aclanthology.org/2026.findings-acl.2158.pdf">More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists</a>
           </div>
-          <div class="pub-venue">soon to appear &mdash; WASSA @ EACL 2026</div>
+          <div class="pub-authors">K Alavi, Z Yeltay, L Flek, <strong>A Karimi</strong></div>
+          <div class="pub-venue">Findings of ACL 2026</div>
+          <div class="pub-desc">We evaluate multi-agent sampling-and-voting on adversarially perturbed math questions across six open-source models and four benchmarks, finding that more agents reliably improve accuracy while the robustness gap to noise, especially human-like typos, persists regardless of agent count.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2026.findings-acl.2158.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2026</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://link.springer.com/content/pdf/10.1140/epjc/s10052-026-15773-2.pdf">MiniFool: Physics-Constraint-Aware Minimizer-Based Adversarial Attacks in Deep Neural Networks</a>
+          </div>
+          <div class="pub-authors">L Flek, O Janik, PA Jung, <strong>A Karimi</strong>, T Saala, A Schmidt, M Schott, P Soldin, M Thiesmeyer, C Wiebusch, U Willemsen</div>
+          <div class="pub-venue">The European Physical Journal C</div>
+          <div class="pub-desc">We present MiniFool, a physics-inspired adversarial attack that minimizes a χ²-based test statistic combined with a target-score deviation, testing the robustness of neural network classifiers on IceCube, CMS, and MNIST data, including unlabeled experimental data.</div>
+          <a class="pub-pdf" href="https://link.springer.com/content/pdf/10.1140/epjc/s10052-026-15773-2.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2026</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2026.dialres-1.8.pdf">Can LLM Agents Identify Spoken Dialects like a Linguist?</a>
+          </div>
+          <div class="pub-authors">T Bystrich, L Hamm, MH Akhter, L Fischbach, L Flek, <strong>A Karimi</strong></div>
+          <div class="pub-venue">DialRes Workshop @ LREC 2026</div>
+          <div class="pub-desc">We explore whether LLM agents can classify Swiss German dialects from ASR-generated phonetic transcriptions combined with linguistic resources such as dialect feature maps, vowel history, and rules, comparing them against HuBERT, an LLM baseline, and a human linguist.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2026.dialres-1.8.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2026</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2026.dialres-1.18.pdf">Speaker Normalization via Voice Conversion Reveals a Human–Machine Dissociation in Dialect Classification</a>
+          </div>
+          <div class="pub-authors">C Kleen, L Fischbach, <strong>A Karimi</strong>, L Flek, A Lameli</div>
+          <div class="pub-venue">DialRes Workshop @ LREC 2026</div>
+          <div class="pub-desc">In perception experiments on nine German dialect regions, we show that voice conversion to a single target speaker leaves human dialect recognition unchanged while significantly improving a deep learning model, revealing a divergence between human and machine speech processing.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2026.dialres-1.18.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2026</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://arxiv.org/pdf/2603.13970">Shapes are not enough: CONSERVAttack and its use for finding vulnerabilities and uncertainties in machine learning applications</a>
+          </div>
+          <div class="pub-authors">P Bechtle, L Flek, PA Jung, <strong>A Karimi</strong>, T Saala, A Schmidt, M Schott, P Soldin, C Wiebusch, U Willemsen</div>
+          <div class="pub-venue">arXiv preprint</div>
+          <div class="pub-desc">We propose CONSERVAttack, an adversarial attack whose perturbations stay within simulation-versus-data uncertainty bounds, evading standard validation checks in high energy physics while fooling the model, and discuss strategies to mitigate such vulnerabilities.</div>
+          <a class="pub-pdf" href="https://arxiv.org/pdf/2603.13970">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2026</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2026.wassa-1.17.pdf">Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents</a>
+          </div>
+          <div class="pub-authors">MHA Monfared, L Flek, <strong>A Karimi</strong></div>
+          <div class="pub-venue">WASSA Workshop @ EACL 2026</div>
           <div class="pub-desc">We propose an agentic data augmentation method for Aspect-Based Sentiment Analysis (ABSA) that uses iterative generation and verification to produce high-quality synthetic training examples.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2026.wassa-1.17.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2025.wasp-main.22.pdf">Encoder Fine-tuning with Stochastic Sampling Outperforms Open-weight GPT in Astronomy Knowledge Extraction</a>
+          </div>
+          <div class="pub-authors">S Rawat, L Flek, <strong>A Karimi</strong></div>
+          <div class="pub-venue">WASP Workshop @ IJCNLP-AACL 2025</div>
+          <div class="pub-desc">We build a multi-task SciBERT system for classifying telescope references, semantic attributes, and instrument mentions in astronomy papers, using stochastic segment sampling and majority voting, which significantly outperforms an open-weight GPT baseline.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2025.wasp-main.22.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://link.springer.com/content/pdf/10.1007/s41781-025-00148-1.pdf">Enforcing Fundamental Relations via Adversarial Attacks on Input Parameter Correlations</a>
+          </div>
+          <div class="pub-authors">L Flek, PA Jung, <strong>A Karimi</strong>, T Saala, A Schmidt, M Schott, P Soldin, C Wiebusch</div>
+          <div class="pub-venue">Computing and Software for Big Science</div>
+          <div class="pub-desc">We present the Random Distribution Shuffle Attack (RDSA), which targets correlations between observables rather than individual features, and show that adversarial training with it improves classification on particle physics and five other tasks.</div>
+          <a class="pub-pdf" href="https://link.springer.com/content/pdf/10.1007/s41781-025-00148-1.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-032-19108-3_36">Colliding with Adversaries: A Challenge on Robust Learning in High Energy Physics at ECML PKDD 2025</a>
+          </div>
+          <div class="pub-authors">T Saala, L Flek, <strong>A Karimi</strong>, PA Jung, A Schmidt, P Soldin, D Stefanopoulos, A Voskou, U Willemsen, C Wiebusch, M Schott</div>
+          <div class="pub-venue">ECML PKDD 2025</div>
+          <div class="pub-desc">We describe the Colliding with Adversaries challenge, with tasks on generating adversarial examples against a jet-classification model and on building models robust to unseen attacks, using simulated CMS collision data.</div>
+          <a class="pub-pdf" href="https://link.springer.com/chapter/10.1007/978-3-032-19108-3_36">Paper</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2025.ranlp-1.44.pdf">EDAudio: Easy Data Augmentation for Dialectal Audio</a>
+          </div>
+          <div class="pub-authors">L Fischbach, <strong>A Karimi</strong>, A Lameli, L Flek</div>
+          <div class="pub-venue">RANLP 2025</div>
+          <div class="pub-desc">We evaluate lightweight audio augmentation techniques on recordings from 20 German dialects, finding that frequency-based methods, especially frequency masking, consistently help while time masking or speaker-based insertion can hurt.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2025.ranlp-1.44.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://www.isca-archive.org/interspeech_2025/fischbach25_interspeech.pdf">Improving Low-Resource Dialect Classification Using Retrieval-based Voice Conversion</a>
+          </div>
+          <div class="pub-authors">L Fischbach, <strong>A Karimi</strong>, C Kleen, A Lameli, L Flek</div>
+          <div class="pub-venue">Interspeech 2025</div>
+          <div class="pub-desc">We use Retrieval-based Voice Conversion to map recordings to a single target speaker, reducing speaker variability so models focus on dialectal features, improving low-resource German dialect classification alone and combined with other augmentations.</div>
+          <a class="pub-pdf" href="https://www.isca-archive.org/interspeech_2025/fischbach25_interspeech.pdf">PDF</a>
         </div>
       </div>
 
@@ -536,6 +724,7 @@ layout: none
           <div class="pub-title">
             <a href="https://aclanthology.org/2025.findings-acl.908.pdf">Multi-Hop Reasoning for Question Answering with Hyperbolic Representations</a>
           </div>
+          <div class="pub-authors">S Welz, L Flek, <strong>A Karimi</strong></div>
           <div class="pub-venue">Findings of ACL</div>
           <div class="pub-desc">Through a simple integration of hyperbolic representations with an encoder-decoder model, we perform a controlled and comprehensive set of experiments to compare the capacity of hyperbolic space versus Euclidean space in multi-hop reasoning.</div>
           <a class="pub-pdf" href="https://aclanthology.org/2025.findings-acl.908.pdf">PDF</a>
@@ -546,8 +735,22 @@ layout: none
         <span class="row-label">2025</span>
         <div>
           <div class="pub-title">
+            <a href="https://aclanthology.org/2025.findings-acl.96.pdf">Explainable Hallucination through Natural Language Inference Mapping</a>
+          </div>
+          <div class="pub-authors">WF Chen, Z Zhao, <strong>A Karimi</strong>, L Flek</div>
+          <div class="pub-venue">Findings of ACL</div>
+          <div class="pub-desc">We introduce HaluMap, a training-free, model-agnostic framework that detects hallucinations by mapping NLI entailment and contradiction relations between inputs and outputs, outperforming other training-free NLI-based methods by five points with interpretable explanations.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2025.findings-acl.96.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2025</span>
+        <div>
+          <div class="pub-title">
             <a href="https://aclanthology.org/2025.llmsec-1.5.pdf">ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving</a>
           </div>
+          <div class="pub-authors">Z Ul Abedin, S Qamar, L Flek, <strong>A Karimi</strong></div>
           <div class="pub-venue">LLMSEC Workshop @ ACL</div>
           <div class="pub-desc">We propose ArithmAttack to examine how robust LLMs are when they encounter noisy prompts containing extra punctuation marks — an attack that causes no information loss yet consistently degrades performance across eight models.</div>
           <a class="pub-pdf" href="https://aclanthology.org/2025.llmsec-1.5.pdf">PDF</a>
@@ -558,11 +761,103 @@ layout: none
         <span class="row-label">2024</span>
         <div>
           <div class="pub-title">
+            <a href="https://arxiv.org/pdf/2501.08322">Exploring Robustness of Multilingual LLMs on Real-World Noisy Data</a>
+          </div>
+          <div class="pub-authors">A Aliakbarzadeh, L Flek, <strong>A Karimi</strong></div>
+          <div class="pub-venue">Eighth Widening NLP Workshop (WiNLP 2024) Phase II</div>
+          <div class="pub-desc">We study how real-world spelling mistakes from Wikipedia edit history affect 9 multilingual language models across NLI, NER, and intent classification in 6 languages, finding a 2.3 to 4.3 point performance gap, with mT5 models the most robust.</div>
+          <a class="pub-pdf" href="https://arxiv.org/pdf/2501.08322">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2024</span>
+        <div>
+          <div class="pub-title">
             <a href="https://aclanthology.org/2024.c3nlp-1.6.pdf">Do Multilingual Large Language Models Mitigate Stereotype Bias?</a>
           </div>
+          <div class="pub-authors">S Nie, M Fromm, C Welch, R Görge, <strong>A Karimi</strong>, J Plepi, N Mowmita, N Flores-Herr, M Ali, L Flek</div>
           <div class="pub-venue">C3NLP Workshop @ ACL</div>
           <div class="pub-desc">We investigate the effect of multilingual training on bias mitigation by systematically training six LLMs of identical size (2.6B parameters): five monolingual and one multilingual model, showing that multilingual training consistently reduces bias while improving prediction accuracy.</div>
           <a class="pub-pdf" href="https://aclanthology.org/2024.c3nlp-1.6.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2023</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2023.semeval-1.292.pdf">CAISA at SemEval-2023 Task 8: Counterfactual Data Augmentation for Mitigating Class Imbalance in Causal Claim Identification</a>
+          </div>
+          <div class="pub-authors"><strong>A Karimi</strong>, L Flek</div>
+          <div class="pub-venue">SemEval 2023</div>
+          <div class="pub-desc">We introduce a counterfactual data augmentation method based on verb replacement for identifying medical claims, yielding significant relative improvement on the minority class compared to three other augmentation techniques.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2023.semeval-1.292.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2022</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2022.smm4h-1.45.pdf">CAISA@SMM4H’22: Robust Cross-Lingual Detection of Disease Mentions on Social Media with Adversarial Methods</a>
+          </div>
+          <div class="pub-authors"><strong>A Karimi</strong>, L Flek</div>
+          <div class="pub-venue">SMM4H 2022</div>
+          <div class="pub-desc">We apply adversarial data augmentation in the input and embedding spaces to BioBERT for detecting disease mentions in Spanish tweets, outperforming a vocabulary-based baseline, with augmentation especially helpful in low-data settings.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2022.smm4h-1.45.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2022</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://arxiv.org/pdf/2404.16633">Self-Balanced R-CNN for Instance Segmentation</a>
+          </div>
+          <div class="pub-authors">L Rossi, <strong>A Karimi</strong>, A Prati</div>
+          <div class="pub-venue">JVCIR</div>
+          <div class="pub-desc">We propose SBR-CNN, an evolution of HTC with loop mechanisms for box and mask refinement and an improved GRoIE, addressing IoU and feature-level imbalances and reaching 45.3% / 41.5% AP on COCO with a ResNet-50 backbone.</div>
+          <a class="pub-pdf" href="https://arxiv.org/pdf/2404.16633">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2022</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2022.lrec-1.61.pdf">Aspect-Based Emotion Analysis and Multimodal Coreference: A Case Study of Customer Comments on Adidas Instagram Posts</a>
+          </div>
+          <div class="pub-authors">L De Bruyne, <strong>A Karimi</strong>, O De Clercq, A Prati, V Hoste</div>
+          <div class="pub-venue">LREC 2022</div>
+          <div class="pub-desc">We present a multimodal dataset of 4,900 comments on 175 Instagram images annotated for aspect-based emotion analysis, and find that aspect and emotion classification benefit little from multimodal coreference resolution.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2022.lrec-1.61.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2022</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://arxiv.org/pdf/2206.10186">Improving Localization for Semi-Supervised Object Detection</a>
+          </div>
+          <div class="pub-authors">L Rossi, <strong>A Karimi</strong>, A Prati</div>
+          <div class="pub-venue">ICIAP 2022</div>
+          <div class="pub-desc">We add a bounding box localization classification task to the Mean Teacher framework to better filter pseudo-labels, and show that box regression on unlabeled data helps as much as classification, improving SSOD on COCO by 1.14% AP.</div>
+          <a class="pub-pdf" href="https://arxiv.org/pdf/2206.10186">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2021</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2021.icnlsp-1.5.pdf">Improving BERT Performance for Aspect-Based Sentiment Analysis</a>
+          </div>
+          <div class="pub-authors"><strong>A Karimi</strong>, L Rossi, A Prati</div>
+          <div class="pub-venue">ICNLSP 2021</div>
+          <div class="pub-desc">We propose two simple modules, Parallel Aggregation and Hierarchical Aggregation, on top of BERT for Aspect Extraction and Aspect Sentiment Classification, improving performance without further training of the BERT model.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2021.icnlsp-1.5.pdf">PDF</a>
         </div>
       </div>
 
@@ -572,9 +867,49 @@ layout: none
           <div class="pub-title">
             <a href="https://aclanthology.org/2021.findings-emnlp.234.pdf">AEDA: An Easier Data Augmentation Technique for Text Classification</a>
           </div>
+          <div class="pub-authors"><strong>A Karimi</strong>, L Rossi, A Prati</div>
           <div class="pub-venue">Findings of EMNLP</div>
           <div class="pub-desc">AEDA inserts punctuation marks randomly into text — simpler than EDA, lossless, and consistently superior across five classification datasets.</div>
           <a class="pub-pdf" href="https://aclanthology.org/2021.findings-emnlp.234.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2021</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://arxiv.org/pdf/2104.01329">Recursively Refined R-CNN: Instance Segmentation with Self-RoI Rebalancing</a>
+          </div>
+          <div class="pub-authors">L Rossi, <strong>A Karimi</strong>, A Prati</div>
+          <div class="pub-venue">CAIP 2021</div>
+          <div class="pub-desc">We propose R³-CNN, which replaces cascade architectures with a loop mechanism and recursive IoU-based re-sampling, surpassing the HTC model on COCO while significantly reducing the number of parameters.</div>
+          <a class="pub-pdf" href="https://arxiv.org/pdf/2104.01329">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2021</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/2021.semeval-1.25.pdf">Uniparma at SemEval-2021 Task 5: Toxic Spans Detection Using CharacterBERT and Bag-of-Words Model</a>
+          </div>
+          <div class="pub-authors"><strong>A Karimi</strong>, L Rossi, A Prati</div>
+          <div class="pub-venue">SemEval 2021</div>
+          <div class="pub-desc">We detect toxic spans by combining CharacterBERT, which handles misspelled toxic words through character-level embeddings, with a bag-of-words method that ensures frequently used toxic words are labeled.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/2021.semeval-1.25.pdf">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2020</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://arxiv.org/pdf/2004.13665">A Novel Region of Interest Extraction Layer for Instance Segmentation</a>
+          </div>
+          <div class="pub-authors">L Rossi, <strong>A Karimi</strong>, A Prati</div>
+          <div class="pub-venue">ICPR 2020</div>
+          <div class="pub-desc">We propose GRoIE, a Generic RoI Extractor that uses all FPN layers with non-local blocks and attention, integrating seamlessly into two-stage architectures and improving detection by up to 1.1% AP and instance segmentation by 1.7% AP.</div>
+          <a class="pub-pdf" href="https://arxiv.org/pdf/2004.13665">PDF</a>
         </div>
       </div>
 
@@ -584,9 +919,23 @@ layout: none
           <div class="pub-title">
             <a href="https://arxiv.org/pdf/2001.11316">Adversarial Training for Aspect-Based Sentiment Analysis with BERT</a>
           </div>
+          <div class="pub-authors"><strong>A Karimi</strong>, L Rossi, A Prati</div>
           <div class="pub-venue">ICPR</div>
           <div class="pub-desc">We propose BERT Adversarial Training (BAT), a novel architecture that applies adversarial training to Aspect Extraction and Aspect Sentiment Classification, outperforming both general and domain post-trained BERT — the first study of its kind in ABSA.</div>
           <a class="pub-pdf" href="https://arxiv.org/pdf/2001.11316">PDF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label">2018</span>
+        <div>
+          <div class="pub-title">
+            <a href="https://aclanthology.org/L18-1549.pdf">Extracting an English-Persian Parallel Corpus from Comparable Corpora</a>
+          </div>
+          <div class="pub-authors"><strong>A Karimi</strong>, E Ansari, BS Bigham</div>
+          <div class="pub-venue">LREC 2018</div>
+          <div class="pub-desc">We propose a bidirectional method to extract parallel sentences from document-aligned English and Persian Wikipedia, producing a corpus of about 200,000 sentences that improves statistical machine translation quality.</div>
+          <a class="pub-pdf" href="https://aclanthology.org/L18-1549.pdf">PDF</a>
         </div>
       </div>
     </section>
@@ -650,6 +999,17 @@ layout: none
 
       <div class="row">
         <span class="row-label" style="text-align:right; padding-top: 0.15rem;">Experience</span>
+        <div>
+          <div class="teaching-title">Postdoctoral Researcher</div>
+          <div class="teaching-meta">2026 – Present &middot; Saarland University</div>
+          <div class="teaching-desc">
+            LSV Lab &mdash; Chemical/Protein Language Models
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label"></span>
         <div>
           <div class="teaching-title">Postdoctoral Researcher &amp; Scientific Coordinator</div>
           <div class="teaching-meta">Oct 2023 – Dec 2025 &middot; University of Bonn</div>
