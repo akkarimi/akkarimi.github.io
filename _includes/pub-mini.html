@@ -1,7 +1,9 @@
 {%- comment -%} One compact line: year · linked title · venue. Param: pub. Used on the homepage and Research page. {%- endcomment -%}
 {%- assign p = include.pub -%}
 {%- assign url = p.links.pdf | default: p.links.website | default: p.links.arxiv -%}
+{%- assign last_char = p.title | slice: -1 -%}
+{%- assign stop = "." -%}{%- if last_char == "?" or last_char == "!" or last_char == "." -%}{%- assign stop = "" -%}{%- endif -%}
 <li class="dated__item">
   <span class="dated__date">{{ p.year }}</span>
-  <span>{% if url %}<a class="paper-link" href="{{ url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. <em class="muted">{{ p.venue }}</em></span>
+  <span>{% if url %}<a class="paper-link" href="{{ url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{{ stop }} <em class="muted">{{ p.venue }}</em></span>
 </li>

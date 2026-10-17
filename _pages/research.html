@@ -2,7 +2,6 @@
 title: "Research"
 permalink: /research/
 description: "Research themes of Akbar Karimi: robustness of LLMs to adversarial and noisy inputs, data augmentation for NLP and speech, AI for science, and dialects and speech."
-lead: "I work on making language models reliable outside the lab: under adversarial and noisy inputs, with little data, and in scientific domains where mistakes are costly."
 ---
 {%- comment -%} Generated from _data/research.yml (themes) and _data/publications.yml (papers). {%- endcomment -%}
 {%- assign pubs = site.data.publications -%}
@@ -11,7 +10,6 @@ lead: "I work on making language models reliable outside the lab: under adversar
 {%- for p in pubs -%}{%- if p.topics contains t.id -%}{%- assign related = related | push: p -%}{%- endif -%}{%- endfor %}
 <section class="theme" id="{{ t.id }}" aria-labelledby="{{ t.id }}-title">
   <h2 class="theme__title" id="{{ t.id }}-title">{{ t.title }}</h2>
-  <p class="theme__desc">{{ t.description }}</p>
   {%- assign fig_path = "/images/research/" | append: t.figure -%}
   {%- assign fig_file = site.static_files | where: "path", fig_path | first -%}
   {%- if t.figure and t.figure != "" and fig_file %}

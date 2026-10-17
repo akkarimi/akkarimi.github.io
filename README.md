@@ -141,8 +141,8 @@ Courses are grouped by year automatically. The 2022 Marburg *Dialog Systems* ent
 ## Other common edits
 
 - **Add LinkedIn (or change any profile link):** in `_config.yml`, set `author.links.linkedin: "https://www.linkedin.com/in/…"`. Empty links are hidden.
-- **Change the research statement** under your name: `_pages/index.html`, the paragraph marked "Edit freely".
-- **Change research theme text or add a figure:** `_data/research.yml`. For a figure, put the image in `images/research/` and set `figure: "name.png"` (optionally `figure_caption:`).
+- **Change your bio:** the three paragraphs in `_pages/index.html`.
+- **Rename a research theme, change its key papers or add a figure:** `_data/research.yml`. For a figure, put the image in `images/research/` and set `figure: "name.png"` (optionally `figure_caption:`).
 - **Update the CV:** replace `files/cv.pdf` (same name), and edit `_data/cv.yml` for the web version.
 - **Write a blog post:** create `_posts/2026-11-01-my-title.md`:
 

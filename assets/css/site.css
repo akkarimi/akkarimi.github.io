@@ -267,8 +267,7 @@ main { padding-block: clamp(2rem, 1rem + 4vw, 4.5rem) clamp(3rem, 2rem + 4vw, 6r
 
 /* Research */
 .theme + .theme { margin-top: 2.25rem; }
-.theme__title { font-size: 1.35em; margin-bottom: .35rem; }
-.theme__desc { margin-bottom: .7rem; }
+.theme__title { font-size: 1.35em; margin-bottom: .5rem; }
 .theme__figure { margin: .5rem 0 1rem; }
 
 /* People */
