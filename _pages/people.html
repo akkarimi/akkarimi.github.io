@@ -11,7 +11,7 @@ lead: "Students I supervise or have co-supervised, from bachelor's projects to P
 <p class="notice">These are sample entries. Replace them in <code>_data/people.yml</code>.</p>
 {%- endif %}
 
-{%- assign groups = "current|Current students,alumni|Alumni" | split: "," -%}
+{%- assign groups = "current|Current students,alumni|Past students" | split: "," -%}
 {%- for g in groups %}
 {%- assign key = g | split: "|" | first -%}
 {%- assign members = people | where: "status", key -%}

@@ -38,7 +38,7 @@
   role: ""             # supervisor | co-supervisor
   topic: "More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists"
   years: ""
-  status: current
+  status: alumni
 
 - name: "Tobias Bystrich"
   author_names: ["T Bystrich"]
@@ -47,7 +47,7 @@
   role: ""             # supervisor | co-supervisor
   topic: "Can LLM Agents Identify Spoken Dialects like a Linguist?"
   years: ""
-  status: current
+  status: alumni
 
 - name: "Mohammad Hossein Akbari Monfared"
   author_names: ["MHA Monfared"]
@@ -56,7 +56,7 @@
   role: ""             # supervisor | co-supervisor
   topic: "Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents"
   years: ""
-  status: current
+  status: alumni
 
 - name: "Shivam Rawat"
   author_names: ["S Rawat"]
@@ -65,7 +65,7 @@
   role: ""             # supervisor | co-supervisor
   topic: "Encoder Fine-tuning with Stochastic Sampling Outperforms Open-weight GPT in Astronomy Knowledge Extraction"
   years: ""
-  status: current
+  status: alumni
 
 - name: "Simon Welz"
   author_names: ["S Welz"]
@@ -74,7 +74,7 @@
   role: ""             # supervisor | co-supervisor
   topic: "Multi-Hop Reasoning for Question Answering with Hyperbolic Representations"
   years: ""
-  status: current
+  status: alumni
 
 - name: "Zain Ul Abedin"
   author_names: ["Z Ul Abedin"]
@@ -83,7 +83,7 @@
   role: ""             # supervisor | co-supervisor
   topic: "ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving"
   years: ""
-  status: current
+  status: alumni
 
 - name: "Amirhossein Aliakbarzadeh"
   author_names: ["A Aliakbarzadeh"]
@@ -92,4 +92,4 @@
   role: ""             # supervisor | co-supervisor
   topic: "Exploring Robustness of Multilingual LLMs on Real-World Noisy Data"
   years: ""
-  status: current
+  status: alumni
