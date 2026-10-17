@@ -12,8 +12,9 @@
 #  topics     ids from _data/topics.yml, e.g. [robustness, augmentation]
 #  selected   true → also shown on the homepage (keep 4–6 selected)
 #  thumbnail  file in /images/papers/, e.g. "arithmattack.png" (~800×500)
-#  links      any of: pdf, doi (just the 10.xxxx/… part), code, slides,
-#             poster, video, website, arxiv. Leave out what you don't have.
+#  links      any of: pdf, code, slides, poster, video, website, arxiv → shown as buttons.
+#             doi (just the 10.xxxx/… part) is not a button; it is used for search engines.
+#             Leave out what you don't have.
 #  bibtex     paste from ACL Anthology / Google Scholar. Keep the "|" and indent.
 # ─────────────────────────────────────────────────────────────────────
 

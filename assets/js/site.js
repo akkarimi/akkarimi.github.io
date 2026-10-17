@@ -103,8 +103,7 @@
       if (!panel) return;
       var open = t.getAttribute('aria-expanded') !== 'true';
       t.setAttribute('aria-expanded', String(open));
-      if (panel.hasAttribute('data-collapsible')) panel.classList.toggle('is-open', open);
-      else panel.hidden = !open;
+      panel.hidden = !open;
       return;
     }
     var c = e.target.closest('[data-copy]');

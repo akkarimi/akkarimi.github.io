@@ -69,7 +69,7 @@ Open `_data/publications.yml` and paste a new entry at the top:
     One or two sentences in plain language — shown under the title.
   links:
     pdf: https://aclanthology.org/2027.findings-acl.1.pdf
-    doi: 10.18653/v1/2027.findings-acl.1
+    doi: 10.18653/v1/2027.findings-acl.1   # not shown as a button; used by search engines
     code: https://github.com/you/repo
     slides: /files/slides/your-paper.pdf
     poster: /files/posters/your-paper.pdf

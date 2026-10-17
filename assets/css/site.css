@@ -515,13 +515,6 @@ main { display: block; padding-bottom: var(--space-8); }
 }
 .pub__bib { font: .78rem/1.55 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
 
-/* On phones the summary is collapsed behind a "Summary" button (publication list only) */
-.pub-btn--summary { display: none; }
-@media (max-width: 767.98px) {
-  .js .pub-btn--summary { display: inline-flex; }
-  .js .pub__summary[data-collapsible]:not(.is-open) { display: none; }
-}
-
 /* Featured publications (homepage): thumbnail/tile + text */
 .pub--featured { padding-bottom: var(--space-6); border-bottom: 1px solid var(--rule); }
 .pubs--featured .pub--featured:last-child { border-bottom: 0; padding-bottom: 0; }

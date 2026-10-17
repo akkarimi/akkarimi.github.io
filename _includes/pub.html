@@ -32,18 +32,16 @@
     <p class="pub__authors">{% include author-list.html authors=p.authors %}</p>
     <p class="pub__venue">{{ p.venue }}</p>
     {%- if p.summary %}
-    <p class="pub__summary" id="{{ uid }}-sum"{% if include.mode != "featured" %} data-collapsible{% endif %}>{{ p.summary }}</p>
+    <p class="pub__summary">{{ p.summary }}</p>
     {%- endif %}
     <div class="pub__links">
       {%- if p.links.pdf %}<a class="pub-btn" href="{{ p.links.pdf }}">PDF</a>{% endif -%}
-      {%- if p.links.doi %}<a class="pub-btn" href="https://doi.org/{{ p.links.doi }}">DOI</a>{% endif -%}
       {%- if p.links.arxiv %}<a class="pub-btn" href="{{ p.links.arxiv }}">arXiv</a>{% endif -%}
       {%- if p.links.code %}<a class="pub-btn" href="{{ p.links.code }}">Code</a>{% endif -%}
       {%- if p.links.slides %}<a class="pub-btn" href="{{ p.links.slides }}">Slides</a>{% endif -%}
       {%- if p.links.poster %}<a class="pub-btn" href="{{ p.links.poster }}">Poster</a>{% endif -%}
       {%- if p.links.video %}<a class="pub-btn" href="{{ p.links.video }}">Video</a>{% endif -%}
       {%- if p.links.website %}<a class="pub-btn" href="{{ p.links.website }}">Website</a>{% endif -%}
-      {%- if p.summary and include.mode != "featured" %}<button class="pub-btn pub-btn--summary js-only" type="button" data-toggle="{{ uid }}-sum" aria-controls="{{ uid }}-sum" aria-expanded="false">Summary</button>{% endif -%}
       {%- if p.abstract %}<button class="pub-btn js-only" type="button" data-toggle="{{ uid }}-abs" aria-controls="{{ uid }}-abs" aria-expanded="false">Abstract</button>{% endif -%}
       {%- if p.bibtex %}<button class="pub-btn js-only" type="button" data-copy="{{ uid }}-bib">BibTeX</button>{% endif -%}
     </div>
