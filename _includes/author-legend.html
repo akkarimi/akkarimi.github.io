@@ -1,5 +1,6 @@
-{%- comment -%} Explains author-list markup. The student part only appears once people.yml has entries. {%- endcomment -%}
+{%- comment -%} Explains author-list markup. The student part only appears once someone in people.yml has author_names. {%- endcomment -%}
+{%- assign student_names = site.data.people | map: "author_names" | join: "" -%}
 <p class="author-legend">
   <strong class="au-me">Bold</strong>: me
-  {%- if site.data.people.size > 0 %}<span aria-hidden="true"> · </span><span class="au-student">Underlined</span>: student I supervised{% endif %}
+  {%- if student_names != "" %}<span aria-hidden="true"> · </span><span class="au-student">Underlined</span>: student I supervised{% endif %}
 </p>

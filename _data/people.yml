@@ -13,6 +13,8 @@
 #  status        current | alumni   ← moving someone to alumni is just this field
 #  now           where alumni went next (optional)
 #  links         optional: website, github, linkedin, scholar, thesis
+#  placeholder   true marks a sample entry (shows a notice on /people/) — delete
+#                these samples once real entries are in
 #
 #  Example (copy, remove the leading "# ", and fill in):
 #
@@ -29,4 +31,66 @@
 #     github: "https://github.com/…"
 # ─────────────────────────────────────────────────────────────────────
 
-[]
+# ── SAMPLE ENTRIES — replace with your students, then delete these ──
+- name: "Student Name"
+  author_names: []
+  photo: ""
+  level: "PhD"
+  role: "co-supervisor"
+  topic: "Robustness of LLM agents to adversarial inputs"
+  years: "2024–"
+  status: current
+  placeholder: true
+
+- name: "Student Name"
+  author_names: []
+  photo: ""
+  level: "MSc"
+  role: "supervisor"
+  topic: "Chemical language models for drug discovery"
+  years: "2026–"
+  status: current
+  placeholder: true
+
+- name: "Student Name"
+  author_names: []
+  photo: ""
+  level: "BSc"
+  role: "supervisor"
+  topic: "Data augmentation for low-resource dialects"
+  years: "2025–"
+  status: current
+  placeholder: true
+
+- name: "Student Name"
+  author_names: []
+  photo: ""
+  level: "MSc"
+  role: "supervisor"
+  topic: "Noisy inputs and math reasoning in LLMs"
+  years: "2024–2025"
+  status: alumni
+  now: "PhD student at a university"
+  placeholder: true
+
+- name: "Student Name"
+  author_names: []
+  photo: ""
+  level: "MSc"
+  role: "co-supervisor"
+  topic: "Hyperbolic representations for multi-hop QA"
+  years: "2023–2024"
+  status: alumni
+  now: "ML engineer in industry"
+  placeholder: true
+
+- name: "Student Name"
+  author_names: []
+  photo: ""
+  level: "BSc"
+  role: "supervisor"
+  topic: "Aspect-based sentiment analysis with LLM agents"
+  years: "2024–2025"
+  status: alumni
+  now: "MSc student"
+  placeholder: true

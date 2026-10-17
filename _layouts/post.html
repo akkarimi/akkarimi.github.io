@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="container post">
+  <header class="page-head">
+    <p class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {%- if page.description %}<p class="page-lead">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <p class="post__back"><a class="section-link" href="{{ '/blog/' | relative_url }}">← All posts</a></p>
+</article>

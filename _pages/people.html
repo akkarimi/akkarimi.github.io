@@ -1,0 +1,60 @@
+---
+title: "People"
+permalink: /people/
+description: "Students supervised and co-supervised by Akbar Karimi."
+lead: "Students I supervise or have co-supervised, from bachelor's projects to PhD theses."
+---
+{%- comment -%} Generated from _data/people.yml. Move someone to alumni by setting status: alumni. {%- endcomment -%}
+{%- assign people = site.data.people -%}
+{%- assign samples = people | where: "placeholder", true -%}
+{%- if samples.size > 0 %}
+<p class="notice">These are sample entries. Replace them in <code>_data/people.yml</code>.</p>
+{%- endif %}
+
+{%- assign groups = "current|Current students,alumni|Alumni" | split: "," -%}
+{%- for g in groups %}
+{%- assign key = g | split: "|" | first -%}
+{%- assign label = g | split: "|" | last -%}
+{%- assign members = people | where: "status", key -%}
+{%- if members.size > 0 %}
+<section class="people-group" aria-labelledby="g-{{ key }}">
+  <div class="section-head">
+    <h2 class="section-title" id="g-{{ key }}">{{ label }}</h2>
+    <span class="section-count">{{ members.size }}</span>
+  </div>
+  <ul class="people" role="list">
+    {%- for m in members %}
+    <li class="person" data-reveal>
+      {%- if m.photo and m.photo != "" %}
+      <img class="person__photo" src="{{ '/images/people/' | append: m.photo | relative_url }}" alt="" width="96" height="96" loading="lazy" decoding="async">
+      {%- else %}
+      {%- assign parts = m.name | split: " " -%}
+      <span class="person__photo person__photo--initials" aria-hidden="true">{{ parts.first | slice: 0 }}{% if parts.size > 1 %}{{ parts.last | slice: 0 }}{% endif %}</span>
+      {%- endif %}
+      <div class="person__body">
+        <h3 class="person__name">{{ m.name }}</h3>
+        <p class="person__meta">
+          <span class="badge">{{ m.level }}</span>
+          {%- if m.years %} <span>{{ m.years }}</span>{% endif -%}
+          {%- if m.role and m.role != "" %} <span aria-hidden="true">·</span> <span>{{ m.role | capitalize }}</span>{% endif %}
+        </p>
+        {%- if m.topic %}<p class="person__topic">{{ m.topic }}</p>{% endif %}
+        {%- if m.now and m.now != "" %}<p class="person__now"><span>Now:</span> {{ m.now }}</p>{% endif %}
+        {%- if m.links %}
+        <p class="person__links">
+          {%- for l in m.links %}{% if l[1] and l[1] != "" %}<a href="{{ l[1] }}">{{ l[0] | capitalize | replace: "Github", "GitHub" | replace: "Linkedin", "LinkedIn" }}</a>{% endif %}{% endfor -%}
+        </p>
+        {%- endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+{%- endfor %}
+
+<aside class="callout" aria-labelledby="join-title">
+  <h2 id="join-title" class="callout__title">Prospective students</h2>
+  <p>If you are interested in a thesis on LLM robustness, data augmentation or AI for drug discovery, send me an email with your CV and a few lines about what you would like to work on.</p>
+  <p><a class="section-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} {% include icon.html name="arrow" %}</a></p>
+</aside>

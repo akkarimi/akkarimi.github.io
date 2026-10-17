@@ -60,50 +60,13 @@ exclude:
   - .sass-cache
   - .jekyll-cache
   - .claude
-  # ── TEMPORARY: remaining old template files, kept out of the build until deleted.
-  - images/3953273590_704e3899d5_m.jpg
-  - images/500x300.png
-  - images/bio-photo.jpg
-  - images/bio-photo-2.jpg
-  - images/editing-talk.png
-  - images/foo-bar-identity.jpg
-  - images/foo-bar-identity-th.jpg
-  - images/homepage.png
-  - images/image-alignment-1200x4002.jpg
-  - images/image-alignment-150x150.jpg
-  - images/image-alignment-300x200.jpg
-  - images/image-alignment-580x300.jpg
-  - images/paragraph-indent.png
-  - images/paragraph-no-indent.png
-  - images/profile.png
-  - images/site-logo.png
-  - images/browserconfig.xml
-  - images/manifest.json
-  - images/safari-pinned-tab.svg
-  - images/mstile-70x70.png
-  - images/mstile-144x144.png
-  - images/mstile-150x150.png
-  - images/mstile-310x150.png
-  - images/mstile-310x310.png
-  - _pages/about.md
-  - _pages/archive-layout-with-content.md
-  - _pages/category-archive.html
-  - _pages/collection-archive.html
-  - _pages/markdown.md
-  - _pages/non-menu-page.md
-  - _pages/page-archive.html
-  - _pages/portfolio.html
-  - _pages/sitemap.md
-  - _pages/tag-archive.html
-  - _pages/talkmap.html
-  - _pages/talks.html
-  - _pages/teaching.html
-  - _pages/terms.md
-  - _pages/year-archive.html
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 defaults:
   - scope: { path: "" }
     values: { layout: page }
+  - scope: { path: "", type: posts }
+    values: { layout: post }

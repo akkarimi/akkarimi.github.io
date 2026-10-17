@@ -1,0 +1,7 @@
+{%- comment -%} Compact one-paper line (title, venue, year). Param: pub. {%- endcomment -%}
+{%- assign p = include.pub -%}
+{%- assign url = p.links.pdf | default: p.links.website -%}
+<span class="mini-pub">
+  <span class="mini-pub__title">{% if url %}<a href="{{ url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>
+  <span class="mini-pub__meta">{% if p.badge %}<span class="badge badge--{{ p.type }}">{{ p.badge }}</span> {% endif %}{{ p.year }}</span>
+</span>
