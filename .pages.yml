@@ -1,0 +1,117 @@
+# Pages CMS (https://pagescms.org) — optional web forms for editing the site.
+# Sign in at https://app.pagescms.org with GitHub and open this repository.
+# Note: saving through the CMS rewrites the YAML file, so the help comments at
+# the top of each _data file may be removed. The content itself is unaffected.
+
+media:
+  input: images
+  output: /images
+
+content:
+  - name: news
+    label: News
+    type: file
+    path: _data/news.yml
+    list: true
+    view:
+      fields: [date, text]
+    fields:
+      - { name: date, label: Date, type: date, required: true, description: "Only month and year are shown" }
+      - { name: text, label: Text, type: text, required: true, description: "Markdown: *italics*, [link](https://…)" }
+      - { name: link, label: Link (optional), type: string }
+      - { name: link_text, label: Link label (optional), type: string }
+
+  - name: publications
+    label: Publications
+    type: file
+    path: _data/publications.yml
+    list: true
+    view:
+      fields: [title, year, badge]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: authors, label: Authors, type: string, required: true, description: "Comma-separated, e.g. K Alavi, L Flek, A Karimi" }
+      - { name: venue, label: Venue, type: string, required: true }
+      - { name: badge, label: Badge, type: string, description: "Short venue tag, e.g. ACL Findings" }
+      - { name: year, label: Year, type: number, required: true }
+      - name: type
+        label: Type
+        type: select
+        required: true
+        options: { values: [journal, conference, findings, workshop, preprint] }
+      - name: topics
+        label: Topics
+        type: select
+        options: { multiple: true, values: [robustness, augmentation, science, dialects, reasoning, multilingual, biomedical, sentiment, vision, mt] }
+      - { name: selected, label: Show on homepage, type: boolean }
+      - { name: summary, label: One-line summary, type: text }
+      - { name: thumbnail, label: Thumbnail, type: image, options: { path: images/papers } , description: "Used for selected papers (~800×500)" }
+      - name: links
+        label: Links
+        type: object
+        fields:
+          - { name: pdf, label: PDF, type: string }
+          - { name: doi, label: DOI (10.xxxx/…), type: string }
+          - { name: arxiv, label: arXiv, type: string }
+          - { name: code, label: Code, type: string }
+          - { name: slides, label: Slides, type: string }
+          - { name: poster, label: Poster, type: string }
+          - { name: video, label: Video, type: string }
+          - { name: website, label: Website, type: string }
+      - { name: abstract, label: Abstract, type: text }
+      - { name: bibtex, label: BibTeX, type: code, options: { language: latex } }
+
+  - name: people
+    label: Students
+    type: file
+    path: _data/people.yml
+    list: true
+    view:
+      fields: [name, level, status]
+    fields:
+      - { name: name, label: Name, type: string, required: true }
+      - { name: author_names, label: Names in author lists, type: string, list: true, description: "e.g. K Alavi — marks them in publications" }
+      - { name: photo, label: Photo, type: image, options: { path: images/people } }
+      - name: level
+        label: Level
+        type: select
+        options: { creatable: true, values: [PhD, MSc, BSc, Intern] }
+      - name: role
+        label: Your role
+        type: select
+        options: { values: [supervisor, co-supervisor] }
+      - { name: topic, label: Topic, type: string }
+      - { name: years, label: Years, type: string, description: "e.g. 2024–2025 or 2025–" }
+      - name: status
+        label: Status
+        type: select
+        required: true
+        options: { values: [current, alumni] }
+      - { name: now, label: Now at (alumni), type: string }
+      - name: links
+        label: Links
+        type: object
+        fields:
+          - { name: website, type: string }
+          - { name: github, type: string }
+          - { name: linkedin, type: string }
+          - { name: scholar, type: string }
+          - { name: thesis, type: string }
+      - { name: placeholder, label: Sample entry, type: boolean, hidden: true }
+
+  - name: courses
+    label: Teaching
+    type: file
+    path: _data/courses.yml
+    list: true
+    view:
+      fields: [title, year, institution]
+    fields:
+      - { name: title, label: Course, type: string, required: true }
+      - { name: institution, label: Institution, type: string, required: true }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: term, label: Term, type: string, description: "e.g. Summer 2025" }
+      - { name: level, label: Level, type: string }
+      - { name: role, label: Role, type: string }
+      - { name: description, label: Description, type: text }
+      - { name: materials, label: Materials link, type: string }

@@ -42,7 +42,9 @@ lead: "I work on making language models reliable outside the lab: under adversar
     <a class="section-link" href="{{ '/publications/' | relative_url }}?topic={{ t.id }}">All {{ related.size }} papers on this theme {% include icon.html name="arrow" %}</a>
   </div>
   <figure class="theme__figure" data-reveal>
-    {%- if t.figure and t.figure != "" %}
+    {%- assign fig_path = "/images/research/" | append: t.figure -%}
+    {%- assign fig_file = site.static_files | where: "path", fig_path | first -%}
+    {%- if t.figure and t.figure != "" and fig_file %}
     <img src="{{ '/images/research/' | append: t.figure | relative_url }}" alt="{{ t.figure_alt | default: t.title }}" loading="lazy" decoding="async">
     {%- else %}
     {% include research-figure.html id=t.id %}

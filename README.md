@@ -1,96 +1,204 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# How to update your site
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+Everything you normally change lives in **`_data/`** — one simple YAML file per kind of content.
+You never need to touch HTML or CSS to add news, papers, students or courses.
 
-# Getting Started
+| To change…                 | Edit                        | Shows up on                       |
+|----------------------------|-----------------------------|-----------------------------------|
+| News                       | `_data/news.yml`            | Home (latest 5), `/news/`         |
+| Publications               | `_data/publications.yml`    | Home (selected), `/publications/`, `/research/` |
+| Students                   | `_data/people.yml`          | `/people/`, student marks in author lists |
+| Courses                    | `_data/courses.yml`         | `/teaching/`, `/cv/`              |
+| Research themes            | `_data/research.yml`        | Home, `/research/`                |
+| Publication topics         | `_data/topics.yml`          | Publication filter, research pages |
+| CV (web version)           | `_data/cv.yml`              | `/cv/` — the PDF is `files/cv.pdf` |
+| Name, links, LinkedIn…     | `_config.yml` (`author:`)   | Header, hero, footer, search engines |
+| Menu                       | `_data/navigation.yml`      | Header                            |
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stoping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
+**Publishing:** commit and push (or edit a file directly on github.com and click *Commit*).
+GitHub rebuilds the preview at <https://akkarimi.github.io> within a minute or two.
+For akkarimi.com, pull and build on your server as usual:
 
 ```bash
-chmod -R 777 .
-docker compose up
+git pull && bundle exec jekyll build      # output goes to _site/
 ```
 
-You should now be able to access the website from `localhost:4000`.
+---
 
-### Using the DevContainer in VS Code
+## YAML in 30 seconds
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+- Each entry starts with `- ` at the left margin; its fields are indented by **two spaces** (never tabs).
+- Put text in `"double quotes"` if it contains a colon `:`, a `#`, or starts with `*`, `[`, `{`, `&`.
+- Long text can use `>-` and continue on the next lines, indented (that's how most entries are written).
+- Leave out any optional field you don't have — it is simply hidden on the site.
+- Order doesn't matter for news; publications are listed in the order you write them within each year (newest first is a good habit).
 
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+If a build fails after an edit, it is almost always indentation or a missing quote — compare with the entry above it.
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## Add a news item
+
+Open `_data/news.yml` and add this anywhere (the site sorts by date):
+
+```yaml
+- date: 2026-11-01
+  text: >-
+    Paper accepted to EMNLP 2026:
+    *Your Paper Title*. [Preprint](https://arxiv.org/abs/xxxx.xxxxx)
+```
+
+- `date` — use `01` as the day if it doesn't matter; only "Nov 2026" is shown.
+- `text` — Markdown: `*italics*`, `**bold**`, `[link text](https://…)`.
+- Optional `link:` (and `link_text:`) adds a "More →" link at the end.
+
+## Add a publication
+
+Open `_data/publications.yml` and paste a new entry at the top:
+
+```yaml
+- title: "Your Paper Title: With a Colon Needs Quotes"
+  authors: "F Student, L Flek, A Karimi"
+  venue: "Findings of ACL 2027"
+  badge: "ACL Findings"
+  year: 2027
+  type: findings          # journal | conference | findings | workshop | preprint
+  topics: [robustness]    # ids from _data/topics.yml
+  selected: false         # true → also on the homepage (keep 4–6 selected)
+  summary: >-
+    One or two sentences in plain language — shown under the title.
+  links:
+    pdf: https://aclanthology.org/2027.findings-acl.1.pdf
+    doi: 10.18653/v1/2027.findings-acl.1
+    code: https://github.com/you/repo
+    slides: /files/slides/your-paper.pdf
+    poster: /files/posters/your-paper.pdf
+  abstract: >-
+    The full abstract (optional) — shown by the "Abstract" button.
+  bibtex: |
+    @inproceedings{student2027your,
+      title = {Your Paper Title},
+      author = {Student, First and Flek, Lucie and Karimi, Akbar},
+      booktitle = {Findings of the Association for Computational Linguistics: ACL 2027},
+      year = {2027}
+    }
+```
+
+Notes:
+
+- **Your name** is bolded automatically wherever it matches `publication_names` in `_config.yml` (currently `A Karimi`).
+- **Student co-authors** are marked automatically if their spelling in `authors` matches an `author_names` entry in `_data/people.yml`.
+- **BibTeX:** copy it from the paper's ACL Anthology page ("Cite → BibTeX"), Google Scholar, or doi.org. Keep the `|` line and indent every BibTeX line by four spaces.
+- **Thumbnail** (only used for selected papers on the homepage): put an image (~800×500, PNG/JPG/WebP) in `images/papers/` and add `thumbnail: "short-name.png"`. Without one, a neat typographic tile is shown.
+- **Slides / posters** can be links, or PDFs you add to `files/` (e.g. `files/slides/…`).
+- **New topic?** Add it to `_data/topics.yml` first (`id` + `label`), then use the id.
+- The Publications page can be linked pre-filtered: `/publications/?topic=science`, `?type=journal`, `?year=2025`, `?q=dialect`.
+
+## Add a new student
+
+Open `_data/people.yml`. **First delete the six sample entries** (the ones with `placeholder: true`). Then add:
+
+```yaml
+- name: "Firstname Lastname"
+  author_names: ["F Lastname"]      # how they appear in publication author lists
+  photo: "firstname-lastname.jpg"   # in images/people/ — square, at least 400×400
+  level: "MSc"                      # PhD | MSc | BSc | Intern
+  role: "co-supervisor"             # or supervisor
+  topic: "Adversarial robustness of LLM agents"
+  years: "2025–"
+  status: current
+  links:
+    github: "https://github.com/…"
+```
+
+No photo yet? Leave `photo: ""` — their initials are shown instead.
+
+## Move a student to alumni
+
+Change one line, and optionally add where they went:
+
+```yaml
+  years: "2025–2026"
+  status: alumni
+  now: "PhD student at TU Munich"
+```
+
+## Add a course
+
+Open `_data/courses.yml` and add:
+
+```yaml
+- title: "Natural Language Processing"
+  institution: "Saarland University"
+  year: 2027
+  term: "Summer 2027"
+  level: "Graduate"
+  role: "Lecturer"
+  description: >-
+    What the course covers, in one or two sentences.
+  materials: "https://…"            # optional link to slides / course page
+```
+
+Courses are grouped by year automatically. The 2022 Marburg *Dialog Systems* entry still has an empty `description` waiting for you.
+
+## Other common edits
+
+- **Add LinkedIn (or change any profile link):** in `_config.yml`, set `author.links.linkedin: "https://www.linkedin.com/in/…"`. Empty links are hidden.
+- **Change the research statement** under your name: `_pages/index.html`, the paragraph marked "Edit freely".
+- **Change research theme text or add a figure:** `_data/research.yml`. For a figure, put the image in `images/research/` and set `figure: "name.png"` (optionally `figure_caption:`).
+- **Update the CV:** replace `files/cv.pdf` (same name), and edit `_data/cv.yml` for the web version.
+- **Write a blog post:** create `_posts/2026-11-01-my-title.md`:
+
+  ```markdown
+  ---
+  title: "My title"
+  description: "One-line teaser shown in the list."
+  ---
+  Your post in Markdown…
+  ```
+
+- **Add a project:** copy the `<article class="card">…</article>` block in `_pages/projects.html`.
+- **Change your photo:** replace `images/ak.jpeg`, then regenerate the small versions (`images/ak-240.*`, `images/ak-480.*`) — or ask for help; the homepage uses those.
+
+## Image conventions
+
+| What              | Folder              | Name                         | Size              |
+|-------------------|---------------------|------------------------------|-------------------|
+| Student photos    | `images/people/`    | `firstname-lastname.jpg`     | square, ≥ 400 px  |
+| Paper thumbnails  | `images/papers/`    | `short-paper-name.png`       | ~800 × 500        |
+| Research figures  | `images/research/`  | `theme-id.png`               | ~1200 px wide     |
+| Social preview    | `images/og.jpg`     | —                            | 1200 × 630        |
+
+Keep images under ~200 KB (export as JPG/WebP; <https://squoosh.app> is handy).
+
+---
+
+## Optional: edit with web forms (Pages CMS)
+
+`.pages.yml` configures [Pages CMS](https://pagescms.org) for news, publications, students and courses.
+Sign in at <https://app.pagescms.org> with GitHub, open this repository, and use the forms; saving commits to GitHub for you.
+(Saving through the CMS may drop the help comments at the top of a `_data` file — the content is unaffected.)
+
+## Preview locally
+
+```bash
+bundle install
+bundle exec jekyll serve      # → http://localhost:4000 (restart after editing _config.yml)
+```
+
+## Changing the look
+
+All colours, fonts, sizes and spacing are CSS custom properties at the top of
+`assets/css/site.css` (section 1 = light theme, section 2 = dark theme — keep the two dark blocks identical).
+For example, to switch the accent from navy to oxblood: set `--accent: #6e1f2a;` and `--accent-line: rgba(110, 31, 42, .28);` (and a lighter shade such as `#e3a1a8` in the dark blocks).
+
+## How it is built
+
+- Jekyll 3.10 (same as GitHub Pages), plugins: `jekyll-sitemap`, `jekyll-redirect-from`.
+- `_layouts/` — `default` (page shell), `page` (inner pages), `post` (blog posts).
+- `_includes/` — header, footer, `pub.html` (one publication), `author-list.html` (bold/student marks), `news-list.html`, icons and illustrations.
+- `_pages/` — one file per page; each is generated from `_data/`.
+- `assets/js/site.js` — menu, dark-mode toggle, BibTeX copy (the site works without JavaScript); `assets/js/publications.js` — search and filters.
+- Fonts (Newsreader, Inter) are self-hosted in `assets/fonts/site/`.
+
+**Server tip:** enable compression in Caddy (`encode zstd gzip` in the site block) — it is the single biggest speed win, especially for the Publications page.

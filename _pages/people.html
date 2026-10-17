@@ -25,7 +25,9 @@ lead: "Students I supervise or have co-supervised, from bachelor's projects to P
   <ul class="people" role="list">
     {%- for m in members %}
     <li class="person" data-reveal>
-      {%- if m.photo and m.photo != "" %}
+      {%- assign photo_path = "/images/people/" | append: m.photo -%}
+      {%- assign photo_file = site.static_files | where: "path", photo_path | first -%}
+      {%- if m.photo and m.photo != "" and photo_file %}
       <img class="person__photo" src="{{ '/images/people/' | append: m.photo | relative_url }}" alt="" width="96" height="96" loading="lazy" decoding="async">
       {%- else %}
       {%- assign parts = m.name | split: " " -%}

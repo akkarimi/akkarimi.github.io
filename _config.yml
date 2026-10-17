@@ -36,7 +36,7 @@ author:
     linkedin: ""   # e.g. "https://www.linkedin.com/in/your-handle/"
 
 # Image shown when the site is shared on social media / chat apps.
-og_image: "/images/ak-480.jpg"
+og_image: "/images/og.jpg"   # 1200×630
 
 # ── Build ─────────────────────────────────────────────────────────────
 markdown: kramdown

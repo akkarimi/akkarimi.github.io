@@ -14,7 +14,9 @@
     data-search="{{ p.title | append: ' ' | append: p.authors | append: ' ' | append: p.venue | append: ' ' | append: p.badge | append: ' ' | append: topic_labels | downcase | escape }}">
   {%- if include.mode == "featured" %}
   <div class="pub__media">
-    {%- if p.thumbnail and p.thumbnail != "" %}
+    {%- assign thumb_path = "/images/papers/" | append: p.thumbnail -%}
+    {%- assign thumb_file = site.static_files | where: "path", thumb_path | first -%}
+    {%- if p.thumbnail and p.thumbnail != "" and thumb_file %}
     <img src="{{ '/images/papers/' | append: p.thumbnail | relative_url }}" alt="" width="320" height="200" loading="lazy" decoding="async">
     {%- else %}
     <div class="pub__tile" aria-hidden="true"><span class="pub__tile-badge">{{ p.badge | default: p.type }}</span><span class="pub__tile-year">{{ p.year }}</span></div>
