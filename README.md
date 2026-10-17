@@ -65,8 +65,6 @@ Open `_data/publications.yml` and paste a new entry at the top:
   type: findings          # journal | conference | findings | workshop | preprint
   topics: [robustness]    # ids from _data/topics.yml
   selected: false         # true → also on the homepage (keep 4–6 selected)
-  summary: >-
-    One or two sentences in plain language (not shown on the site; used by search engines).
   links:
     pdf: https://aclanthology.org/2027.findings-acl.1.pdf
     doi: 10.18653/v1/2027.findings-acl.1   # not shown as a button; used by search engines

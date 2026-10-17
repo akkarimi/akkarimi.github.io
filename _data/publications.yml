@@ -2,7 +2,7 @@
 #  PUBLICATIONS — one entry per paper, newest first.
 #
 #  Required:  title, authors, venue, year, type
-#  Optional:  badge, topics, selected, summary, links, abstract, bibtex
+#  Optional:  badge, topics, selected, links, abstract, bibtex
 #
 #  authors    "First Last, First Last" exactly as you want them shown.
 #             Your name (see author.publication_names in _config.yml) is bolded;
@@ -11,7 +11,6 @@
 #  badge      short venue label, e.g. "ACL Findings" (not shown; makes search find it)
 #  topics     ids from _data/topics.yml, e.g. [robustness, augmentation]
 #  selected   true → also shown on the homepage (keep 4–6 selected)
-#  summary    optional one-liner (not shown on the site; used by search engines)
 #  links      any of: pdf, code, slides, poster, video, website, arxiv → shown as buttons.
 #             doi (just the 10.xxxx/… part) is not a button; it is used for search engines.
 #             Leave out what you don't have.
@@ -26,11 +25,6 @@
   type: findings
   topics: [robustness]
   selected: true
-  summary: >-
-    We evaluate multi-agent sampling-and-voting on adversarially perturbed math
-    questions across six open-source models and four benchmarks, finding that more
-    agents reliably improve accuracy while the robustness gap to noise, especially
-    human-like typos, persists regardless of agent count.
   links:
     pdf: https://aclanthology.org/2026.findings-acl.2158.pdf
     doi: 10.18653/v1/2026.findings-acl.2158
@@ -72,11 +66,6 @@
   type: journal
   topics: [science, robustness]
   selected: true
-  summary: >-
-    We present MiniFool, a physics-inspired adversarial attack that minimizes a χ²-based
-    test statistic combined with a target-score deviation, testing the robustness of
-    neural network classifiers on IceCube, CMS, and MNIST data, including unlabeled
-    experimental data.
   links:
     pdf: https://link.springer.com/content/pdf/10.1140/epjc/s10052-026-15773-2.pdf
     doi: 10.1140/epjc/s10052-026-15773-2
@@ -120,11 +109,6 @@
   type: workshop
   topics: [dialects]
   selected: false
-  summary: >-
-    We explore whether LLM agents can classify Swiss German dialects from ASR-generated
-    phonetic transcriptions combined with linguistic resources such as dialect feature
-    maps, vowel history, and rules, comparing them against HuBERT, an LLM baseline, and
-    a human linguist.
   links:
     pdf: https://aclanthology.org/2026.dialres-1.8.pdf
     doi: 10.63317/27m2tbgjcat8
@@ -162,11 +146,6 @@
   type: workshop
   topics: [dialects, augmentation]
   selected: false
-  summary: >-
-    In perception experiments on nine German dialect regions, we show that voice
-    conversion to a single target speaker leaves human dialect recognition unchanged
-    while significantly improving a deep learning model, revealing a divergence between
-    human and machine speech processing.
   links:
     pdf: https://aclanthology.org/2026.dialres-1.18.pdf
     doi: 10.63317/3sqk7nxsikhp
@@ -212,11 +191,6 @@
   type: journal
   topics: [science, robustness]
   selected: false
-  summary: >-
-    We propose CONSERVAttack, an adversarial attack whose perturbations stay within
-    simulation-versus-data uncertainty bounds, evading standard validation checks in
-    high energy physics while fooling the model, and discuss strategies to mitigate such
-    vulnerabilities.
   links:
     pdf: https://link.springer.com/content/pdf/10.1140/epjc/s10052-026-16351-2.pdf
     doi: 10.1140/epjc/s10052-026-16351-2
@@ -264,10 +238,6 @@
   type: workshop
   topics: [augmentation, sentiment]
   selected: false
-  summary: >-
-    We propose an agentic data augmentation method for Aspect-Based Sentiment Analysis
-    (ABSA) that uses iterative generation and verification to produce high-quality
-    synthetic training examples.
   links:
     pdf: https://aclanthology.org/2026.wassa-1.17.pdf
     doi: 10.18653/v1/2026.wassa-1.17
@@ -308,11 +278,6 @@
   type: workshop
   topics: [science]
   selected: false
-  summary: >-
-    We build a multi-task SciBERT system for classifying telescope references, semantic
-    attributes, and instrument mentions in astronomy papers, using stochastic segment
-    sampling and majority voting, which significantly outperforms an open-weight GPT
-    baseline.
   links:
     pdf: https://aclanthology.org/2025.wasp-main.22.pdf
     doi: 10.18653/v1/2025.wasp-main.22
@@ -350,10 +315,6 @@
   type: journal
   topics: [science, robustness]
   selected: false
-  summary: >-
-    We present the Random Distribution Shuffle Attack (RDSA), which targets correlations
-    between observables rather than individual features, and show that adversarial
-    training with it improves classification on particle physics and five other tasks.
   links:
     pdf: https://link.springer.com/content/pdf/10.1007/s41781-025-00148-1.pdf
     doi: 10.1007/s41781-025-00148-1
@@ -398,10 +359,6 @@
   type: conference
   topics: [science, robustness]
   selected: false
-  summary: >-
-    We describe the Colliding with Adversaries challenge, with tasks on generating
-    adversarial examples against a jet-classification model and on building models
-    robust to unseen attacks, using simulated CMS collision data.
   links:
     pdf: https://link.springer.com/chapter/10.1007/978-3-032-19108-3_36
     doi: 10.1007/978-3-032-19108-3_36
@@ -436,10 +393,6 @@
   type: conference
   topics: [augmentation, dialects]
   selected: false
-  summary: >-
-    We evaluate lightweight audio augmentation techniques on recordings from 20 German
-    dialects, finding that frequency-based methods, especially frequency masking,
-    consistently help while time masking or speaker-based insertion can hurt.
   links:
     pdf: https://aclanthology.org/2025.ranlp-1.44.pdf
   abstract: >-
@@ -475,11 +428,6 @@
   type: conference
   topics: [dialects, augmentation]
   selected: true
-  summary: >-
-    We use Retrieval-based Voice Conversion to map recordings to a single target
-    speaker, reducing speaker variability so models focus on dialectal features,
-    improving low-resource German dialect classification alone and combined with other
-    augmentations.
   links:
     pdf: https://www.isca-archive.org/interspeech_2025/fischbach25_interspeech.pdf
     doi: 10.21437/interspeech.2025-1017
@@ -515,10 +463,6 @@
   type: findings
   topics: [reasoning]
   selected: false
-  summary: >-
-    Through a simple integration of hyperbolic representations with an encoder-decoder
-    model, we perform a controlled and comprehensive set of experiments to compare the
-    capacity of hyperbolic space versus Euclidean space in multi-hop reasoning.
   links:
     pdf: https://aclanthology.org/2025.findings-acl.908.pdf
     doi: 10.18653/v1/2025.findings-acl.908
@@ -557,11 +501,6 @@
   type: findings
   topics: [reasoning]
   selected: false
-  summary: >-
-    We introduce HaluMap, a training-free, model-agnostic framework that detects
-    hallucinations by mapping NLI entailment and contradiction relations between inputs
-    and outputs, outperforming other training-free NLI-based methods by five points with
-    interpretable explanations.
   links:
     pdf: https://aclanthology.org/2025.findings-acl.96.pdf
     doi: 10.18653/v1/2025.findings-acl.96
@@ -600,10 +539,6 @@
   type: workshop
   topics: [robustness]
   selected: true
-  summary: >-
-    We propose ArithmAttack to examine how robust LLMs are when they encounter noisy
-    prompts containing extra punctuation marks — an attack that causes no information
-    loss yet consistently degrades performance across eight models.
   links:
     pdf: https://aclanthology.org/2025.llmsec-1.5.pdf
     code: https://github.com/caisa-lab/ArithmAttack
@@ -638,11 +573,6 @@
   type: workshop
   topics: [robustness, multilingual]
   selected: false
-  summary: >-
-    We study how real-world spelling mistakes from Wikipedia edit history affect 9
-    multilingual language models across NLI, NER, and intent classification in 6
-    languages, finding a 2.3 to 4.3 point performance gap, with mT5 models the most
-    robust.
   links:
     pdf: https://arxiv.org/pdf/2501.08322
   abstract: >-
@@ -678,11 +608,6 @@
   type: workshop
   topics: [multilingual]
   selected: false
-  summary: >-
-    We investigate the effect of multilingual training on bias mitigation by
-    systematically training six LLMs of identical size (2.6B parameters): five
-    monolingual and one multilingual model, showing that multilingual training
-    consistently reduces bias while improving prediction accuracy.
   links:
     pdf: https://aclanthology.org/2024.c3nlp-1.6.pdf
     doi: 10.18653/v1/2024.c3nlp-1.6
@@ -723,10 +648,6 @@
   type: workshop
   topics: [augmentation, biomedical]
   selected: false
-  summary: >-
-    We introduce a counterfactual data augmentation method based on verb replacement for
-    identifying medical claims, yielding significant relative improvement on the
-    minority class compared to three other augmentation techniques.
   links:
     pdf: https://aclanthology.org/2023.semeval-1.292.pdf
     doi: 10.18653/v1/2023.semeval-1.292
@@ -761,10 +682,6 @@
   type: workshop
   topics: [robustness, biomedical, multilingual]
   selected: false
-  summary: >-
-    We apply adversarial data augmentation in the input and embedding spaces to BioBERT
-    for detecting disease mentions in Spanish tweets, outperforming a vocabulary-based
-    baseline, with augmentation especially helpful in low-data settings.
   links:
     pdf: https://aclanthology.org/2022.smm4h-1.45.pdf
     code: https://github.com/caisa-lab/caisa-smm4h22
@@ -799,10 +716,6 @@
   type: journal
   topics: [vision]
   selected: false
-  summary: >-
-    We propose SBR-CNN, an evolution of HTC with loop mechanisms for box and mask
-    refinement and an improved GRoIE, addressing IoU and feature-level imbalances and
-    reaching 45.3% / 41.5% AP on COCO with a ResNet-50 backbone.
   links:
     pdf: https://arxiv.org/pdf/2404.16633
     doi: 10.1016/j.jvcir.2022.103595
@@ -845,10 +758,6 @@
   type: conference
   topics: [sentiment]
   selected: false
-  summary: >-
-    We present a multimodal dataset of 4,900 comments on 175 Instagram images annotated
-    for aspect-based emotion analysis, and find that aspect and emotion classification
-    benefit little from multimodal coreference resolution.
   links:
     pdf: https://aclanthology.org/2022.lrec-1.61.pdf
   abstract: >-
@@ -886,10 +795,6 @@
   type: conference
   topics: [vision]
   selected: false
-  summary: >-
-    We add a bounding box localization classification task to the Mean Teacher framework
-    to better filter pseudo-labels, and show that box regression on unlabeled data helps
-    as much as classification, improving SSOD on COCO by 1.14% AP.
   links:
     pdf: https://arxiv.org/pdf/2206.10186
     doi: 10.1007/978-3-031-06430-2_43
@@ -929,10 +834,6 @@
   type: conference
   topics: [sentiment]
   selected: false
-  summary: >-
-    We propose two simple modules, Parallel Aggregation and Hierarchical Aggregation, on
-    top of BERT for Aspect Extraction and Aspect Sentiment Classification, improving
-    performance without further training of the BERT model.
   links:
     pdf: https://aclanthology.org/2021.icnlsp-1.5.pdf
   abstract: >-
@@ -963,9 +864,6 @@
   type: findings
   topics: [augmentation]
   selected: true
-  summary: >-
-    AEDA inserts punctuation marks randomly into text — simpler than EDA, lossless, and
-    consistently superior across five classification datasets.
   links:
     pdf: https://aclanthology.org/2021.findings-emnlp.234.pdf
     doi: 10.18653/v1/2021.findings-emnlp.234
@@ -1005,10 +903,6 @@
   type: conference
   topics: [vision]
   selected: false
-  summary: >-
-    We propose R³-CNN, which replaces cascade architectures with a loop mechanism and
-    recursive IoU-based re-sampling, surpassing the HTC model on COCO while
-    significantly reducing the number of parameters.
   links:
     pdf: https://arxiv.org/pdf/2104.01329
     doi: 10.1007/978-3-030-89128-2_46
@@ -1047,10 +941,6 @@
   type: workshop
   topics: [sentiment]
   selected: false
-  summary: >-
-    We detect toxic spans by combining CharacterBERT, which handles misspelled toxic
-    words through character-level embeddings, with a bag-of-words method that ensures
-    frequently used toxic words are labeled.
   links:
     pdf: https://aclanthology.org/2021.semeval-1.25.pdf
     doi: 10.18653/v1/2021.semeval-1.25
@@ -1090,10 +980,6 @@
   type: conference
   topics: [vision]
   selected: false
-  summary: >-
-    We propose GRoIE, a Generic RoI Extractor that uses all FPN layers with non-local
-    blocks and attention, integrating seamlessly into two-stage architectures and
-    improving detection by up to 1.1% AP and instance segmentation by 1.7% AP.
   links:
     pdf: https://arxiv.org/pdf/2004.13665
     doi: 10.1109/icpr48806.2021.9412258
@@ -1138,11 +1024,6 @@
   type: conference
   topics: [robustness, sentiment]
   selected: true
-  summary: >-
-    We propose BERT Adversarial Training (BAT), a novel architecture that applies
-    adversarial training to Aspect Extraction and Aspect Sentiment Classification,
-    outperforming both general and domain post-trained BERT — the first study of its
-    kind in ABSA.
   links:
     pdf: https://arxiv.org/pdf/2001.11316
     doi: 10.1109/icpr48806.2021.9412167
@@ -1183,10 +1064,6 @@
   type: conference
   topics: [mt]
   selected: false
-  summary: >-
-    We propose a bidirectional method to extract parallel sentences from
-    document-aligned English and Persian Wikipedia, producing a corpus of about 200,000
-    sentences that improves statistical machine translation quality.
   links:
     pdf: https://aclanthology.org/L18-1549.pdf
   abstract: >-

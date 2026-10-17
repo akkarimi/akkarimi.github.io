@@ -44,7 +44,6 @@ content:
         type: select
         options: { multiple: true, values: [robustness, augmentation, science, dialects, reasoning, multilingual, biomedical, sentiment, vision, mt] }
       - { name: selected, label: Show on homepage, type: boolean }
-      - { name: summary, label: One-line summary, type: text }
       - name: links
         label: Links
         type: object
