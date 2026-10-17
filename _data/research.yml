@@ -4,7 +4,7 @@
 #  id        a topic id from topics.yml; related papers are pulled in
 #            automatically from publications.yml
 #  figure    optional image in /images/research/ (e.g. "robustness.png"), shown under the title
-#  key_papers  optional list of paper titles to list first on /research/
+#  key_papers  optional list of paper titles shown on /research/ (sorted newest first automatically)
 # ─────────────────────────────────────────────────────────────────────
 
 - id: robustness
