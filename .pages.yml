@@ -32,7 +32,7 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: authors, label: Authors, type: string, required: true, description: "Comma-separated, e.g. K Alavi, L Flek, A Karimi" }
       - { name: venue, label: Venue, type: string, required: true }
-      - { name: badge, label: Badge, type: string, description: "Short venue tag, e.g. ACL Findings" }
+      - { name: badge, label: Short venue (optional), type: string, description: "e.g. ACL Findings — helps search" }
       - { name: year, label: Year, type: number, required: true }
       - name: type
         label: Type
@@ -45,7 +45,6 @@ content:
         options: { multiple: true, values: [robustness, augmentation, science, dialects, reasoning, multilingual, biomedical, sentiment, vision, mt] }
       - { name: selected, label: Show on homepage, type: boolean }
       - { name: summary, label: One-line summary, type: text }
-      - { name: thumbnail, label: Thumbnail, type: image, options: { path: images/papers } , description: "Used for selected papers (~800×500)" }
       - name: links
         label: Links
         type: object

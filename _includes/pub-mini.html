@@ -1,7 +1,7 @@
-{%- comment -%} Compact one-paper line (title, venue, year). Param: pub. {%- endcomment -%}
+{%- comment -%} One compact line: year · linked title · venue. Param: pub. Used on the homepage and Research page. {%- endcomment -%}
 {%- assign p = include.pub -%}
-{%- assign url = p.links.pdf | default: p.links.website -%}
-<span class="mini-pub">
-  <span class="mini-pub__title">{% if url %}<a href="{{ url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>
-  <span class="mini-pub__meta">{% if p.badge %}<span class="badge badge--{{ p.type }}">{{ p.badge }}</span> {% endif %}{{ p.year }}</span>
-</span>
+{%- assign url = p.links.pdf | default: p.links.website | default: p.links.arxiv -%}
+<li class="dated__item">
+  <span class="dated__date">{{ p.year }}</span>
+  <span>{% if url %}<a class="paper-link" href="{{ url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. <em class="muted">{{ p.venue }}</em></span>
+</li>

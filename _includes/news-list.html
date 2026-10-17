@@ -1,14 +1,11 @@
-{%- comment -%} News items, newest first. Param: limit (optional). {%- endcomment -%}
+{%- comment -%} News items, newest first, as a dated list. Param: limit (optional). {%- endcomment -%}
 {%- assign items = site.data.news | sort: "date" | reverse -%}
 {%- assign limit = include.limit | default: items.size -%}
-<ol class="news" role="list">
+<ol class="dated" role="list">
   {%- for n in items limit: limit %}
-  <li class="news__item">
-    <time class="news__date" datetime="{{ n.date | date: '%Y-%m' }}">{{ n.date | date: "%b %Y" }}</time>
-    <div class="news__text">
-      {{ n.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}
-      {%- if n.link %} <a class="more-link" href="{{ n.link }}">{{ n.link_text | default: "More" }}&nbsp;→</a>{% endif %}
-    </div>
+  <li class="dated__item">
+    <time class="dated__date" datetime="{{ n.date | date: '%Y-%m' }}">{{ n.date | date: "%Y %b" }}</time>
+    <span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if n.link %} <a class="small-link" href="{{ n.link }}">({{ n.link_text | default: "more" }})</a>{% endif %}</span>
   </li>
   {%- endfor %}
 </ol>

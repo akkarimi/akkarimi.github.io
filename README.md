@@ -60,7 +60,7 @@ Open `_data/publications.yml` and paste a new entry at the top:
 - title: "Your Paper Title: With a Colon Needs Quotes"
   authors: "F Student, L Flek, A Karimi"
   venue: "Findings of ACL 2027"
-  badge: "ACL Findings"
+  badge: "ACL Findings"   # optional; helps search
   year: 2027
   type: findings          # journal | conference | findings | workshop | preprint
   topics: [robustness]    # ids from _data/topics.yml
@@ -89,7 +89,6 @@ Notes:
 - **Your name** is bolded automatically wherever it matches `publication_names` in `_config.yml` (currently `A Karimi`).
 - **Student co-authors** are marked automatically if their spelling in `authors` matches an `author_names` entry in `_data/people.yml`.
 - **BibTeX:** copy it from the paper's ACL Anthology page ("Cite → BibTeX"), Google Scholar, or doi.org. Keep the `|` line and indent every BibTeX line by four spaces.
-- **Thumbnail** (only used for selected papers on the homepage): put an image (~800×500, PNG/JPG/WebP) in `images/papers/` and add `thumbnail: "short-name.png"`. Without one, a neat typographic tile is shown.
 - **Slides / posters** can be links, or PDFs you add to `files/` (e.g. `files/slides/…`).
 - **New topic?** Add it to `_data/topics.yml` first (`id` + `label`), then use the id.
 - The Publications page can be linked pre-filtered: `/publications/?topic=science`, `?type=journal`, `?year=2025`, `?q=dialect`.
@@ -111,7 +110,7 @@ Open `_data/people.yml`. **First delete the six sample entries** (the ones with 
     github: "https://github.com/…"
 ```
 
-No photo yet? Leave `photo: ""` — their initials are shown instead.
+No photo yet? Leave `photo: ""` — the entry is simply shown without one.
 
 ## Move a student to alumni
 
@@ -165,7 +164,6 @@ Courses are grouped by year automatically. The 2022 Marburg *Dialog Systems* ent
 | What              | Folder              | Name                         | Size              |
 |-------------------|---------------------|------------------------------|-------------------|
 | Student photos    | `images/people/`    | `firstname-lastname.jpg`     | square, ≥ 400 px  |
-| Paper thumbnails  | `images/papers/`    | `short-paper-name.png`       | ~800 × 500        |
 | Research figures  | `images/research/`  | `theme-id.png`               | ~1200 px wide     |
 | Social preview    | `images/og.jpg`     | —                            | 1200 × 630        |
 
@@ -188,24 +186,21 @@ bundle exec jekyll serve      # → http://localhost:4000 (restart after editing
 
 ## Changing the look
 
-All colours, fonts, sizes and spacing are CSS custom properties at the top of
-`assets/css/site.css` (section 1 = light theme, section 2 = dark theme — keep the two dark blocks identical).
+The design is deliberately minimal: one serif typeface (EB Garamond), a light grey page and a
+single reading column. All colours, sizes and widths are CSS custom properties at the top of
+`assets/css/site.css` (section 1 = light theme, section 2 = dark theme — keep the two dark blocks identical):
 
-- `--accent` (deep teal) is used for links and highlights; `--accent-2` (terracotta) for small touches
-  like the bars above headings and the hero eyebrow.
-- Each research theme has a colour, set with `color:` in `_data/research.yml`
-  (`teal`, `amber`, `plum`, `green` or `indigo`); it is used on its card and on the Research page.
-- Venue badges are coloured by publication type (journal = plum, conference = teal,
-  findings = indigo, workshop = amber).
-- `--footer-bg` sets the dark footer band; `--band` the tinted Research section on the homepage.
+- `--bg` page background, `--ink` text, `--muted` dates and summaries
+- `--title` paper titles (midnight blue), `--link` links in running text, `--small-link` the "(pdf) (code) …" links
+- `--col` width of the reading column, `--side` width of the photo column
 
 ## How it is built
 
 - Jekyll 3.10 (same as GitHub Pages), plugins: `jekyll-sitemap`, `jekyll-redirect-from`.
 - `_layouts/` — `default` (page shell), `page` (inner pages), `post` (blog posts).
-- `_includes/` — header, footer, `pub.html` (one publication), `author-list.html` (bold/student marks), `news-list.html`, icons and illustrations.
+- `_includes/` — header, footer, `pub.html` (one publication on /publications/), `pub-mini.html` (one-line paper used on Home and Research), `author-list.html` (bold/student marks), `news-list.html`, icons.
 - `_pages/` — one file per page; each is generated from `_data/`.
 - `assets/js/site.js` — menu, dark-mode toggle, BibTeX copy (the site works without JavaScript); `assets/js/publications.js` — search and filters.
-- Fonts (Newsreader, Inter) are self-hosted in `assets/fonts/site/`.
+- The font (EB Garamond) is self-hosted in `assets/fonts/site/`.
 
 **Server tip:** enable compression in Caddy (`encode zstd gzip` in the site block) — it is the single biggest speed win, especially for the Publications page.

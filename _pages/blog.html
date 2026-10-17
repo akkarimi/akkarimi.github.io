@@ -5,17 +5,14 @@ description: "Writing by Akbar Karimi."
 ---
 {%- comment -%} Lists Markdown posts from _posts/ (file name: YYYY-MM-DD-title.md). {%- endcomment -%}
 {%- if site.posts.size > 0 %}
-<ol class="post-list" role="list">
+<ol class="dated" role="list">
   {%- for post in site.posts %}
-  <li class="post-list__item">
-    <time class="news__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-    <div>
-      <h2 class="post-list__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      {%- if post.description %}<p class="post-list__desc">{{ post.description }}</p>{% endif %}
-    </div>
+  <li class="dated__item">
+    <time class="dated__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y %b" }}</time>
+    <span><a class="paper-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}. <span class="muted">{{ post.description }}</span>{% endif %}</span>
   </li>
   {%- endfor %}
 </ol>
 {%- else %}
-<p class="page-intro">Coming soon.</p>
+<p class="muted">Coming soon.</p>
 {%- endif %}

@@ -4,37 +4,23 @@ permalink: /cv/
 redirect_from: [/resume/]
 description: "Curriculum vitae of Akbar Karimi: postdoctoral researcher at Saarland University; previously University of Bonn and University of Marburg; PhD, University of Parma."
 ---
-{%- comment -%} Generated from _data/cv.yml plus counts from the other data files. {%- endcomment -%}
+{%- comment -%} Generated from _data/cv.yml. {%- endcomment -%}
 {%- assign cv = site.data.cv -%}
-<div class="cv-actions">
-  <a class="button" href="{{ cv.pdf | relative_url }}">{% include icon.html name="download" %} Download full CV (PDF)</a>
-</div>
+<p class="page-lead"><a href="{{ cv.pdf | relative_url }}">Download full CV (PDF)</a></p>
 
 {%- assign blocks = "experience|Experience,education|Education" | split: "," -%}
 {%- for b in blocks %}
 {%- assign key = b | split: "|" | first -%}
-<section class="section-grid cv-block" aria-labelledby="cv-{{ key }}">
-  <h2 class="section-label" id="cv-{{ key }}">{{ b | split: "|" | last }}</h2>
-  <ol class="cv-list" role="list">
+<section class="cv-block" aria-labelledby="cv-{{ key }}">
+  <h2 class="section-title" id="cv-{{ key }}">{{ b | split: "|" | last }}</h2>
+  <ol class="pubs" role="list">
     {%- for e in cv[key] %}
-    <li class="cv-item">
-      <p class="cv-item__dates">{{ e.dates }}</p>
-      <div>
-        <h3 class="cv-item__title">{{ e.title }}</h3>
-        <p class="cv-item__org">{{ e.org }}</p>
-        {%- if e.details %}<div class="cv-item__details">{{ e.details | markdownify }}</div>{% endif %}
-      </div>
+    <li>
+      <p class="cv-item__title">{{ e.title }}</p>
+      <p class="muted"><em>{{ e.org }}</em>, {{ e.dates }}</p>
+      {%- if e.details %}<div class="cv-item__details">{{ e.details | markdownify }}</div>{% endif %}
     </li>
     {%- endfor %}
   </ol>
 </section>
 {%- endfor %}
-
-<section class="section-grid cv-block" aria-labelledby="cv-more">
-  <h2 class="section-label" id="cv-more">At a glance</h2>
-  <ul class="cv-glance" role="list">
-    <li><a href="{{ '/publications/' | relative_url }}"><strong>{{ site.data.publications.size }}</strong> publications</a></li>
-    <li><a href="{{ '/teaching/' | relative_url }}"><strong>{{ site.data.courses.size }}</strong> courses taught</a></li>
-    <li><a href="{{ '/research/' | relative_url }}"><strong>{{ site.data.research.size }}</strong> research themes</a></li>
-  </ul>
-</section>

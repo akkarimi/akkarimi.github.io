@@ -31,8 +31,8 @@
 <meta name="twitter:image" content="{{ og_image }}">
 
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#fbf9f5" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#161411" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f4f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
 <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
@@ -40,8 +40,7 @@
 {%- comment -%} Runs before first paint: marks JS as available and applies a saved theme, so there is no flash. {%- endcomment %}
 <script>(function(d){d.className=d.className.replace('no-js','js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement);</script>
 
-<link rel="preload" href="{{ '/assets/fonts/site/newsreader-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ '/assets/fonts/site/inter-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/site/ebgaramond-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {%- for script in page.scripts %}

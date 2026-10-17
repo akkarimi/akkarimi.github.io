@@ -3,24 +3,5 @@ title: "News"
 permalink: /news/
 description: "News from Akbar Karimi: papers, talks, conferences and positions."
 ---
-{%- comment -%} Generated from _data/news.yml, newest first, grouped by year. {%- endcomment -%}
-{%- assign items = site.data.news | sort: "date" | reverse -%}
-{%- assign by_year = items | group_by_exp: "n", "n.date | date: '%Y'" -%}
-<div class="timeline">
-  {%- for g in by_year %}
-  <section class="timeline__group" aria-labelledby="n{{ g.name }}">
-    <h2 class="timeline__label" id="n{{ g.name }}">{{ g.name }}</h2>
-    <ol class="news" role="list">
-      {%- for n in g.items %}
-      <li class="news__item">
-        <time class="news__date" datetime="{{ n.date | date: '%Y-%m' }}">{{ n.date | date: "%b" }}</time>
-        <div class="news__text">
-          {{ n.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}
-          {%- if n.link %} <a class="more-link" href="{{ n.link }}">{{ n.link_text | default: "More" }}&nbsp;→</a>{% endif %}
-        </div>
-      </li>
-      {%- endfor %}
-    </ol>
-  </section>
-  {%- endfor %}
-</div>
+{%- comment -%} Generated from _data/news.yml, newest first. {%- endcomment -%}
+{% include news-list.html %}

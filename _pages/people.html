@@ -14,37 +14,27 @@ lead: "Students I supervise or have co-supervised, from bachelor's projects to P
 {%- assign groups = "current|Current students,alumni|Alumni" | split: "," -%}
 {%- for g in groups %}
 {%- assign key = g | split: "|" | first -%}
-{%- assign label = g | split: "|" | last -%}
 {%- assign members = people | where: "status", key -%}
 {%- if members.size > 0 %}
-<section class="people-group" aria-labelledby="g-{{ key }}">
-  <div class="section-head">
-    <h2 class="section-title" id="g-{{ key }}">{{ label }}</h2>
-    <span class="section-count">{{ members.size }}</span>
-  </div>
+<section class="section" aria-labelledby="g-{{ key }}">
+  <h2 class="section-title" id="g-{{ key }}">{{ g | split: "|" | last }}</h2>
   <ul class="people" role="list">
     {%- for m in members %}
-    <li class="person" data-reveal>
-      {%- assign photo_path = "/images/people/" | append: m.photo -%}
-      {%- assign photo_file = site.static_files | where: "path", photo_path | first -%}
-      {%- if m.photo and m.photo != "" and photo_file %}
-      <img class="person__photo" src="{{ '/images/people/' | append: m.photo | relative_url }}" alt="" width="96" height="96" loading="lazy" decoding="async">
-      {%- else %}
-      {%- assign parts = m.name | split: " " -%}
-      <span class="person__photo person__photo--initials" aria-hidden="true">{{ parts.first | slice: 0 }}{% if parts.size > 1 %}{{ parts.last | slice: 0 }}{% endif %}</span>
+    {%- assign photo_path = "/images/people/" | append: m.photo -%}
+    {%- assign photo_file = site.static_files | where: "path", photo_path | first -%}
+    {%- assign has_photo = false -%}{%- if m.photo and m.photo != "" and photo_file -%}{%- assign has_photo = true -%}{%- endif %}
+    <li class="person{% unless has_photo %} person--no-photo{% endunless %}">
+      {%- if has_photo %}
+      <img class="person__photo" src="{{ photo_path | relative_url }}" alt="" width="56" height="56" loading="lazy" decoding="async">
       {%- endif %}
-      <div class="person__body">
+      <div>
         <h3 class="person__name">{{ m.name }}</h3>
-        <p class="person__meta">
-          <span class="badge">{{ m.level }}</span>
-          {%- if m.years %} <span>{{ m.years }}</span>{% endif -%}
-          {%- if m.role and m.role != "" %} <span aria-hidden="true">·</span> <span>{{ m.role | capitalize }}</span>{% endif %}
-        </p>
+        <p class="person__meta">{{ m.level }}{% if m.years %}, {{ m.years }}{% endif %}{% if m.role and m.role != "" %} · {{ m.role }}{% endif %}</p>
         {%- if m.topic %}<p class="person__topic">{{ m.topic }}</p>{% endif %}
-        {%- if m.now and m.now != "" %}<p class="person__now"><span>Now:</span> {{ m.now }}</p>{% endif %}
+        {%- if m.now and m.now != "" %}<p class="person__now">Now: {{ m.now }}</p>{% endif %}
         {%- if m.links %}
         <p class="person__links">
-          {%- for l in m.links %}{% if l[1] and l[1] != "" %}<a href="{{ l[1] }}">{{ l[0] | capitalize | replace: "Github", "GitHub" | replace: "Linkedin", "LinkedIn" }}</a>{% endif %}{% endfor -%}
+          {%- for l in m.links %}{% if l[1] and l[1] != "" %}<a class="small-link" href="{{ l[1] }}">({{ l[0] }})</a>{% endif %}{% endfor -%}
         </p>
         {%- endif %}
       </div>
@@ -55,8 +45,7 @@ lead: "Students I supervise or have co-supervised, from bachelor's projects to P
 {%- endif %}
 {%- endfor %}
 
-<aside class="callout" aria-labelledby="join-title">
-  <h2 id="join-title" class="callout__title">Prospective students</h2>
-  <p>If you are interested in a thesis on LLM robustness, data augmentation or AI for drug discovery, send me an email with your CV and a few lines about what you would like to work on.</p>
-  <p><a class="section-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} {% include icon.html name="arrow" %}</a></p>
-</aside>
+<section class="section" aria-labelledby="join-title">
+  <h2 class="section-title" id="join-title">Prospective students</h2>
+  <p>If you are interested in a thesis on LLM robustness, data augmentation or AI for drug discovery, <a href="mailto:{{ site.author.email }}">email me</a> with your CV and a few lines about what you would like to work on.</p>
+</section>

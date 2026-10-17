@@ -6,50 +6,34 @@ lead: "I work on making language models reliable outside the lab: under adversar
 ---
 {%- comment -%} Generated from _data/research.yml (themes) and _data/publications.yml (papers). {%- endcomment -%}
 {%- assign pubs = site.data.publications -%}
-
-<nav class="theme-index" aria-label="Research themes">
-  <ol role="list">
-    {%- for t in site.data.research %}
-    <li class="tone-{{ t.color | default: 'teal' }}"><a href="#{{ t.id }}"><span aria-hidden="true">{{ forloop.index | prepend: "0" }}</span> {{ t.title }}</a></li>
-    {%- endfor %}
-  </ol>
-</nav>
-
 {%- for t in site.data.research %}
 {%- assign related = "" | split: "" -%}
 {%- for p in pubs -%}{%- if p.topics contains t.id -%}{%- assign related = related | push: p -%}{%- endif -%}{%- endfor %}
-<section class="theme tone-{{ t.color | default: 'teal' }}" id="{{ t.id }}" aria-labelledby="{{ t.id }}-title">
-  <div class="theme__text">
-    <p class="theme__num" aria-hidden="true">{{ forloop.index | prepend: "0" }}</p>
-    <h2 class="theme__title" id="{{ t.id }}-title">{{ t.title }}</h2>
-    <p class="theme__desc">{{ t.description }}</p>
-
-    <h3 class="theme__sub">Key papers</h3>
-    <ul class="mini-pubs" role="list">
-      {%- assign shown = 0 -%}
-      {%- for title in t.key_papers -%}
-        {%- assign p = pubs | where: "title", title | first -%}
-        {%- if p %}{% assign shown = shown | plus: 1 %}
-      <li>{% include pub-mini.html pub=p %}</li>
-        {%- endif -%}
-      {%- endfor -%}
-      {%- if shown == 0 -%}
-        {%- for p in related limit: 3 %}
-      <li>{% include pub-mini.html pub=p %}</li>
-        {%- endfor -%}
-      {%- endif %}
-    </ul>
-    <a class="section-link" href="{{ '/publications/' | relative_url }}?topic={{ t.id }}">All {{ related.size }} papers on this theme {% include icon.html name="arrow" %}</a>
-  </div>
-  <figure class="theme__figure" data-reveal>
-    {%- assign fig_path = "/images/research/" | append: t.figure -%}
-    {%- assign fig_file = site.static_files | where: "path", fig_path | first -%}
-    {%- if t.figure and t.figure != "" and fig_file %}
-    <img src="{{ '/images/research/' | append: t.figure | relative_url }}" alt="{{ t.figure_alt | default: t.title }}" loading="lazy" decoding="async">
-    {%- else %}
-    {% include research-figure.html id=t.id %}
-    {%- endif %}
-    {%- if t.figure_caption %}<figcaption>{{ t.figure_caption }}</figcaption>{% endif %}
+<section class="theme" id="{{ t.id }}" aria-labelledby="{{ t.id }}-title">
+  <h2 class="theme__title" id="{{ t.id }}-title">{{ t.title }}</h2>
+  <p class="theme__desc">{{ t.description }}</p>
+  {%- assign fig_path = "/images/research/" | append: t.figure -%}
+  {%- assign fig_file = site.static_files | where: "path", fig_path | first -%}
+  {%- if t.figure and t.figure != "" and fig_file %}
+  <figure class="theme__figure">
+    <img src="{{ fig_path | relative_url }}" alt="{{ t.figure_alt | default: t.title }}" loading="lazy" decoding="async">
+    {%- if t.figure_caption %}<figcaption class="muted">{{ t.figure_caption }}</figcaption>{% endif %}
   </figure>
+  {%- endif %}
+  <ol class="dated" role="list">
+    {%- assign shown = 0 -%}
+    {%- for title in t.key_papers -%}
+      {%- assign p = pubs | where: "title", title | first -%}
+      {%- if p %}{% assign shown = shown | plus: 1 %}
+    {% include pub-mini.html pub=p %}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if shown == 0 -%}
+      {%- for p in related limit: 3 %}
+    {% include pub-mini.html pub=p %}
+      {%- endfor -%}
+    {%- endif %}
+  </ol>
+  <p class="section-more"><a href="{{ '/publications/' | relative_url }}?topic={{ t.id }}">All {{ related.size }} papers on this topic</a></p>
 </section>
 {%- endfor %}

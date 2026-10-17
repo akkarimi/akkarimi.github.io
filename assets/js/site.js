@@ -2,7 +2,6 @@
 (function () {
   'use strict';
   var root = document.documentElement;
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   /* Old one-page links (/#teaching, /#cv) → their new pages */
   var moved = { '#teaching': '/teaching/', '#cv': '/cv/' };
@@ -53,35 +52,7 @@
       if (header.classList.contains('nav-open') && !header.contains(e.target)) setMenu(false);
     });
     nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-    window.matchMedia('(min-width: 1024px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
-  }
-
-  /* ── Header condenses once the page is scrolled ── */
-  if (header) {
-    var ticking = false;
-    var onScroll = function () {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(function () {
-        header.classList.toggle('is-condensed', window.scrollY > 24);
-        ticking = false;
-      });
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
-
-  /* ── Gentle fade-in for [data-reveal] blocks ── */
-  var reveals = document.querySelectorAll('[data-reveal]');
-  if (reduceMotion.matches || !('IntersectionObserver' in window)) {
-    reveals.forEach(function (el) { el.classList.add('is-visible'); });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    reveals.forEach(function (el) { io.observe(el); });
+    window.matchMedia('(min-width: 900px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
   }
 
   /* ── Toast messages ── */

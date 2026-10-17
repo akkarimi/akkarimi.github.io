@@ -3,14 +3,11 @@
 #
 #  id        a topic id from topics.yml; related papers are pulled in
 #            automatically from publications.yml
-#  color     teal | amber | plum | green | indigo — the theme's colour on cards and pages
-#  figure    optional image in /images/research/ (e.g. "robustness.png");
-#            if empty, a small built-in illustration is used
+#  figure    optional image in /images/research/ (e.g. "robustness.png"), shown under the description
 #  key_papers  optional list of paper titles to list first on /research/
 # ─────────────────────────────────────────────────────────────────────
 
 - id: robustness
-  color: teal
   title: "Robustness of LLMs to adversarial and noisy inputs"
   short: "How language models break under typos, punctuation noise and adversarial perturbations — and how to make them hold up."
   description: >-
@@ -26,7 +23,6 @@
     - "Exploring Robustness of Multilingual LLMs on Real-World Noisy Data"
 
 - id: augmentation
-  color: amber
   title: "Data augmentation for NLP and speech"
   short: "Simple, label-preserving ways to get more out of scarce data — for text, audio and LLM-generated examples."
   description: >-
@@ -42,7 +38,6 @@
     - "Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents"
 
 - id: science
-  color: plum
   title: "AI for science"
   short: "Trustworthy machine learning for high-energy physics, astronomy and, now, drug discovery."
   description: >-
@@ -58,7 +53,6 @@
     - "Colliding with Adversaries: A Challenge on Robust Learning in High Energy Physics at ECML PKDD 2025"
 
 - id: dialects
-  color: green
   title: "Dialects and speech"
   short: "Classifying spoken dialects with little data — and comparing how humans and machines do it."
   description: >-

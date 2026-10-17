@@ -8,8 +8,7 @@
   var groups = document.querySelectorAll('[data-year-group]');
   var count = document.querySelector('[data-pub-count]');
   var empty = document.querySelector('[data-pub-empty]');
-  var toggle = document.querySelector('[data-filters-toggle]');
-  var activeBadge = document.querySelector('[data-filters-active]');
+  var resetBtns = document.querySelectorAll('[data-filters-reset]');
   var fields = ['year', 'type', 'topic'];
 
   function state() {
@@ -34,11 +33,10 @@
     groups.forEach(function (g) { g.hidden = !g.querySelector('.pub:not([hidden])'); });
     empty.hidden = shown !== 0;
     count.textContent = shown === items.length
-      ? items.length + ' publications'
-      : 'Showing ' + shown + ' of ' + items.length + ' publications';
-
-    var n = fields.filter(function (f) { return s[f]; }).length;
-    activeBadge.textContent = n ? ' (' + n + ')' : '';
+      ? items.length + ' papers'
+      : 'Showing ' + shown + ' of ' + items.length + ' papers';
+    var filtered = !!(s.q || s.year || s.type || s.topic);
+    resetBtns.forEach(function (b) { b.hidden = !filtered; });
 
     if (updateUrl) {
       var params = new URLSearchParams();
@@ -61,7 +59,7 @@
   form.q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { apply(true); }, 120); });
   form.addEventListener('change', function () { apply(true); });
   form.addEventListener('submit', function (e) { e.preventDefault(); });
-  document.querySelectorAll('[data-filters-reset]').forEach(function (b) {
+  resetBtns.forEach(function (b) {
     b.addEventListener('click', function (e) {
       e.preventDefault();
       form.reset();
@@ -69,14 +67,6 @@
       form.q.focus();
     });
   });
-
-  // Phones: the selects live behind a "Filter" button
-  toggle.addEventListener('click', function () {
-    var open = toggle.getAttribute('aria-expanded') !== 'true';
-    toggle.setAttribute('aria-expanded', String(open));
-    form.classList.toggle('is-open', open);
-  });
-  if (fields.some(function (f) { return form[f].value; })) toggle.click();
 
   apply(false);
 })();

@@ -1,14 +1,11 @@
 ---
 layout: default
 ---
-{%- comment -%} Standard inner page: tinted title band + content. Front matter: title, lead (optional intro line). {%- endcomment -%}
-<div class="page-band">
-  <header class="container page-head">
-    {%- if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+{%- comment -%} Inner page: title + content in the reading column. Front matter: title, lead (optional). {%- endcomment -%}
+<div class="container split">
+  <div class="main-col">
     <h1 class="page-title">{{ page.title }}</h1>
     {%- if page.lead %}<p class="page-lead">{{ page.lead }}</p>{% endif %}
-  </header>
-</div>
-<div class="container page-body">
-  {{ content }}
+    {{ content }}
+  </div>
 </div>

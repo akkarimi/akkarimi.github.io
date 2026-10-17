@@ -2,33 +2,20 @@
 title: "Teaching"
 permalink: /teaching/
 description: "Courses taught by Akbar Karimi at the University of Bonn and the University of Marburg."
-lead: "Courses I have taught at the University of Bonn and the University of Marburg."
 ---
-{%- comment -%} Generated from _data/courses.yml, grouped by year (newest first). {%- endcomment -%}
-{%- assign by_year = site.data.courses | group_by: "year" | sort: "name" | reverse -%}
-<div class="timeline">
-  {%- for g in by_year %}
-  <section class="timeline__group" aria-labelledby="t{{ g.name }}">
-    <h2 class="timeline__label" id="t{{ g.name }}">{{ g.name }}</h2>
-    <ul class="courses" role="list">
-      {%- for c in g.items %}
-      <li class="course">
-        <h3 class="course__title">{{ c.title }}</h3>
-        <p class="course__meta">
-          {{ c.institution }}
-          {%- if c.term and c.term != "" %} <span aria-hidden="true">·</span> {{ c.term }}{% endif %}
-          {%- if c.level and c.level != "" %} <span aria-hidden="true">·</span> {{ c.level }}{% endif %}
-          {%- if c.role and c.role != "" %} <span aria-hidden="true">·</span> {{ c.role }}{% endif %}
-        </p>
-        {%- if c.description and c.description != "" %}
-        <div class="course__desc">{{ c.description | markdownify }}</div>
-        {%- endif %}
-        {%- if c.materials and c.materials != "" %}
-        <p class="course__links"><a class="pub-btn" href="{{ c.materials }}">Materials</a></p>
-        {%- endif %}
-      </li>
-      {%- endfor %}
-    </ul>
-  </section>
+{%- comment -%} Generated from _data/courses.yml, newest first. {%- endcomment -%}
+{%- assign courses = site.data.courses | sort: "year" | reverse -%}
+<ol class="dated" role="list">
+  {%- for c in courses %}
+  <li class="dated__item">
+    <span class="dated__date">{{ c.year }}</span>
+    <div>
+      <p><strong class="cv-item__title">{{ c.title }}</strong>{% if c.materials and c.materials != "" %} <a class="small-link" href="{{ c.materials }}">(materials)</a>{% endif %}</p>
+      <p class="muted"><em>{{ c.institution }}{% if c.term and c.term != "" %}, {{ c.term }}{% endif %}{% if c.level and c.level != "" %} · {{ c.level }}{% endif %}{% if c.role and c.role != "" %} · {{ c.role }}{% endif %}</em></p>
+      {%- if c.description and c.description != "" %}
+      <div class="cv-item__details">{{ c.description | markdownify }}</div>
+      {%- endif %}
+    </div>
+  </li>
   {%- endfor %}
-</div>
+</ol>

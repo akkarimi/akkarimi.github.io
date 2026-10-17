@@ -1,26 +1,14 @@
 {%- comment -%}
-  Email / Scholar / ORCID / GitHub / LinkedIn / CV icon links.
+  "Email / Google Scholar / ORCID / GitHub / CV" text links.
   Any link left empty in _config.yml (author.links) is hidden automatically.
-  Optional: include.labels=true shows text next to the icons.
 {%- endcomment -%}
 {%- assign a = site.author -%}
-<ul class="profile-links {{ include.class }}" role="list">
-  {%- if a.email %}
-  <li><a class="profile-links__primary" href="mailto:{{ a.email }}" aria-label="Email"{% unless include.labels %} title="Email"{% endunless %}>{% include icon.html name="email" %}{% if include.labels %}<span>Email</span>{% endif %}</a></li>
-  {%- endif %}
-  {%- if a.links.scholar != "" and a.links.scholar %}
-  <li><a href="{{ a.links.scholar }}" aria-label="Google Scholar"{% unless include.labels %} title="Google Scholar"{% endunless %}>{% include icon.html name="scholar" %}{% if include.labels %}<span>Scholar</span>{% endif %}</a></li>
-  {%- endif %}
-  {%- if a.links.orcid != "" and a.links.orcid %}
-  <li><a href="{{ a.links.orcid }}" aria-label="ORCID"{% unless include.labels %} title="ORCID"{% endunless %}>{% include icon.html name="orcid" %}{% if include.labels %}<span>ORCID</span>{% endif %}</a></li>
-  {%- endif %}
-  {%- if a.links.github != "" and a.links.github %}
-  <li><a href="{{ a.links.github }}" aria-label="GitHub"{% unless include.labels %} title="GitHub"{% endunless %}>{% include icon.html name="github" %}{% if include.labels %}<span>GitHub</span>{% endif %}</a></li>
-  {%- endif %}
-  {%- if a.links.linkedin != "" and a.links.linkedin %}
-  <li><a href="{{ a.links.linkedin }}" aria-label="LinkedIn"{% unless include.labels %} title="LinkedIn"{% endunless %}>{% include icon.html name="linkedin" %}{% if include.labels %}<span>LinkedIn</span>{% endif %}</a></li>
-  {%- endif %}
-  {%- if include.cv %}
-  <li><a href="{{ '/cv/' | relative_url }}" aria-label="CV"{% unless include.labels %} title="CV"{% endunless %}>{% include icon.html name="cv" %}{% if include.labels %}<span>CV</span>{% endif %}</a></li>
-  {%- endif %}
-</ul>
+{%- capture links -%}
+{%- if a.email %}<a href="mailto:{{ a.email }}">Email</a>|{% endif -%}
+{%- if a.links.scholar and a.links.scholar != "" %}<a href="{{ a.links.scholar }}">Google Scholar</a>|{% endif -%}
+{%- if a.links.orcid and a.links.orcid != "" %}<a href="{{ a.links.orcid }}">ORCID</a>|{% endif -%}
+{%- if a.links.github and a.links.github != "" %}<a href="{{ a.links.github }}">GitHub</a>|{% endif -%}
+{%- if a.links.linkedin and a.links.linkedin != "" %}<a href="{{ a.links.linkedin }}">LinkedIn</a>|{% endif -%}
+<a href="{{ '/cv/' | relative_url }}">CV</a>
+{%- endcapture -%}
+<p class="text-links">{{ links | split: "|" | join: '<span class="sep" aria-hidden="true">/</span>' }}</p>

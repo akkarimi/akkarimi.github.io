@@ -10,8 +10,8 @@ scripts: ["/assets/js/publications.js"]
 {%- assign pubs = site.data.publications -%}
 {%- assign years = pubs | map: "year" | uniq | sort | reverse -%}
 
-<p class="page-intro">
-  {{ pubs.size }} papers, newest first. Citation metrics are on
+<p class="page-lead">
+  {{ pubs.size }} papers, newest first. Also on
   <a href="{{ site.author.links.scholar }}">Google Scholar</a>.
 </p>
 
@@ -20,46 +20,34 @@ scripts: ["/assets/js/publications.js"]
     <label class="visually-hidden" for="pub-q">Search publications</label>
     <input id="pub-q" name="q" type="search" placeholder="Search papers…" autocomplete="off" spellcheck="false">
   </div>
-  <button class="pub-filters__toggle" type="button" aria-expanded="false" aria-controls="pub-filter-fields" data-filters-toggle>
-    Filter<span class="pub-filters__active" data-filters-active></span>
-  </button>
-  <div class="pub-filters__fields" id="pub-filter-fields">
-    <div class="field">
-      <label for="pub-year">Year</label>
-      <select id="pub-year" name="year">
-        <option value="">All years</option>
-        {%- for y in years %}
-        {%- assign n = pubs | where: "year", y | size %}
-        <option value="{{ y }}">{{ y }} ({{ n }})</option>
-        {%- endfor %}
-      </select>
-    </div>
-    <div class="field">
-      <label for="pub-type">Type</label>
-      <select id="pub-type" name="type">
-        <option value="">All types</option>
-        {%- for t in site.data.pub_types %}
-        {%- assign n = pubs | where: "type", t.id | size %}
-        {%- if n > 0 %}<option value="{{ t.id }}">{{ t.label | escape }} ({{ n }})</option>{% endif %}
-        {%- endfor %}
-      </select>
-    </div>
-    <div class="field">
-      <label for="pub-topic">Topic</label>
-      <select id="pub-topic" name="topic">
-        <option value="">All topics</option>
-        {%- for t in site.data.topics %}
-        {%- assign n = 0 -%}{%- for p in pubs -%}{%- if p.topics contains t.id -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor %}
-        {%- if n > 0 %}<option value="{{ t.id }}">{{ t.label | escape }} ({{ n }})</option>{% endif %}
-        {%- endfor %}
-      </select>
-    </div>
-    <button class="pub-filters__reset" type="reset" data-filters-reset>Clear</button>
-  </div>
+  <label class="visually-hidden" for="pub-year">Year</label>
+  <select id="pub-year" name="year">
+    <option value="">All years</option>
+    {%- for y in years %}
+    {%- assign n = pubs | where: "year", y | size %}
+    <option value="{{ y }}">{{ y }} ({{ n }})</option>
+    {%- endfor %}
+  </select>
+  <label class="visually-hidden" for="pub-type">Type</label>
+  <select id="pub-type" name="type">
+    <option value="">All types</option>
+    {%- for t in site.data.pub_types %}
+    {%- assign n = pubs | where: "type", t.id | size %}
+    {%- if n > 0 %}<option value="{{ t.id }}">{{ t.label | escape }} ({{ n }})</option>{% endif %}
+    {%- endfor %}
+  </select>
+  <label class="visually-hidden" for="pub-topic">Topic</label>
+  <select id="pub-topic" name="topic">
+    <option value="">All topics</option>
+    {%- for t in site.data.topics %}
+    {%- assign n = 0 -%}{%- for p in pubs -%}{%- if p.topics contains t.id -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor %}
+    {%- if n > 0 %}<option value="{{ t.id }}">{{ t.label | escape }} ({{ n }})</option>{% endif %}
+    {%- endfor %}
+  </select>
 </form>
 
-<div class="pub-status">
-  <p class="pub-count" aria-live="polite" data-pub-count>{{ pubs.size }} publications</p>
+<div class="pub-status js-only">
+  <span aria-live="polite"><span data-pub-count>{{ pubs.size }} papers</span> <button type="button" class="link-btn" data-filters-reset hidden>(clear filters)</button></span>
   {% include author-legend.html %}
 </div>
 
@@ -69,12 +57,12 @@ scripts: ["/assets/js/publications.js"]
     <h2 class="pub-year__label" id="y{{ y }}">{{ y }}</h2>
     <ol class="pubs" role="list">
       {%- for p in pubs %}{% if p.year == y %}
-      {% include pub.html pub=p mode="list" %}
+      {% include pub.html pub=p %}
       {%- endif %}{% endfor %}
     </ol>
   </section>
   {%- endfor %}
-  <p class="pub-empty" hidden data-pub-empty>No publications match these filters. <button type="button" class="link-btn" data-filters-reset>Clear filters</button></p>
+  <p class="pub-empty" hidden data-pub-empty>No papers match these filters.</p>
 </div>
 
 {%- comment -%} schema.org ScholarlyArticle data for search engines {%- endcomment %}
