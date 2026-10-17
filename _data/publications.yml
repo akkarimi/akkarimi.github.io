@@ -203,14 +203,12 @@
       url = {https://aclanthology.org/2026.dialres-1.18/}
     }
 
-# NOTE: Crossref lists a published version in EPJ C (Oct 2026), doi 10.1140/epjc/s10052-026-16351-2.
-#       Update venue/type/badge and add the doi if you want to show it.
 - title: "Shapes are not enough: CONSERVAttack and its use for finding vulnerabilities and uncertainties in machine learning applications"
   authors: "P Bechtle, L Flek, PA Jung, A Karimi, T Saala, A Schmidt, M Schott, P Soldin, C Wiebusch, U Willemsen"
-  venue: "arXiv preprint"
-  badge: "arXiv"
+  venue: "The European Physical Journal C"
+  badge: "EPJ C"
   year: 2026
-  type: preprint
+  type: journal
   topics: [science, robustness]
   selected: false
   summary: >-
@@ -219,7 +217,9 @@
     high energy physics while fooling the model, and discuss strategies to mitigate such
     vulnerabilities.
   links:
-    pdf: https://arxiv.org/pdf/2603.13970
+    pdf: https://link.springer.com/content/pdf/10.1140/epjc/s10052-026-16351-2.pdf
+    doi: 10.1140/epjc/s10052-026-16351-2
+    arxiv: https://arxiv.org/abs/2603.13970
   abstract: >-
     In High Energy Physics, as in many other fields of science, the application of
     machine learning techniques has been crucial in advancing our understanding of
@@ -241,14 +241,18 @@
     robustness to adversarial effects must be considered when interpreting results from
     deep learning in particle physics.
   bibtex: |
-    @misc{bechtle2026shapes,
+    @article{bechtle2026shapes,
       title = {Shapes are not enough: CONSERVAttack and its use for finding vulnerabilities and uncertainties in machine learning applications},
-      author = {Philip Bechtle and Lucie Flek and Philipp Alexander Jung and Akbar Karimi and Timo Saala and Alexander Schmidt and Matthias Schott and Philipp Soldin and Christopher Wiebusch and Ulrich Willemsen},
+      author = {Bechtle, Philip and Flek, Lucie and Jung, Philipp Alexander and Karimi, Akbar and Saala, Timo and Schmidt, Alexander and Schott, Matthias and Soldin, Philipp and Wiebusch, Christopher and Willemsen, Ulrich},
+      journal = {The European Physical Journal C},
+      volume = {86},
+      number = {10},
+      pages = {1172},
       year = {2026},
-      eprint = {2603.13970},
-      archiveprefix = {arXiv},
-      primaryclass = {cs.LG},
-      url = {https://arxiv.org/abs/2603.13970}
+      month = oct,
+      publisher = {Springer},
+      doi = {10.1140/epjc/s10052-026-16351-2},
+      url = {https://doi.org/10.1140/epjc/s10052-026-16351-2}
     }
 
 - title: "Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents"
