@@ -1,0 +1,32 @@
+# ─────────────────────────────────────────────────────────────────────
+#  PEOPLE — students you have supervised or co-supervised. Shown on /people/.
+#
+#  name          full name
+#  author_names  how they appear in publications.yml author lists, e.g. ["K Alavi"];
+#                matching names are marked as students in every author list
+#  photo         file in /images/people/ (e.g. "firstname-lastname.jpg", square, ≥400px);
+#                leave empty for a neutral placeholder
+#  level         PhD | MSc | BSc | Intern | ...
+#  role          supervisor | co-supervisor (optional)
+#  topic         thesis / project topic
+#  years         e.g. "2024–2025" or "2025–"
+#  status        current | alumni   ← moving someone to alumni is just this field
+#  now           where alumni went next (optional)
+#  links         optional: website, github, linkedin, scholar, thesis
+#
+#  Example (copy, remove the leading "# ", and fill in):
+#
+# - name: "Firstname Lastname"
+#   author_names: ["F Lastname"]
+#   photo: "firstname-lastname.jpg"
+#   level: "MSc"
+#   role: "co-supervisor"
+#   topic: "Adversarial robustness of LLM agents"
+#   years: "2024–2025"
+#   status: alumni
+#   now: "PhD student at …"
+#   links:
+#     github: "https://github.com/…"
+# ─────────────────────────────────────────────────────────────────────
+
+[]

@@ -1,0 +1,18 @@
+{%- comment -%}
+  Renders an author string ("K Alavi, L Flek, A Karimi"):
+  - your own name (author.publication_names in _config.yml) is bolded
+  - anyone whose author_names appear in _data/people.yml is marked as a supervised student
+{%- endcomment -%}
+{%- assign me = site.author.publication_names | join: "|" | prepend: "|" | append: "|" -%}
+{%- assign students = "|" -%}
+{%- for person in site.data.people -%}{%- for n in person.author_names -%}{%- assign students = students | append: n | append: "|" -%}{%- endfor -%}{%- endfor -%}
+{%- assign names = include.authors | split: "," -%}
+{%- for raw in names -%}
+  {%- assign n = raw | strip -%}
+  {%- assign key = n | prepend: "|" | append: "|" -%}
+  {%- assign shown = n | replace: " ", "&nbsp;" -%}
+  {%- if me contains key -%}<strong class="au-me">{{ shown }}</strong>
+  {%- elsif students contains key -%}<span class="au-student">{{ shown }}<span class="visually-hidden"> (supervised student)</span></span>
+  {%- else -%}{{ shown }}{%- endif -%}
+  {%- unless forloop.last -%}, {% endunless -%}
+{%- endfor -%}

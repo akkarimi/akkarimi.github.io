@@ -1,0 +1,1211 @@
+# ─────────────────────────────────────────────────────────────────────
+#  PUBLICATIONS — one entry per paper, newest first.
+#
+#  Required:  title, authors, venue, year, type
+#  Optional:  badge, topics, selected, summary, links, abstract, bibtex, thumbnail
+#
+#  authors    "First Last, First Last" exactly as you want them shown.
+#             Your name (see author.publication_names in _config.yml) is bolded;
+#             students listed in people.yml are marked automatically.
+#  type       journal | conference | findings | workshop | preprint
+#  badge      short venue label shown as a tag, e.g. "ACL Findings"
+#  topics     ids from _data/topics.yml, e.g. [robustness, augmentation]
+#  selected   true → also shown on the homepage (keep 4–6 selected)
+#  thumbnail  file in /images/papers/, e.g. "arithmattack.png" (~800×500)
+#  links      any of: pdf, doi (just the 10.xxxx/… part), code, slides,
+#             poster, video, website, arxiv. Leave out what you don't have.
+#  bibtex     paste from ACL Anthology / Google Scholar. Keep the "|" and indent.
+# ─────────────────────────────────────────────────────────────────────
+
+- title: "More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists"
+  authors: "K Alavi, Z Yeltay, L Flek, A Karimi"
+  venue: "Findings of ACL 2026"
+  badge: "ACL Findings"
+  year: 2026
+  type: findings
+  topics: [robustness]
+  selected: true
+  summary: >-
+    We evaluate multi-agent sampling-and-voting on adversarially perturbed math
+    questions across six open-source models and four benchmarks, finding that more
+    agents reliably improve accuracy while the robustness gap to noise, especially
+    human-like typos, persists regardless of agent count.
+  links:
+    pdf: https://aclanthology.org/2026.findings-acl.2158.pdf
+    doi: 10.18653/v1/2026.findings-acl.2158
+  abstract: >-
+    When LLM agents work together, they seem to be more powerful than a single LLM in
+    mathematical question answering. However, are they also more robust to adversarial
+    inputs? We investigate this question using adversarially perturbed math questions.
+    These perturbations include punctuation noise with three intensities (10%, 30%,
+    50%), plus real-world and human-like typos (WikiTypo, R2ATA). Using a unified
+    sampling-and-voting framework (Agent Forest), we evaluate six open-source models
+    (Qwen3-4B/14B, Llama3.1-8B, Mistral-7B, Gemma3-4B/12B) across four benchmarks
+    (GSM8K, MATH, MMLU-Math, MultiArith), with various numbers of agents n = {1, 2, 5,
+    10, 15, 20, 25}. Our findings show that 1) Noise type matters: punctuation noise
+    harm scales with its severity, and the human typos remain the dominant bottleneck,
+    yielding the largest gaps to Clean accuracy and the highest attack success rate
+    (ASR) even with a large number of agents; 2) Collaboration reliably improves
+    accuracy as the number of agents, n, increases, with the largest gains from n=1 to
+    n=5 and diminishing returns beyond n≈10. However, the adversarial robustness gap
+    persists regardless of the agent count.
+  bibtex: |
+    @inproceedings{alavi2026more,
+      title = {More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists},
+      author = {Alavi, Khashayar and Yeltay, Zhastay and Flek, Lucie and Karimi, Akbar},
+      booktitle = {Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2026},
+      pages = {43457--43475},
+      year = {2026},
+      month = jul,
+      address = {San Diego, California, United States},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2026.findings-acl.2158},
+      url = {https://aclanthology.org/2026.findings-acl.2158/}
+    }
+
+- title: "MiniFool: Physics-Constraint-Aware Minimizer-Based Adversarial Attacks in Deep Neural Networks"
+  authors: "L Flek, O Janik, PA Jung, A Karimi, T Saala, A Schmidt, M Schott, P Soldin, M Thiesmeyer, C Wiebusch, U Willemsen"
+  venue: "The European Physical Journal C"
+  badge: "EPJ C"
+  year: 2026
+  type: journal
+  topics: [science, robustness]
+  selected: true
+  summary: >-
+    We present MiniFool, a physics-inspired adversarial attack that minimizes a χ²-based
+    test statistic combined with a target-score deviation, testing the robustness of
+    neural network classifiers on IceCube, CMS, and MNIST data, including unlabeled
+    experimental data.
+  links:
+    pdf: https://link.springer.com/content/pdf/10.1140/epjc/s10052-026-15773-2.pdf
+    doi: 10.1140/epjc/s10052-026-15773-2
+  abstract: >-
+    In this paper, we present a new algorithm, MiniFool, that implements
+    physics-inspired adversarial attacks for testing neural network-based classification
+    tasks in particle and astroparticle physics. While we initially developed the
+    algorithm for the search for astrophysical tau neutrinos with the IceCube Neutrino
+    Observatory, we apply it to further data from other science domains, thus
+    demonstrating its general applicability. Here, we apply the algorithm to the
+    well-known MNIST data set and furthermore, to public data from the CMS Experiment at
+    the Large Hadron Collider. The algorithm is based on minimizing a cost function that
+    combines a χ² based test-statistic with the deviation from the desired target score.
+    The test statistic quantifies the probability of the perturbations applied to the
+    data based on the experimental uncertainties. For our studied use cases, we find
+    that the likelihood of a flipped classification differs for both the initially
+    correctly and incorrectly classified events. When testing changes of the
+    classifications as a function of an attack parameter that scales the experimental
+    uncertainties, the robustness of the network decision can be assessed. Furthermore,
+    this allows testing the robustness of the classification of unlabeled experimental
+    data.
+  bibtex: |
+    @article{flek2026minifool,
+      title = {MiniFool: Physics-Constraint-Aware Minimizer-Based Adversarial Attacks in Deep Neural Networks},
+      author = {Flek, Lucie and Janik, Oliver and Jung, Philipp Alexander and Karimi, Akbar and Saala, Timo and Schmidt, Alexander and Schott, Matthias and Soldin, Philipp and Thiesmeyer, Matthias and Wiebusch, Christopher and Willemsen, Ulrich},
+      journal = {The European Physical Journal C},
+      volume = {86},
+      number = {6},
+      year = {2026},
+      month = jun,
+      publisher = {Springer Science and Business Media LLC},
+      doi = {10.1140/epjc/s10052-026-15773-2},
+      url = {https://doi.org/10.1140/epjc/s10052-026-15773-2}
+    }
+
+- title: "Can LLM Agents Identify Spoken Dialects like a Linguist?"
+  authors: "T Bystrich, L Hamm, MH Akhter, L Fischbach, L Flek, A Karimi"
+  venue: "DialRes Workshop @ LREC 2026"
+  badge: "LREC Workshop"
+  year: 2026
+  type: workshop
+  topics: [dialects]
+  selected: false
+  summary: >-
+    We explore whether LLM agents can classify Swiss German dialects from ASR-generated
+    phonetic transcriptions combined with linguistic resources such as dialect feature
+    maps, vowel history, and rules, comparing them against HuBERT, an LLM baseline, and
+    a human linguist.
+  links:
+    pdf: https://aclanthology.org/2026.dialres-1.8.pdf
+    doi: 10.63317/27m2tbgjcat8
+  abstract: >-
+    Due to the scarcity of labeled dialectal speech, audio dialect classification is a
+    challenging task for most languages, including Swiss German. In this work, we
+    explore the ability of large language models (LLMs) as agents in understanding the
+    dialects and whether they can show comparable performance to models such as HuBERT
+    in dialect classification. In addition, we provide an LLM baseline and a human
+    linguist one. Our approach uses phonetic transcriptions produced by ASR systems and
+    combines them with linguistic resources such as dialect feature maps, vowel history,
+    and rules. Our findings indicate that, when linguistic information is provided, the
+    LLM predictions improve. The human baseline shows that automatically generated
+    transcriptions can be beneficial for such classifications, but also present
+    opportunities for improvement.
+  bibtex: |
+    @inproceedings{bystrich2026llm,
+      title = {Can {LLM} Agents Identify Spoken Dialects like a Linguist?},
+      author = {Bystrich, Tobias and Hamm, Lukas and Akhter, Maria Hassan and Fischbach, Lea and Flek, Lucie and Karimi, Akbar},
+      booktitle = {Proceedings of the First Workshop on Dialects in {NLP} {---} A Resource Perspective},
+      pages = {83--92},
+      year = {2026},
+      month = may,
+      address = {Palma de Mallorca},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.63317/27m2tbgjcat8},
+      url = {https://aclanthology.org/2026.dialres-1.8/}
+    }
+
+- title: "Speaker Normalization via Voice Conversion Reveals a Human–Machine Dissociation in Dialect Classification"
+  authors: "C Kleen, L Fischbach, A Karimi, L Flek, A Lameli"
+  venue: "DialRes Workshop @ LREC 2026"
+  badge: "LREC Workshop"
+  year: 2026
+  type: workshop
+  topics: [dialects, augmentation]
+  selected: false
+  summary: >-
+    In perception experiments on nine German dialect regions, we show that voice
+    conversion to a single target speaker leaves human dialect recognition unchanged
+    while significantly improving a deep learning model, revealing a divergence between
+    human and machine speech processing.
+  links:
+    pdf: https://aclanthology.org/2026.dialres-1.18.pdf
+    doi: 10.63317/3sqk7nxsikhp
+  abstract: >-
+    This study evaluates whether Retrieval-based Voice Conversion (RVC) can be used to
+    normalize speaker-specific variability while preserving dialect-relevant acoustic
+    cues, and what the response of human and machine systems to this manipulation
+    reveals about the architecture of dialect recognition. In two perception
+    experiments, speech samples from nine German dialect regions were presented either
+    in their original form or after conversion to a single target speaker. We compared
+    overall accuracy, confusion structures, item-level response distributions, and the
+    interaction between listener origin and target dialect across conditions. Human
+    classification remained stable under voice conversion. Accuracy did not differ
+    between conditions, confusion matrices were highly correlated, and item-level
+    divergences were minimal. The interaction between listener origin and target
+    dialect—reflecting systematic regional bias—remained invariant. These findings
+    indicate that RVC does not distort perceptually relevant dialectal cues and that
+    human dialect recognition is robust to speaker normalization. In contrast, we
+    evaluated a deep learning model under matched conditions: model accuracy improved
+    significantly under RVC, while human performance remained unchanged. This
+    dissociation reframes RVC as an experimental probe for investigating the divergence
+    between human and machine speech processing, suggesting that this divergence is
+    rooted in fundamentally different representational architectures.
+  bibtex: |
+    @inproceedings{kleen2026speaker,
+      title = {Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification},
+      author = {Kleen, Caroline and Fischbach, Lea and Karimi, Akbar and Flek, Lucie and Lameli, Alfred},
+      booktitle = {Proceedings of the First Workshop on Dialects in {NLP} {---} A Resource Perspective},
+      pages = {177--187},
+      year = {2026},
+      month = may,
+      address = {Palma de Mallorca},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.63317/3sqk7nxsikhp},
+      url = {https://aclanthology.org/2026.dialres-1.18/}
+    }
+
+# NOTE: Crossref lists a published version in EPJ C (Oct 2026), doi 10.1140/epjc/s10052-026-16351-2.
+#       Update venue/type/badge and add the doi if you want to show it.
+- title: "Shapes are not enough: CONSERVAttack and its use for finding vulnerabilities and uncertainties in machine learning applications"
+  authors: "P Bechtle, L Flek, PA Jung, A Karimi, T Saala, A Schmidt, M Schott, P Soldin, C Wiebusch, U Willemsen"
+  venue: "arXiv preprint"
+  badge: "arXiv"
+  year: 2026
+  type: preprint
+  topics: [science, robustness]
+  selected: false
+  summary: >-
+    We propose CONSERVAttack, an adversarial attack whose perturbations stay within
+    simulation-versus-data uncertainty bounds, evading standard validation checks in
+    high energy physics while fooling the model, and discuss strategies to mitigate such
+    vulnerabilities.
+  links:
+    pdf: https://arxiv.org/pdf/2603.13970
+  abstract: >-
+    In High Energy Physics, as in many other fields of science, the application of
+    machine learning techniques has been crucial in advancing our understanding of
+    fundamental phenomena. Increasingly, deep learning models are applied to analyze
+    both simulated and experimental data. In most experiments, a rigorous regime of
+    testing for physically motivated systematic uncertainties is in place. The numerical
+    evaluation of these tests for differences between the data on the one side and
+    simulations on the other side quantifies the effect of potential sources of
+    mismodelling on the machine learning output. In addition, thorough comparisons of
+    marginal distributions and (linear) feature correlations between data and simulation
+    in "control regions" are applied. However, the guidance by physical motivation, and
+    the need to constrain comparisons to specific regions, does not guarantee that all
+    possible sources of deviations have been accounted for. We therefore propose a new
+    adversarial attack - the CONSERVAttack - designed to exploit the remaining space of
+    hypothetical deviations between simulation and data after the above mentioned tests.
+    The resulting adversarial perturbations are consistent within the uncertainty bounds
+    - evading standard validation checks - while successfully fooling the underlying
+    model. We further propose strategies to mitigate such vulnerabilities and argue that
+    robustness to adversarial effects must be considered when interpreting results from
+    deep learning in particle physics.
+  bibtex: |
+    @misc{bechtle2026shapes,
+      title = {Shapes are not enough: CONSERVAttack and its use for finding vulnerabilities and uncertainties in machine learning applications},
+      author = {Philip Bechtle and Lucie Flek and Philipp Alexander Jung and Akbar Karimi and Timo Saala and Alexander Schmidt and Matthias Schott and Philipp Soldin and Christopher Wiebusch and Ulrich Willemsen},
+      year = {2026},
+      eprint = {2603.13970},
+      archiveprefix = {arXiv},
+      primaryclass = {cs.LG},
+      url = {https://arxiv.org/abs/2603.13970}
+    }
+
+- title: "Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents"
+  authors: "MHA Monfared, L Flek, A Karimi"
+  venue: "WASSA Workshop @ EACL 2026"
+  badge: "EACL Workshop"
+  year: 2026
+  type: workshop
+  topics: [augmentation, sentiment]
+  selected: false
+  summary: >-
+    We propose an agentic data augmentation method for Aspect-Based Sentiment Analysis
+    (ABSA) that uses iterative generation and verification to produce high-quality
+    synthetic training examples.
+  links:
+    pdf: https://aclanthology.org/2026.wassa-1.17.pdf
+    doi: 10.18653/v1/2026.wassa-1.17
+  abstract: >-
+    We propose an agentic data augmentation method for Aspect-Based Sentiment Analysis
+    (ABSA) that uses iterative generation and verification to produce high-quality
+    synthetic training examples. To isolate the effect of agentic structure, we also
+    develop a closely matched prompting-based baseline using the same model and
+    instructions. Both methods are evaluated across three ABSA subtasks—Aspect Term
+    Extraction (ATE), Aspect Sentiment Classification (ATSC), and Aspect Sentiment Pair
+    Extraction (ASPE)—four SemEval datasets, and two encoder–decoder models: T5-Base and
+    Tk-Instruct. Our results show that the agentic augmentation outperforms raw
+    prompting in label preservation of the augmented data, especially when the tasks
+    require aspect term generation. In addition, when combined with real data, agentic
+    augmentation provides higher gains, consistently outperforming prompting-based
+    generation. These benefits are most pronounced for T5-Base, while the more heavily
+    pretrained Tk-Instruct exhibits smaller improvements. As a result, augmented data
+    helps T5-Base achieve comparable performance with its counterpart.
+  bibtex: |
+    @inproceedings{monfared2026label,
+      title = {Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using {LLM} Agents},
+      author = {Monfared, Mohammad Hossein Akbari and Flek, Lucie and Karimi, Akbar},
+      booktitle = {The Proceedings for the 15th Workshop on Computational Approaches to Subjectivity, Sentiment Social Media Analysis ({WASSA} 2026)},
+      pages = {222--234},
+      year = {2026},
+      month = mar,
+      address = {Rabat, Morocco},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2026.wassa-1.17},
+      url = {https://aclanthology.org/2026.wassa-1.17/}
+    }
+
+- title: "Encoder Fine-tuning with Stochastic Sampling Outperforms Open-weight GPT in Astronomy Knowledge Extraction"
+  authors: "S Rawat, L Flek, A Karimi"
+  venue: "WASP Workshop @ IJCNLP-AACL 2025"
+  badge: "AACL Workshop"
+  year: 2025
+  type: workshop
+  topics: [science]
+  selected: false
+  summary: >-
+    We build a multi-task SciBERT system for classifying telescope references, semantic
+    attributes, and instrument mentions in astronomy papers, using stochastic segment
+    sampling and majority voting, which significantly outperforms an open-weight GPT
+    baseline.
+  links:
+    pdf: https://aclanthology.org/2025.wasp-main.22.pdf
+    doi: 10.18653/v1/2025.wasp-main.22
+  abstract: >-
+    Scientific literature in astronomy is rapidly expanding, making it increasingly
+    important to automate the extraction of key entities and contextual information from
+    research papers. In this paper, we present an encoder-based system for extracting
+    knowledge from astronomy articles. Our objective is to develop models capable of
+    classifying telescope references, detecting auxiliary semantic attributes, and
+    recognizing instrument mentions from textual content. To this end, we implement a
+    multi-task transformer-based system built upon the SciBERT model and fine-tuned for
+    astronomy corpora classification. To carry out the fine-tuning, we stochastically
+    sample segments from the training data and use majority voting over the test
+    segments at inference time. Our system, despite its simplicity and low-cost
+    implementation, significantly outperforms the open-weight GPT baseline.
+  bibtex: |
+    @inproceedings{rawat2025encoder,
+      title = {Encoder Fine-tuning with Stochastic Sampling Outperforms Open-weight {GPT} in Astronomy Knowledge Extraction},
+      author = {Rawat, Shivam and Flek, Lucie and Karimi, Akbar},
+      booktitle = {Proceedings of the Third Workshop for Artificial Intelligence for Scientific Publications},
+      pages = {195--200},
+      year = {2025},
+      month = dec,
+      address = {Mumbai, India and virtual},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2025.wasp-main.22},
+      url = {https://aclanthology.org/2025.wasp-main.22/}
+    }
+
+- title: "Enforcing Fundamental Relations via Adversarial Attacks on Input Parameter Correlations"
+  authors: "L Flek, PA Jung, A Karimi, T Saala, A Schmidt, M Schott, P Soldin, C Wiebusch"
+  venue: "Computing and Software for Big Science"
+  badge: "CSBS"
+  year: 2025
+  type: journal
+  topics: [science, robustness]
+  selected: false
+  summary: >-
+    We present the Random Distribution Shuffle Attack (RDSA), which targets correlations
+    between observables rather than individual features, and show that adversarial
+    training with it improves classification on particle physics and five other tasks.
+  links:
+    pdf: https://link.springer.com/content/pdf/10.1007/s41781-025-00148-1.pdf
+    doi: 10.1007/s41781-025-00148-1
+  abstract: >-
+    Correlations between input parameters play a crucial role in many scientific
+    classification tasks, since these are often related to fundamental laws of nature.
+    For example, in high energy physics, one common deep learning use-case is the
+    classification of signal and background processes in particle collisions. In many
+    such cases, the fundamental principles of the correlations between observables are
+    often better understood than the actual distributions of the observables themselves.
+    In this work, we present a new adversarial attack algorithm called Random
+    Distribution Shuffle Attack (RDSA), emphasizing the correlations between observables
+    in the network rather than individual feature characteristics. Correct application
+    of the proposed novel attack can result in a significant improvement in
+    classification performance—particularly in the context of data augmentation—when
+    using the generated adversaries within adversarial training. Given that correlations
+    between input features are also crucial in many other disciplines, we demonstrate
+    the RDSA effectiveness on six classification tasks, including two particle collision
+    challenges (using CERN Open Data), hand-written digit recognition (MNIST784), human
+    activity recognition (HAR), weather forecasting (Rain in Australia), and ICU patient
+    mortality (MIMIC-IV), demonstrating a general use case beyond fundamental physics
+    for this new type of adversarial attack algorithm.
+  bibtex: |
+    @article{flek2025enforcing,
+      title = {Enforcing Fundamental Relations via Adversarial Attacks on Input Parameter Correlations},
+      author = {Flek, Lucie and Jung, Philipp Alexander and Karimi, Akbar and Saala, Timo and Schmidt, Alexander and Schott, Matthias and Soldin, Philipp and Wiebusch, Christopher},
+      journal = {Computing and Software for Big Science},
+      volume = {9},
+      number = {1},
+      year = {2025},
+      month = nov,
+      publisher = {Springer Science and Business Media LLC},
+      doi = {10.1007/s41781-025-00148-1},
+      url = {https://doi.org/10.1007/s41781-025-00148-1}
+    }
+
+- title: "Colliding with Adversaries: A Challenge on Robust Learning in High Energy Physics at ECML PKDD 2025"
+  authors: "T Saala, L Flek, A Karimi, PA Jung, A Schmidt, P Soldin, D Stefanopoulos, A Voskou, U Willemsen, C Wiebusch, M Schott"
+  venue: "ECML PKDD 2025"
+  badge: "ECML PKDD"
+  year: 2025
+  type: conference
+  topics: [science, robustness]
+  selected: false
+  summary: >-
+    We describe the Colliding with Adversaries challenge, with tasks on generating
+    adversarial examples against a jet-classification model and on building models
+    robust to unseen attacks, using simulated CMS collision data.
+  links:
+    pdf: https://link.springer.com/chapter/10.1007/978-3-032-19108-3_36
+    doi: 10.1007/978-3-032-19108-3_36
+    website: https://collidingadversaries.github.io/
+  abstract: >-
+    The Colliding with Adversaries challenge on robust learning in High Energy Physics
+    was held at ECML PKDD 2025. It consisted of two tasks: generating adversarial
+    examples to attack a deep learning model, and developing a model that is robust to
+    unseen adversarial attacks while maintaining strong performance on clean data. Both
+    tasks used a tabular dataset derived from two simulated CMS collision processes at
+    the LHC, with 87 continuous features per sample, framed as binary classification
+    between jets from top-quark pairs (TTJets) and W-boson jets. More details are
+    available on the <a href="https://collidingadversaries.github.io/">challenge
+    website</a>.
+  bibtex: |
+    @inproceedings{saala2026colliding,
+      title = {Colliding with Adversaries: A Challenge on Robust Learning in High Energy Physics at ECML PKDD 2025},
+      author = {Saala, Timo and Flek, Lucie and Karimi, Akbar and Jung, Philipp Alexander and Schmidt, Alexander and Soldin, Philipp and Stefanopoulos, Dimitris and Voskou, Andreas and Willemsen, Ulrich and Wiebusch, Christopher and Schott, Matthias},
+      booktitle = {Machine Learning and Principles and Practice of Knowledge Discovery in Databases},
+      pages = {486--493},
+      year = {2026},
+      publisher = {Springer Nature Switzerland},
+      doi = {10.1007/978-3-032-19108-3_36},
+      url = {https://doi.org/10.1007/978-3-032-19108-3_36}
+    }
+
+- title: "EDAudio: Easy Data Augmentation for Dialectal Audio"
+  authors: "L Fischbach, A Karimi, A Lameli, L Flek"
+  venue: "RANLP 2025"
+  badge: "RANLP"
+  year: 2025
+  type: conference
+  topics: [augmentation, dialects]
+  selected: false
+  summary: >-
+    We evaluate lightweight audio augmentation techniques on recordings from 20 German
+    dialects, finding that frequency-based methods, especially frequency masking,
+    consistently help while time masking or speaker-based insertion can hurt.
+  links:
+    pdf: https://aclanthology.org/2025.ranlp-1.44.pdf
+  abstract: >-
+    We investigate lightweight and easily applicable data augmentation techniques for
+    dialectal audio classification. We evaluate four main methods, namely shifting
+    pitch, interval removal, background noise insertion and interval swap as well as
+    several subvariants on recordings from 20 German dialects. Each main method is
+    tested across multiple hyperparameter combinations, including augmentation length,
+    coverage ratio and number of augmentations per original sample. Our results show
+    that frequency-based techniques, particularly frequency masking, consistently yield
+    performance improvements, while others such as time masking or speaker-based
+    insertion can negatively affect the results. Our comparative analysis identifies
+    which augmentations are most effective under realistic conditions, offering simple
+    and efficient strategies to improve dialectal speech classification.
+  bibtex: |
+    @inproceedings{fischbach2025edaudio,
+      title = {{EDA}udio: Easy Data Augmentation for Dialectal Audio},
+      author = {Fischbach, Lea and Karimi, Akbar and Lameli, Alfred and Flek, Lucie},
+      booktitle = {Proceedings of the 15th International Conference on Recent Advances in Natural Language Processing - Natural Language Processing in the Generative {AI} Era},
+      pages = {363--368},
+      year = {2025},
+      month = sep,
+      address = {Varna, Bulgaria},
+      publisher = {INCOMA Ltd., Shoumen, Bulgaria},
+      url = {https://aclanthology.org/2025.ranlp-1.44/}
+    }
+
+- title: "Improving Low-Resource Dialect Classification Using Retrieval-based Voice Conversion"
+  authors: "L Fischbach, A Karimi, C Kleen, A Lameli, L Flek"
+  venue: "Interspeech 2025"
+  badge: "Interspeech"
+  year: 2025
+  type: conference
+  topics: [dialects, augmentation]
+  selected: true
+  summary: >-
+    We use Retrieval-based Voice Conversion to map recordings to a single target
+    speaker, reducing speaker variability so models focus on dialectal features,
+    improving low-resource German dialect classification alone and combined with other
+    augmentations.
+  links:
+    pdf: https://www.isca-archive.org/interspeech_2025/fischbach25_interspeech.pdf
+    doi: 10.21437/interspeech.2025-1017
+  abstract: >-
+    Deep learning models for dialect identification are often limited by the scarcity of
+    dialectal data. To address this challenge, we propose to use Retrieval-based Voice
+    Conversion (RVC) as an effective data augmentation method for a low-resource German
+    dialect classification task. By converting audio samples to a uniform target
+    speaker, RVC minimizes speaker-related variability, enabling models to focus on
+    dialect-specific linguistic and phonetic features. Our experiments demonstrate that
+    RVC enhances classification performance when utilized as a standalone augmentation
+    method. Furthermore, combining RVC with other augmentation methods such as frequency
+    masking and segment removal leads to additional performance gains, highlighting its
+    potential for improving dialect classification in low-resource scenarios.
+  bibtex: |
+    @inproceedings{fischbach2025improving,
+      title = {Improving Low-Resource Dialect Classification Using Retrieval-based Voice Conversion},
+      author = {Fischbach, Lea and Karimi, Akbar and Kleen, Caroline and Lameli, Alfred and Flek, Lucie},
+      booktitle = {Interspeech 2025},
+      pages = {2780--2784},
+      year = {2025},
+      month = aug,
+      publisher = {ISCA},
+      doi = {10.21437/interspeech.2025-1017},
+      url = {https://doi.org/10.21437/interspeech.2025-1017}
+    }
+
+- title: "Multi-Hop Reasoning for Question Answering with Hyperbolic Representations"
+  authors: "S Welz, L Flek, A Karimi"
+  venue: "Findings of ACL"
+  badge: "ACL Findings"
+  year: 2025
+  type: findings
+  topics: [reasoning]
+  selected: false
+  summary: >-
+    Through a simple integration of hyperbolic representations with an encoder-decoder
+    model, we perform a controlled and comprehensive set of experiments to compare the
+    capacity of hyperbolic space versus Euclidean space in multi-hop reasoning.
+  links:
+    pdf: https://aclanthology.org/2025.findings-acl.908.pdf
+    doi: 10.18653/v1/2025.findings-acl.908
+  abstract: >-
+    Hyperbolic representations are effective in modeling knowledge graph data which is
+    prevalently used to facilitate multi-hop reasoning. However, a rigorous and detailed
+    comparison of the two spaces for this task is lacking. In this paper, through a
+    simple integration of hyperbolic representations with an encoder-decoder model, we
+    perform a controlled and comprehensive set of experiments to compare the capacity of
+    hyperbolic space versus Euclidean space in multi-hop reasoning. Our results show
+    that the former consistently outperforms the latter across a diverse set of
+    datasets. In addition, through an ablation study, we show that a learnable curvature
+    initialized with the delta hyperbolicity of the utilized data yields superior
+    results to random initializations. Furthermore, our findings suggest that hyperbolic
+    representations can be significantly more advantageous when the datasets exhibit a
+    more hierarchical structure.
+  bibtex: |
+    @inproceedings{welz2025multi,
+      title = {Multi-Hop Reasoning for Question Answering with Hyperbolic Representations},
+      author = {Welz, Simon and Flek, Lucie and Karimi, Akbar},
+      booktitle = {Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2025},
+      pages = {17667--17679},
+      year = {2025},
+      month = jul,
+      address = {Vienna, Austria},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2025.findings-acl.908},
+      url = {https://aclanthology.org/2025.findings-acl.908/}
+    }
+
+- title: "Explainable Hallucination through Natural Language Inference Mapping"
+  authors: "WF Chen, Z Zhao, A Karimi, L Flek"
+  venue: "Findings of ACL"
+  badge: "ACL Findings"
+  year: 2025
+  type: findings
+  topics: [reasoning]
+  selected: false
+  summary: >-
+    We introduce HaluMap, a training-free, model-agnostic framework that detects
+    hallucinations by mapping NLI entailment and contradiction relations between inputs
+    and outputs, outperforming other training-free NLI-based methods by five points with
+    interpretable explanations.
+  links:
+    pdf: https://aclanthology.org/2025.findings-acl.96.pdf
+    doi: 10.18653/v1/2025.findings-acl.96
+    code: https://github.com/caisa-lab/acl25-halumap
+  abstract: >-
+    Large language models (LLMs) often generate hallucinated content, making it crucial
+    to identify and quantify inconsistencies in their outputs. We introduce HaluMap, a
+    post-hoc framework that detects hallucinations by mapping entailment and
+    contradiction relations between source inputs and generated outputs using a natural
+    language inference (NLI) model. To improve reliability, we propose a calibration
+    step leveraging intra-text relations to refine predictions. HaluMap outperforms
+    state-of-the-art NLI-based methods by five percentage points compared to other
+    training-free approaches, while providing clear, interpretable explanations. As a
+    training-free and model-agnostic approach, HaluMap offers a practical solution for
+    verifying LLM outputs across diverse NLP tasks. The resources of this paper are
+    available at https://github.com/caisa-lab/acl25-halumap.
+  bibtex: |
+    @inproceedings{chen2025explainable,
+      title = {Explainable Hallucination through Natural Language Inference Mapping},
+      author = {Chen, Wei-Fan and Zhao, Zhixue and Karimi, Akbar and Flek, Lucie},
+      booktitle = {Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2025},
+      pages = {1888--1896},
+      year = {2025},
+      month = jul,
+      address = {Vienna, Austria},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2025.findings-acl.96},
+      url = {https://aclanthology.org/2025.findings-acl.96/}
+    }
+
+- title: "ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving"
+  authors: "Z Ul Abedin, S Qamar, L Flek, A Karimi"
+  venue: "LLMSEC Workshop @ ACL"
+  badge: "ACL Workshop"
+  year: 2025
+  type: workshop
+  topics: [robustness]
+  selected: true
+  summary: >-
+    We propose ArithmAttack to examine how robust LLMs are when they encounter noisy
+    prompts containing extra punctuation marks — an attack that causes no information
+    loss yet consistently degrades performance across eight models.
+  links:
+    pdf: https://aclanthology.org/2025.llmsec-1.5.pdf
+    code: https://github.com/caisa-lab/ArithmAttack
+  abstract: >-
+    While Large Language Models (LLMs) have shown impressive capabilities in math
+    problem-solving tasks, their robustness to noisy inputs is not well-studied. We
+    propose ArithmAttack to examine how robust the LLMs are when they encounter noisy
+    prompts that contain extra noise in the form of punctuation marks. While being easy
+    to implement, ArithmAttack does not cause any information loss since words are not
+    added or deleted from the context. We evaluate the robustness of eight LLMs,
+    including LLama3, Mistral, Mathstral, and DeepSeek on noisy GSM8K and MultiArith
+    datasets. Our experiments suggest that all the studied models show vulnerability to
+    such noise, with more noise leading to poorer performances.
+  bibtex: |
+    @inproceedings{ulabedin2025arithmattack,
+      title = {{A}rithm{A}ttack: Evaluating Robustness of {LLM}s to Noisy Context in Math Problem Solving},
+      author = {Ul Abedin, Zain and Qamar, Shahzeb and Flek, Lucie and Karimi, Akbar},
+      booktitle = {Proceedings of the First Workshop on {LLM} Security ({LLMSEC})},
+      pages = {48--53},
+      year = {2025},
+      month = aug,
+      address = {Vienna, Austria},
+      publisher = {Association for Computational Linguistics},
+      url = {https://aclanthology.org/2025.llmsec-1.5/}
+    }
+
+- title: "Exploring Robustness of Multilingual LLMs on Real-World Noisy Data"
+  authors: "A Aliakbarzadeh, L Flek, A Karimi"
+  venue: "Eighth Widening NLP Workshop (WiNLP 2024) Phase II"
+  badge: "WiNLP"
+  year: 2024
+  type: workshop
+  topics: [robustness, multilingual]
+  selected: false
+  summary: >-
+    We study how real-world spelling mistakes from Wikipedia edit history affect 9
+    multilingual language models across NLI, NER, and intent classification in 6
+    languages, finding a 2.3 to 4.3 point performance gap, with mT5 models the most
+    robust.
+  links:
+    pdf: https://arxiv.org/pdf/2501.08322
+  abstract: >-
+    Large Language Models (LLMs) are trained on Web data that might contain spelling
+    errors made by humans. But do they become robust to similar real-world noise? In
+    this paper, we investigate the effect of real-world spelling mistakes on the
+    performance of 9 language models, with parameters ranging from 0.2B to 13B, in 3
+    different NLP tasks, namely Natural Language Inference (NLI), Name Entity
+    Recognition (NER), and Intent Classification (IC). We perform our experiments on 6
+    different languages and build a dictionary of real-world noise for them using the
+    Wikipedia edit history. We show that the performance gap of the studied models on
+    the clean and noisy test data averaged across all the datasets and languages ranges
+    from 2.3 to 4.3 absolute percentage points. In addition, mT5 models, in general,
+    show more robustness compared to BLOOM, Falcon, and BERT-like models. In particular,
+    mT5 (13B), was the most robust on average overall, across the 3 tasks, and in 4 of
+    the 6 languages.
+  bibtex: |
+    @misc{aliakbarzadeh2025exploring,
+      title = {Exploring Robustness of Multilingual LLMs on Real-World Noisy Data},
+      author = {Amirhossein Aliakbarzadeh and Lucie Flek and Akbar Karimi},
+      year = {2025},
+      eprint = {2501.08322},
+      archiveprefix = {arXiv},
+      primaryclass = {cs.CL},
+      url = {https://arxiv.org/abs/2501.08322}
+    }
+
+- title: "Do Multilingual Large Language Models Mitigate Stereotype Bias?"
+  authors: "S Nie, M Fromm, C Welch, R Görge, A Karimi, J Plepi, N Mowmita, N Flores-Herr, M Ali, L Flek"
+  venue: "C3NLP Workshop @ ACL"
+  badge: "ACL Workshop"
+  year: 2024
+  type: workshop
+  topics: [multilingual]
+  selected: false
+  summary: >-
+    We investigate the effect of multilingual training on bias mitigation by
+    systematically training six LLMs of identical size (2.6B parameters): five
+    monolingual and one multilingual model, showing that multilingual training
+    consistently reduces bias while improving prediction accuracy.
+  links:
+    pdf: https://aclanthology.org/2024.c3nlp-1.6.pdf
+    doi: 10.18653/v1/2024.c3nlp-1.6
+  abstract: >-
+    While preliminary findings indicate that multilingual LLMs exhibit reduced bias
+    compared to monolingual ones, a comprehensive understanding of the effect of
+    multilingual training on bias mitigation, is lacking. This study addresses this gap
+    by systematically training six LLMs of identical size (2.6 B parameters) and
+    architecture: five monolingual models (English, German, French, Italian, and
+    Spanish) and one multilingual model trained on an equal distribution of data across
+    these languages, all using publicly available data. To ensure robust evaluation,
+    standard bias benchmarks were automatically translated into the five target
+    languages and verified for both translation quality and bias preservation by human
+    annotators. Our results consistently demonstrate that multilingual training
+    effectively mitigates bias. Moreover, we observe that multilingual models achieve
+    not only lower bias but also superior prediction accuracy when compared to
+    monolingual models with the same amount of training data, model architecture, and
+    size.
+  bibtex: |
+    @inproceedings{nie2024multilingual,
+      title = {Do Multilingual Large Language Models Mitigate Stereotype Bias?},
+      author = {Nie, Shangrui and Fromm, Michael and Welch, Charles and G{\"o}rge, Rebekka and Karimi, Akbar and Plepi, Joan and Mowmita, Nazia and Flores-Herr, Nicolas and Ali, Mehdi and Flek, Lucie},
+      booktitle = {Proceedings of the 2nd Workshop on Cross-Cultural Considerations in {NLP}},
+      pages = {65--83},
+      year = {2024},
+      month = aug,
+      address = {Bangkok, Thailand},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2024.c3nlp-1.6},
+      url = {https://aclanthology.org/2024.c3nlp-1.6/}
+    }
+
+- title: "CAISA at SemEval-2023 Task 8: Counterfactual Data Augmentation for Mitigating Class Imbalance in Causal Claim Identification"
+  authors: "A Karimi, L Flek"
+  venue: "SemEval 2023"
+  badge: "SemEval"
+  year: 2023
+  type: workshop
+  topics: [augmentation, biomedical]
+  selected: false
+  summary: >-
+    We introduce a counterfactual data augmentation method based on verb replacement for
+    identifying medical claims, yielding significant relative improvement on the
+    minority class compared to three other augmentation techniques.
+  links:
+    pdf: https://aclanthology.org/2023.semeval-1.292.pdf
+    doi: 10.18653/v1/2023.semeval-1.292
+  abstract: >-
+    Class imbalance problem can cause machine learning models to produce an undesirable
+    performance on the minority class as well as the whole dataset. Using data
+    augmentation techniques to increase the number of samples is one way to tackle this
+    problem. We introduce a novel counterfactual data augmentation by verb replacement
+    for the identification of medical claims. In addition, we investigate the impact of
+    this method and compare it with 3 other data augmentation techniques, showing that
+    the proposed method can result in significant (relative) improvement on the minority
+    class.
+  bibtex: |
+    @inproceedings{karimi2023caisa,
+      title = {{CAISA} at {S}em{E}val-2023 Task 8: Counterfactual Data Augmentation for Mitigating Class Imbalance in Causal Claim Identification},
+      author = {Karimi, Akbar and Flek, Lucie},
+      booktitle = {Proceedings of the 17th {I}nternational {W}orkshop on {S}emantic {E}valuation ({S}em{E}val-2023)},
+      pages = {2118--2123},
+      year = {2023},
+      month = jul,
+      address = {Toronto, Canada},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2023.semeval-1.292},
+      url = {https://aclanthology.org/2023.semeval-1.292/}
+    }
+
+- title: "CAISA@SMM4H’22: Robust Cross-Lingual Detection of Disease Mentions on Social Media with Adversarial Methods"
+  authors: "A Karimi, L Flek"
+  venue: "SMM4H 2022"
+  badge: "SMM4H"
+  year: 2022
+  type: workshop
+  topics: [robustness, biomedical, multilingual]
+  selected: false
+  summary: >-
+    We apply adversarial data augmentation in the input and embedding spaces to BioBERT
+    for detecting disease mentions in Spanish tweets, outperforming a vocabulary-based
+    baseline, with augmentation especially helpful in low-data settings.
+  links:
+    pdf: https://aclanthology.org/2022.smm4h-1.45.pdf
+    code: https://github.com/caisa-lab/caisa-smm4h22
+  abstract: >-
+    We propose adversarial methods for increasing the robustness of disease mention
+    detection on social media. Our method applies adversarial data augmentation on the
+    input and the embedding spaces to the English BioBERT model. We evaluate our method
+    in the SocialDisNER challenge at SMM4H’22 on an annotated dataset of disease
+    mentions in Spanish tweets. We find that both methods outperform a heuristic
+    vocabulary-based baseline by a large margin. Additionally, utilizing the English
+    BioBERT model shows a strong performance and outperforms the data augmentation
+    methods even when applied to the Spanish dataset, which has a large amount of data,
+    while augmentation methods show a significant advantage in a low-data setting.
+  bibtex: |
+    @inproceedings{karimi2022caisa,
+      title = {{CAISA}@{SMM}4{H}{'}22: Robust Cross-Lingual Detection of Disease Mentions on Social Media with Adversarial Methods},
+      author = {Karimi, Akbar and Flek, Lucie},
+      booktitle = {Proceedings of the Seventh Workshop on Social Media Mining for Health Applications, Workshop {\&} Shared Task},
+      pages = {168--170},
+      year = {2022},
+      month = oct,
+      address = {Gyeongju, Republic of Korea},
+      publisher = {Association for Computational Linguistics},
+      url = {https://aclanthology.org/2022.smm4h-1.45/}
+    }
+
+- title: "Self-Balanced R-CNN for Instance Segmentation"
+  authors: "L Rossi, A Karimi, A Prati"
+  venue: "JVCIR"
+  badge: "JVCIR"
+  year: 2022
+  type: journal
+  topics: [vision]
+  selected: false
+  summary: >-
+    We propose SBR-CNN, an evolution of HTC with loop mechanisms for box and mask
+    refinement and an improved GRoIE, addressing IoU and feature-level imbalances and
+    reaching 45.3% / 41.5% AP on COCO with a ResNet-50 backbone.
+  links:
+    pdf: https://arxiv.org/pdf/2404.16633
+    doi: 10.1016/j.jvcir.2022.103595
+  abstract: >-
+    Current state-of-the-art two-stage models on instance segmentation task suffer from
+    several types of imbalances. In this paper, we address the Intersection over the
+    Union (IoU) distribution imbalance of positive input Regions of Interest (RoIs)
+    during the training of the second stage. Our Self-Balanced R-CNN (SBR-CNN), an
+    evolved version of the Hybrid Task Cascade (HTC) model, brings brand new loop
+    mechanisms of bounding box and mask refinements. With an improved Generic RoI
+    Extraction (GRoIE), we also address the feature-level imbalance at the Feature
+    Pyramid Network (FPN) level, originated by a non-uniform integration between low-
+    and high-level features from the backbone layers. In addition, the redesign of the
+    architecture heads toward a fully convolutional approach with FCC further reduces
+    the number of parameters and obtains more clues to the connection between the task
+    to solve and the layers used. Moreover, our SBR-CNN model shows the same or even
+    better improvements if adopted in conjunction with other state-of-the-art models. In
+    fact, with a lightweight ResNet-50 as backbone, evaluated on COCO minival 2017
+    dataset, our model reaches 45.3% and 41.5% AP for object detection and instance
+    segmentation, with 12 epochs and without extra tricks.
+  bibtex: |
+    @article{rossi2022self,
+      title = {Self-Balanced R-CNN for instance segmentation},
+      author = {Rossi, Leonardo and Karimi, Akbar and Prati, Andrea},
+      journal = {Journal of Visual Communication and Image Representation},
+      volume = {87},
+      pages = {103595},
+      year = {2022},
+      month = aug,
+      publisher = {Elsevier BV},
+      doi = {10.1016/j.jvcir.2022.103595},
+      url = {https://doi.org/10.1016/j.jvcir.2022.103595}
+    }
+
+- title: "Aspect-Based Emotion Analysis and Multimodal Coreference: A Case Study of Customer Comments on Adidas Instagram Posts"
+  authors: "L De Bruyne, A Karimi, O De Clercq, A Prati, V Hoste"
+  venue: "LREC 2022"
+  badge: "LREC"
+  year: 2022
+  type: conference
+  topics: [sentiment]
+  selected: false
+  summary: >-
+    We present a multimodal dataset of 4,900 comments on 175 Instagram images annotated
+    for aspect-based emotion analysis, and find that aspect and emotion classification
+    benefit little from multimodal coreference resolution.
+  links:
+    pdf: https://aclanthology.org/2022.lrec-1.61.pdf
+  abstract: >-
+    While aspect-based sentiment analysis of user-generated content has received a lot
+    of attention in the past years, emotion detection at the aspect level has been
+    relatively unexplored. Moreover, given the rise of more visual content on social
+    media platforms, we want to meet the ever-growing share of multimodal content. In
+    this paper, we present a multimodal dataset for Aspect-Based Emotion Analysis
+    (ABEA). Additionally, we take the first steps in investigating the utility of
+    multimodal coreference resolution in an ABEA framework. The presented dataset
+    consists of 4,900 comments on 175 images and is annotated with aspect and emotion
+    categories and the emotional dimensions of valence and arousal. Our preliminary
+    experiments suggest that ABEA does not benefit from multimodal coreference
+    resolution, and that aspect and emotion classification only requires textual
+    information. However, when more specific information about the aspects is desired,
+    image recognition could be essential.
+  bibtex: |
+    @inproceedings{debruyne2022aspect,
+      title = {Aspect-Based Emotion Analysis and Multimodal Coreference: A Case Study of Customer Comments on Adidas {I}nstagram Posts},
+      author = {De Bruyne, Luna and Karimi, Akbar and De Clercq, Orphee and Prati, Andrea and Hoste, Veronique},
+      booktitle = {Proceedings of the Thirteenth Language Resources and Evaluation Conference},
+      pages = {574--580},
+      year = {2022},
+      month = jun,
+      address = {Marseille, France},
+      publisher = {European Language Resources Association},
+      url = {https://aclanthology.org/2022.lrec-1.61/}
+    }
+
+- title: "Improving Localization for Semi-Supervised Object Detection"
+  authors: "L Rossi, A Karimi, A Prati"
+  venue: "ICIAP 2022"
+  badge: "ICIAP"
+  year: 2022
+  type: conference
+  topics: [vision]
+  selected: false
+  summary: >-
+    We add a bounding box localization classification task to the Mean Teacher framework
+    to better filter pseudo-labels, and show that box regression on unlabeled data helps
+    as much as classification, improving SSOD on COCO by 1.14% AP.
+  links:
+    pdf: https://arxiv.org/pdf/2206.10186
+    doi: 10.1007/978-3-031-06430-2_43
+  abstract: >-
+    Nowadays, Semi-Supervised Object Detection (SSOD) is a hot topic, since, while it is
+    rather easy to collect images for creating a new dataset, labeling them is still an
+    expensive and time-consuming task. One of the successful methods to take advantage
+    of raw images on a Semi-Supervised Learning (SSL) setting is the Mean Teacher
+    technique, where the operations of pseudo-labeling by the Teacher and the Knowledge
+    Transfer from the Student to the Teacher take place simultaneously. However, the
+    pseudo-labeling by thresholding is not the best solution since the confidence value
+    is not strictly related to the prediction uncertainty, not permitting to safely
+    filter predictions. In this paper, we introduce an additional classification task
+    for bounding box localization to improve the filtering of the predicted bounding
+    boxes and obtain higher quality on Student training. Furthermore, we empirically
+    prove that bounding box regression on the unsupervised part can equally contribute
+    to the training as much as category classification. Our experiments show that our
+    IL-net (Improving Localization net) increases SSOD performance by 1.14% AP on COCO
+    dataset in limited-annotation regime.
+  bibtex: |
+    @inproceedings{rossi2022improving,
+      title = {Improving Localization for Semi-Supervised Object Detection},
+      author = {Rossi, Leonardo and Karimi, Akbar and Prati, Andrea},
+      booktitle = {Image Analysis and Processing – ICIAP 2022},
+      pages = {516--527},
+      year = {2022},
+      publisher = {Springer International Publishing},
+      doi = {10.1007/978-3-031-06430-2_43},
+      url = {https://doi.org/10.1007/978-3-031-06430-2_43}
+    }
+
+- title: "Improving BERT Performance for Aspect-Based Sentiment Analysis"
+  authors: "A Karimi, L Rossi, A Prati"
+  venue: "ICNLSP 2021"
+  badge: "ICNLSP"
+  year: 2021
+  type: conference
+  topics: [sentiment]
+  selected: false
+  summary: >-
+    We propose two simple modules, Parallel Aggregation and Hierarchical Aggregation, on
+    top of BERT for Aspect Extraction and Aspect Sentiment Classification, improving
+    performance without further training of the BERT model.
+  links:
+    pdf: https://aclanthology.org/2021.icnlsp-1.5.pdf
+  abstract: >-
+    Aspect-Based Sentiment Analysis (ABSA) studies the consumer opinion on the market
+    products. It involves examining the type of sentiments as well as sentiment targets
+    expressed in product reviews. Analyzing the language used in a review is a difficult
+    task that requires a deep understanding of the language. In recent years, deep
+    language models, such as BERT, have shown great progress in this regard. In this
+    work, we propose two simple modules called Parallel Aggregation and Hierarchical
+    Aggregation to be utilized on top of BERT for two main ABSA tasks namely Aspect
+    Extraction (AE) and Aspect Sentiment Classification (ASC) in order to improve the
+    model's performance. We show that applying the proposed models eliminates the need
+    for further training of the BERT model. The source code is available on the Web for
+    further research and reproduction of the results.
+  bibtex: |
+    @inproceedings{karimi2021improving,
+      title = {Improving {BERT} Performance for Aspect-Based Sentiment Analysis},
+      author = {Karimi, Akbar and Rossi, Leonardo and Prati, Andrea},
+      booktitle = {Proceedings of the 4th International Conference on Natural Language and Speech Processing ({ICNLSP} 2021)},
+      month = 12-
+    }
+
+- title: "AEDA: An Easier Data Augmentation Technique for Text Classification"
+  authors: "A Karimi, L Rossi, A Prati"
+  venue: "Findings of EMNLP"
+  badge: "EMNLP Findings"
+  year: 2021
+  type: findings
+  topics: [augmentation]
+  selected: true
+  summary: >-
+    AEDA inserts punctuation marks randomly into text — simpler than EDA, lossless, and
+    consistently superior across five classification datasets.
+  links:
+    pdf: https://aclanthology.org/2021.findings-emnlp.234.pdf
+    doi: 10.18653/v1/2021.findings-emnlp.234
+  abstract: >-
+    This paper proposes AEDA (An Easier Data Augmentation) technique to help improve the
+    performance on text classification tasks. AEDA includes only random insertion of
+    punctuation marks into the original text. This is an easier technique to implement
+    for data augmentation than EDA method (Wei and Zou, 2019) with which we compare our
+    results. In addition, it keeps the order of the words while changing their positions
+    in the sentence leading to a better generalized performance. Furthermore, the
+    deletion operation in EDA can cause loss of information which, in turn, misleads the
+    network, whereas AEDA preserves all the input information. Following the baseline,
+    we perform experiments on five different datasets for text classification. We show
+    that using the AEDA-augmented data for training, the models show superior
+    performance compared to using the EDA-augmented data in all five datasets. The
+    source code will be made available for further study and reproduction of the
+    results.
+  bibtex: |
+    @inproceedings{karimi2021aeda,
+      title = {{AEDA}: An Easier Data Augmentation Technique for Text Classification},
+      author = {Karimi, Akbar and Rossi, Leonardo and Prati, Andrea},
+      booktitle = {Findings of the {A}ssociation for {C}omputational {L}inguistics: {EMNLP} 2021},
+      pages = {2748--2754},
+      year = {2021},
+      month = nov,
+      address = {Punta Cana, Dominican Republic},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2021.findings-emnlp.234},
+      url = {https://aclanthology.org/2021.findings-emnlp.234/}
+    }
+
+- title: "Recursively Refined R-CNN: Instance Segmentation with Self-RoI Rebalancing"
+  authors: "L Rossi, A Karimi, A Prati"
+  venue: "CAIP 2021"
+  badge: "CAIP"
+  year: 2021
+  type: conference
+  topics: [vision]
+  selected: false
+  summary: >-
+    We propose R³-CNN, which replaces cascade architectures with a loop mechanism and
+    recursive IoU-based re-sampling, surpassing the HTC model on COCO while
+    significantly reducing the number of parameters.
+  links:
+    pdf: https://arxiv.org/pdf/2104.01329
+    doi: 10.1007/978-3-030-89128-2_46
+  abstract: >-
+    Within the field of instance segmentation, most of the state-of-the-art deep
+    learning networks rely nowadays on cascade architectures, where multiple object
+    detectors are trained sequentially, re-sampling the ground truth at each step. This
+    offers a solution to the problem of exponentially vanishing positive samples.
+    However, it also translates into an increase in network complexity in terms of the
+    number of parameters. To address this issue, we propose Recursively Refined R-CNN
+    (R^3-CNN) which avoids duplicates by introducing a loop mechanism instead. At the
+    same time, it achieves a quality boost using a recursive re-sampling technique,
+    where a specific IoU quality is utilized in each recursion to eventually equally
+    cover the positive spectrum. Our experiments highlight the specific encoding of the
+    loop mechanism in the weights, requiring its usage at inference time. The R^3-CNN
+    architecture is able to surpass the recently proposed HTC model, while reducing the
+    number of parameters significantly. Experiments on COCO minival 2017 dataset show
+    performance boost independently from the utilized baseline model.
+  bibtex: |
+    @inproceedings{rossi2021recursively,
+      title = {Recursively Refined R-CNN: Instance Segmentation with Self-RoI Rebalancing},
+      author = {Rossi, Leonardo and Karimi, Akbar and Prati, Andrea},
+      booktitle = {Computer Analysis of Images and Patterns},
+      pages = {476--486},
+      year = {2021},
+      publisher = {Springer International Publishing},
+      doi = {10.1007/978-3-030-89128-2_46},
+      url = {https://doi.org/10.1007/978-3-030-89128-2_46}
+    }
+
+- title: "Uniparma at SemEval-2021 Task 5: Toxic Spans Detection Using CharacterBERT and Bag-of-Words Model"
+  authors: "A Karimi, L Rossi, A Prati"
+  venue: "SemEval 2021"
+  badge: "SemEval"
+  year: 2021
+  type: workshop
+  topics: [sentiment]
+  selected: false
+  summary: >-
+    We detect toxic spans by combining CharacterBERT, which handles misspelled toxic
+    words through character-level embeddings, with a bag-of-words method that ensures
+    frequently used toxic words are labeled.
+  links:
+    pdf: https://aclanthology.org/2021.semeval-1.25.pdf
+    doi: 10.18653/v1/2021.semeval-1.25
+  abstract: >-
+    With the ever-increasing availability of digital information, toxic content is also
+    on the rise. Therefore, the detection of this type of language is of paramount
+    importance. We tackle this problem utilizing a combination of a state-of-the-art
+    pre-trained language model (CharacterBERT) and a traditional bag-of-words technique.
+    Since the content is full of toxic words that have not been written according to
+    their dictionary spelling, attendance to individual characters is crucial.
+    Therefore, we use CharacterBERT to extract features based on the word characters. It
+    consists of a CharacterCNN module that learns character embeddings from the context.
+    These are, then, fed into the well-known BERT architecture. The bag-of-words method,
+    on the other hand, further improves upon that by making sure that some frequently
+    used toxic words get labeled accordingly. With a ~4 percent difference from the
+    first team, our system ranked 36th in the competition. The code is available for
+    further research and reproduction of the results.
+  bibtex: |
+    @inproceedings{karimi2021uniparma,
+      title = {{U}ni{P}arma at {S}em{E}val-2021 Task 5: Toxic Spans Detection Using {C}haracter{BERT} and Bag-of-Words Model},
+      author = {Karimi, Akbar and Rossi, Leonardo and Prati, Andrea},
+      booktitle = {Proceedings of the 15th {I}nternational {W}orkshop on {S}emantic {E}valuation ({S}em{E}val-2021)},
+      pages = {220--224},
+      year = {2021},
+      month = aug,
+      address = {Online},
+      publisher = {Association for Computational Linguistics},
+      doi = {10.18653/v1/2021.semeval-1.25},
+      url = {https://aclanthology.org/2021.semeval-1.25/}
+    }
+
+- title: "A Novel Region of Interest Extraction Layer for Instance Segmentation"
+  authors: "L Rossi, A Karimi, A Prati"
+  venue: "ICPR 2020"
+  badge: "ICPR"
+  year: 2020
+  type: conference
+  topics: [vision]
+  selected: false
+  summary: >-
+    We propose GRoIE, a Generic RoI Extractor that uses all FPN layers with non-local
+    blocks and attention, integrating seamlessly into two-stage architectures and
+    improving detection by up to 1.1% AP and instance segmentation by 1.7% AP.
+  links:
+    pdf: https://arxiv.org/pdf/2004.13665
+    doi: 10.1109/icpr48806.2021.9412258
+  abstract: >-
+    Given the wide diffusion of deep neural network architectures for computer vision
+    tasks, several new applications are nowadays more and more feasible. Among them, a
+    particular attention has been recently given to instance segmentation, by exploiting
+    the results achievable by two-stage networks (such as Mask R-CNN or Faster R-CNN),
+    derived from R-CNN. In these complex architectures, a crucial role is played by the
+    Region of Interest (RoI) extraction layer, devoted to extracting a coherent subset
+    of features from a single Feature Pyramid Network (FPN) layer attached on top of a
+    backbone. This paper is motivated by the need to overcome the limitations of
+    existing RoI extractors which select only one (the best) layer from FPN. Our
+    intuition is that all the layers of FPN retain useful information. Therefore, the
+    proposed layer (called Generic RoI Extractor - GRoIE) introduces non-local building
+    blocks and attention mechanisms to boost the performance. A comprehensive ablation
+    study at component level is conducted to find the best set of algorithms and
+    parameters for the GRoIE layer. Moreover, GRoIE can be integrated seamlessly with
+    every two-stage architecture for both object detection and instance segmentation
+    tasks. Therefore, the improvements brought about by the use of GRoIE in different
+    state-of-the-art architectures are also evaluated. The proposed layer leads up to
+    gain a 1.1% AP improvement on bounding box detection and 1.7% AP improvement on
+    instance segmentation.
+  bibtex: |
+    @inproceedings{rossi2021novel,
+      title = {A Novel Region of Interest Extraction Layer for Instance Segmentation},
+      author = {Rossi, Leonardo and Karimi, Akbar and Prati, Andrea},
+      booktitle = {2020 25th International Conference on Pattern Recognition (ICPR)},
+      pages = {2203--2209},
+      year = {2021},
+      month = jan,
+      publisher = {IEEE},
+      doi = {10.1109/icpr48806.2021.9412258},
+      url = {https://doi.org/10.1109/icpr48806.2021.9412258}
+    }
+
+- title: "Adversarial Training for Aspect-Based Sentiment Analysis with BERT"
+  authors: "A Karimi, L Rossi, A Prati"
+  venue: "ICPR"
+  badge: "ICPR"
+  year: 2020
+  type: conference
+  topics: [robustness, sentiment]
+  selected: true
+  summary: >-
+    We propose BERT Adversarial Training (BAT), a novel architecture that applies
+    adversarial training to Aspect Extraction and Aspect Sentiment Classification,
+    outperforming both general and domain post-trained BERT — the first study of its
+    kind in ABSA.
+  links:
+    pdf: https://arxiv.org/pdf/2001.11316
+    doi: 10.1109/icpr48806.2021.9412167
+  abstract: >-
+    Aspect-Based Sentiment Analysis (ABSA) studies the extraction of sentiments and
+    their targets. Collecting labeled data for this task in order to help neural
+    networks generalize better can be laborious and time-consuming. As an alternative,
+    similar data to the real-world examples can be produced artificially through an
+    adversarial process which is carried out in the embedding space. Although these
+    examples are not real sentences, they have been shown to act as a regularization
+    method which can make neural networks more robust. In this work, we finetune the
+    general purpose BERT and domain specific post-trained BERT (BERT-PT) using
+    adversarial training. After improving the results of post-trained BERT with
+    different hyperparameters, we propose a novel architecture called BERT Adversarial
+    Training (BAT) to utilize adversarial training for the two major tasks of Aspect
+    Extraction and Aspect Sentiment Classification in sentiment analysis. The proposed
+    model outperforms the general BERT as well as the in-domain post-trained BERT in
+    both tasks. To the best of our knowledge, this is the first study on the application
+    of adversarial training in ABSA.
+  bibtex: |
+    @inproceedings{karimi2021adversarial,
+      title = {Adversarial Training for Aspect-Based Sentiment Analysis with BERT},
+      author = {Karimi, Akbar and Rossi, Leonardo and Prati, Andrea},
+      booktitle = {2020 25th International Conference on Pattern Recognition (ICPR)},
+      pages = {8797--8803},
+      year = {2021},
+      month = jan,
+      publisher = {IEEE},
+      doi = {10.1109/icpr48806.2021.9412167},
+      url = {https://doi.org/10.1109/icpr48806.2021.9412167}
+    }
+
+- title: "Extracting an English-Persian Parallel Corpus from Comparable Corpora"
+  authors: "A Karimi, E Ansari, BS Bigham"
+  venue: "LREC 2018"
+  badge: "LREC"
+  year: 2018
+  type: conference
+  topics: [mt]
+  selected: false
+  summary: >-
+    We propose a bidirectional method to extract parallel sentences from
+    document-aligned English and Persian Wikipedia, producing a corpus of about 200,000
+    sentences that improves statistical machine translation quality.
+  links:
+    pdf: https://aclanthology.org/L18-1549.pdf
+  abstract: >-
+    Parallel data are an important part of a reliable Statistical Machine Translation
+    (SMT) system. The more of these data are available, the better the quality of the
+    SMT system. However, for some language pairs such as Persian-English, parallel
+    sources of this kind are scarce. In this paper, a bidirectional method is proposed
+    to extract parallel sentences from English and Persian document aligned Wikipedia.
+    Two machine translation systems are employed to translate from Persian to English
+    and the reverse after which an IR system is used to measure the similarity of the
+    translated sentences. Adding the extracted sentences to the training data of the
+    existing SMT systems is shown to improve the quality of the translation.
+    Furthermore, the proposed method slightly outperforms the one-directional approach.
+    The extracted corpus consists of about 200,000 sentences which have been sorted by
+    their degree of similarity calculated by the IR system and is freely available for
+    public access on the Web.
+  bibtex: |
+    @inproceedings{karimi2018extracting,
+      title = {Extracting an {E}nglish-{P}ersian Parallel Corpus from Comparable Corpora},
+      author = {Karimi, Akbar and Ansari, Ebrahim and Sadeghi Bigham, Bahram},
+      booktitle = {Proceedings of the Eleventh International Conference on Language Resources and Evaluation ({LREC} 2018)},
+      year = {2018},
+      month = may,
+      address = {Miyazaki, Japan},
+      publisher = {European Language Resources Association (ELRA)},
+      url = {https://aclanthology.org/L18-1549/}
+    }

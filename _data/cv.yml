@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────────────────
+#  CV — the web version on /cv/ (the full PDF lives at /files/cv.pdf).
+#  `details` accepts Markdown, including [links](https://…).
+# ─────────────────────────────────────────────────────────────────────
+
+pdf: "/files/cv.pdf"
+
+experience:
+  - title: "Postdoctoral Researcher"
+    org: "Saarland University"
+    dates: "2026 – present"
+    details: >-
+      [LSV Lab](https://www.lsv.uni-saarland.de/) — Chemical/Protein Language Models
+
+  - title: "Postdoctoral Researcher & Scientific Coordinator"
+    org: "University of Bonn"
+    dates: "Oct 2023 – Dec 2025"
+    details: >-
+      [CAISA Lab](https://caisa-lab.github.io/) — Conversational AI and Social Analytics.
+      Research on LLM robustness, adversarial NLP, and data augmentation; co-coordination
+      of lab activities and student supervision.
+
+  - title: "Postdoctoral Researcher"
+    org: "University of Marburg"
+    dates: "2022 – 2023"
+    details: >-
+      Research on data augmentation and entity extraction for BioNLP; teaching Dialog
+      Systems and Introduction to Natural Language Processing.
+
+education:
+  - title: "Ph.D. in Information Technology"
+    org: "University of Parma"
+    dates: "2022"
+    details: >-
+      Thesis on adversarial learning and data augmentation for robust NLP models, under
+      [Prof. Andrea Prati](https://scholar.google.com/citations?user=PJAxU3QAAAAJ&hl=en&oi=ao)
+      at [IMP Lab](https://implab.ce.unipr.it/).
+
+  - title: "M.S. in Computer Science — Intelligent Systems"
+    org: "IASBS"
+    dates: "2017"
+
+  - title: "B.S. in Computer Engineering — Software"
+    org: "Azad University of Zanjan"
+    dates: "2012"

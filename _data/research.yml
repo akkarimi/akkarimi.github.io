@@ -1,0 +1,69 @@
+# ─────────────────────────────────────────────────────────────────────
+#  RESEARCH THEMES — shown on the homepage and on /research/.
+#
+#  id        a topic id from topics.yml; related papers are pulled in
+#            automatically from publications.yml
+#  figure    optional image in /images/research/ (e.g. "robustness.png");
+#            if empty, a small built-in illustration is used
+#  key_papers  optional list of paper titles to list first on /research/
+# ─────────────────────────────────────────────────────────────────────
+
+- id: robustness
+  title: "Robustness of LLMs to adversarial and noisy inputs"
+  short: "How language models break under typos, punctuation noise and adversarial perturbations — and how to make them hold up."
+  description: >-
+    Large language models are increasingly deployed on messy, real-world input.
+    I study how their behaviour degrades under adversarial and naturally occurring
+    noise — from punctuation attacks on math reasoning (ArithmAttack) and multi-agent
+    setups, to real-world spelling errors across languages — and how adversarial
+    training can make models more resilient.
+  figure: ""
+  key_papers:
+    - "More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists"
+    - "ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving"
+    - "Exploring Robustness of Multilingual LLMs on Real-World Noisy Data"
+
+- id: augmentation
+  title: "Data augmentation for NLP and speech"
+  short: "Simple, label-preserving ways to get more out of scarce data — for text, audio and LLM-generated examples."
+  description: >-
+    When labelled data is scarce, carefully designed augmentation can go a long way.
+    My work ranges from lightweight text methods (AEDA) and adversarial training (BAT)
+    to audio augmentation and voice conversion for low-resource dialects (EDAudio),
+    and agentic, label-consistent data generation with LLMs.
+  figure: ""
+  key_papers:
+    - "AEDA: An Easier Data Augmentation Technique for Text Classification"
+    - "Adversarial Training for Aspect-Based Sentiment Analysis with BERT"
+    - "EDAudio: Easy Data Augmentation for Dialectal Audio"
+    - "Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents"
+
+- id: science
+  title: "AI for science"
+  short: "Trustworthy machine learning for high-energy physics, astronomy and, now, drug discovery."
+  description: >-
+    Scientific applications demand models whose failures are understood. With
+    physicists, I develop physics-aware adversarial attacks and robustness tests for
+    classifiers in high-energy physics; I have also worked on knowledge extraction
+    from astronomy literature. At Saarland University I now work on chemical and
+    protein language models and trustworthy AI for drug discovery.
+  figure: ""
+  key_papers:
+    - "MiniFool: Physics-Constraint-Aware Minimizer-Based Adversarial Attacks in Deep Neural Networks"
+    - "Enforcing Fundamental Relations via Adversarial Attacks on Input Parameter Correlations"
+    - "Colliding with Adversaries: A Challenge on Robust Learning in High Energy Physics at ECML PKDD 2025"
+
+- id: dialects
+  title: "Dialects and speech"
+  short: "Classifying spoken dialects with little data — and comparing how humans and machines do it."
+  description: >-
+    Dialects are a natural testbed for low-resource speech processing. Together with
+    linguists, I work on German and Swiss German dialect classification using voice
+    conversion, audio augmentation and LLM agents equipped with linguistic resources,
+    and on what perception experiments reveal about differences between human and
+    machine listeners.
+  figure: ""
+  key_papers:
+    - "Improving Low-Resource Dialect Classification Using Retrieval-based Voice Conversion"
+    - "Can LLM Agents Identify Spoken Dialects like a Linguist?"
+    - "Speaker Normalization via Voice Conversion Reveals a Human–Machine Dissociation in Dialect Classification"

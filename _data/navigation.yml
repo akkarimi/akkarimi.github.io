@@ -1,15 +1,17 @@
-main:
-  - title: "About"
-    url: "/#about"
-
-  - title: "News"
-    url: "/#news"
-
-  - title: "Publications"
-    url: "/#publications"
-
-  - title: "Teaching"
-    url: "/#teaching"
-
-  - title: "CV"
-    url: /cv/
+# Main menu, in order. `url` must match a page permalink.
+- title: "Research"
+  url: "/research/"
+- title: "Publications"
+  url: "/publications/"
+- title: "People"
+  url: "/people/"
+- title: "Teaching"
+  url: "/teaching/"
+- title: "News"
+  url: "/news/"
+- title: "CV"
+  url: "/cv/"
+- title: "Projects"
+  url: "/projects/"
+- title: "Blog"
+  url: "/blog/"

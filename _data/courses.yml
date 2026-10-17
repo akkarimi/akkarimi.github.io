@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────────────────────────────
+#  TEACHING — one entry per course offering. Shown on /teaching/, grouped by year.
+#
+#  title, institution, year   required
+#  term         e.g. "Summer 2025" / "Winter 2022/23" (optional)
+#  level        Undergraduate | Graduate | ...
+#  role         e.g. Lecturer, Teaching assistant, Lab instructor (optional)
+#  description  Markdown allowed (optional)
+#  materials    link to slides / course page (optional)
+# ─────────────────────────────────────────────────────────────────────
+
+- title: "Dialog Systems"
+  institution: "University of Bonn"
+  year: 2025
+  term: ""
+  level: "Undergraduate"
+  role: ""
+  description: >-
+    Lab sessions on LLM agents, agentic frameworks including SmolAgents,
+    LangChain, and LlamaIndex, and building personal chatbots using small
+    models with internet search and tool-use capabilities.
+  materials: ""
+
+- title: "Dialog Systems"
+  institution: "University of Bonn"
+  year: 2024
+  term: ""
+  level: "Undergraduate"
+  role: ""
+  description: >-
+    Core components of a dialog system: ASR, NLU, dialog manager,
+    dialog state tracking, and NLG, and the tasks involved in each module.
+  materials: ""
+
+- title: "Introduction to Natural Language Processing"
+  institution: "University of Marburg"
+  year: 2023
+  term: ""
+  level: "Undergraduate"
+  role: ""
+  description: >-
+    Core NLP concepts including TF-IDF, word embeddings, RNNs, and
+    Transformers, as well as evaluation methodologies and applications
+    in conversational systems and computational social science.
+  materials: ""
+
+- title: "Dialog Systems"
+  institution: "University of Marburg"
+  year: 2022
+  term: ""
+  level: "Undergraduate"
+  role: ""
+  description: ""   # TODO: add a one- or two-sentence description of this course
+  materials: ""

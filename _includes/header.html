@@ -1,0 +1,27 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>{{ site.author.name }}</a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="site-nav__list" role="list">
+        {%- for item in site.data.navigation %}
+        {%- assign active = false -%}
+        {%- if page.url == item.url or page.url contains item.url and item.url != "/" -%}{%- assign active = true -%}{%- endif %}
+        <li><a class="site-nav__link" href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle__light">{% include icon.html name="moon" %}</span>
+        <span class="theme-toggle__dark">{% include icon.html name="sun" %}</span>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle__open">{% include icon.html name="menu" %}</span>
+        <span class="nav-toggle__close">{% include icon.html name="close" %}</span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────────────────────────────
+#  TOPICS — the tags used in publications.yml (topics: [...]) and in the
+#  Publications page filter. Add a new topic here before using its id.
+# ─────────────────────────────────────────────────────────────────────
+
+- id: robustness
+  label: "Robustness & adversarial ML"
+- id: augmentation
+  label: "Data augmentation"
+- id: science
+  label: "AI for science"
+- id: dialects
+  label: "Dialects & speech"
+- id: reasoning
+  label: "Reasoning & hallucination"
+- id: multilingual
+  label: "Multilingual & bias"
+- id: biomedical
+  label: "Biomedical NLP"
+- id: sentiment
+  label: "Sentiment & social media"
+- id: vision
+  label: "Computer vision"
+- id: mt
+  label: "Machine translation"

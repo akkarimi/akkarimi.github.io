@@ -1,16 +1,47 @@
-{% include base_path %}
-
+{%- comment -%} <head> contents: meta, SEO/social cards, fonts, styles. {%- endcomment -%}
+{%- assign page_title = page.title | default: site.title -%}
+{%- if page.url == "/" -%}
+  {%- assign full_title = site.title | append: " — " | append: site.author.job_title | append: ", " | append: site.author.affiliation.institution -%}
+{%- else -%}
+  {%- assign full_title = page_title | append: " — " | append: site.title -%}
+{%- endif -%}
+{%- assign description = page.description | default: site.description | strip_newlines | strip -%}
+{%- assign og_image = page.og_image | default: site.og_image | absolute_url -%}
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta name="author" content="{{ site.author.name }}">
 
-{% include seo.html %}
+<meta property="og:type" content="{% if page.url == '/' %}profile{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ full_title | escape }}">
+<meta property="og:description" content="{{ description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ full_title | escape }}">
+<meta name="twitter:description" content="{{ description | escape }}">
+<meta name="twitter:image" content="{{ og_image }}">
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbf9f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161411" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- comment -%} Runs before first paint: marks JS as available and applies a saved theme, so there is no flash. {%- endcomment %}
+<script>(function(d){d.className=d.className.replace('no-js','js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement);</script>
 
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+<link rel="preload" href="{{ '/assets/fonts/site/newsreader-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/site/inter-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{%- for script in page.scripts %}
+<script src="{{ script | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{%- endfor %}
+{%- if page.url == "/" or page.url == "/cv/" %}
+{% include schema-person.html %}
+{%- endif %}
