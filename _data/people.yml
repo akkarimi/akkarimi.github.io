@@ -31,66 +31,65 @@
 #     github: "https://github.com/…"
 # ─────────────────────────────────────────────────────────────────────
 
-# ── SAMPLE ENTRIES — replace with your students, then delete these ──
-- name: "Student Name"
-  author_names: []
+- name: "Khashayar Alavi"
+  author_names: ["K Alavi"]
   photo: ""
-  level: "PhD"
-  role: "co-supervisor"
-  topic: "Robustness of LLM agents to adversarial inputs"
-  years: "2024–"
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists"
+  years: ""
   status: current
-  placeholder: true
 
-- name: "Student Name"
-  author_names: []
+- name: "Tobias Bystrich"
+  author_names: ["T Bystrich"]
   photo: ""
-  level: "MSc"
-  role: "supervisor"
-  topic: "Chemical language models for drug discovery"
-  years: "2026–"
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "Can LLM Agents Identify Spoken Dialects like a Linguist?"
+  years: ""
   status: current
-  placeholder: true
 
-- name: "Student Name"
-  author_names: []
+- name: "Mohammad Hossein Akbari Monfared"
+  author_names: ["MHA Monfared"]
   photo: ""
-  level: "BSc"
-  role: "supervisor"
-  topic: "Data augmentation for low-resource dialects"
-  years: "2025–"
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "Label-Consistent Data Generation for Aspect-Based Sentiment Analysis Using LLM Agents"
+  years: ""
   status: current
-  placeholder: true
 
-- name: "Student Name"
-  author_names: []
+- name: "Shivam Rawat"
+  author_names: ["S Rawat"]
   photo: ""
-  level: "MSc"
-  role: "supervisor"
-  topic: "Noisy inputs and math reasoning in LLMs"
-  years: "2024–2025"
-  status: alumni
-  now: "PhD student at a university"
-  placeholder: true
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "Encoder Fine-tuning with Stochastic Sampling Outperforms Open-weight GPT in Astronomy Knowledge Extraction"
+  years: ""
+  status: current
 
-- name: "Student Name"
-  author_names: []
+- name: "Simon Welz"
+  author_names: ["S Welz"]
   photo: ""
-  level: "MSc"
-  role: "co-supervisor"
-  topic: "Hyperbolic representations for multi-hop QA"
-  years: "2023–2024"
-  status: alumni
-  now: "ML engineer in industry"
-  placeholder: true
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "Multi-Hop Reasoning for Question Answering with Hyperbolic Representations"
+  years: ""
+  status: current
 
-- name: "Student Name"
-  author_names: []
+- name: "Zain Ul Abedin"
+  author_names: ["Z Ul Abedin"]
   photo: ""
-  level: "BSc"
-  role: "supervisor"
-  topic: "Aspect-based sentiment analysis with LLM agents"
-  years: "2024–2025"
-  status: alumni
-  now: "MSc student"
-  placeholder: true
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving"
+  years: ""
+  status: current
+
+- name: "Amirhossein Aliakbarzadeh"
+  author_names: ["A Aliakbarzadeh"]
+  photo: ""
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "Exploring Robustness of Multilingual LLMs on Real-World Noisy Data"
+  years: ""
+  status: current

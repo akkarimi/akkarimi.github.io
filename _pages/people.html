@@ -29,7 +29,13 @@ lead: "Students I supervise or have co-supervised, from bachelor's projects to P
       {%- endif %}
       <div>
         <h3 class="person__name">{{ m.name }}</h3>
-        <p class="person__meta">{{ m.level }}{% if m.years %}, {{ m.years }}{% endif %}{% if m.role and m.role != "" %} · {{ m.role }}{% endif %}</p>
+        {%- assign meta = "" | split: "" -%}
+        {%- if m.level and m.level != "" %}{% assign meta = meta | push: m.level %}{% endif -%}
+        {%- if m.years and m.years != "" %}{% assign meta = meta | push: m.years %}{% endif -%}
+        {%- if m.role and m.role != "" %}{% assign meta = meta | push: m.role %}{% endif -%}
+        {%- if meta.size > 0 %}
+        <p class="person__meta">{{ meta | join: " · " }}</p>
+        {%- endif %}
         {%- if m.topic %}<p class="person__topic">{{ m.topic }}</p>{% endif %}
         {%- if m.now and m.now != "" %}<p class="person__now">Now: {{ m.now }}</p>{% endif %}
         {%- if m.links %}
