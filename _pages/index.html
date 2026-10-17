@@ -6,6 +6,7 @@ body_class: page-home
 {%- assign a = site.author -%}
 {%- assign selected = site.data.publications | where: "selected", true -%}
 
+<div class="hero-band">
 <section class="hero container" aria-labelledby="hero-name">
   <div class="hero__text">
     <p class="eyebrow">{{ a.job_title }}</p>
@@ -31,6 +32,7 @@ body_class: page-home
     </picture>
   </div>
 </section>
+</div>
 
 <section class="section container" id="about" aria-labelledby="about-title">
   <div class="section-grid">
@@ -66,6 +68,7 @@ body_class: page-home
   </div>
 </section>
 
+<div class="band">
 <section class="section container" id="research" aria-labelledby="research-title">
   <div class="section-head">
     <h2 class="section-title" id="research-title">Research</h2>
@@ -74,7 +77,7 @@ body_class: page-home
   <div class="themes">
     {%- for t in site.data.research %}
     {%- assign n = 0 -%}{%- for p in site.data.publications -%}{%- if p.topics contains t.id -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor %}
-    <a class="theme-card" href="{{ '/research/' | relative_url }}#{{ t.id }}" data-reveal>
+    <a class="theme-card tone-{{ t.color | default: 'teal' }}" href="{{ '/research/' | relative_url }}#{{ t.id }}" data-reveal>
       <span class="theme-card__num" aria-hidden="true">{{ forloop.index | prepend: "0" }}</span>
       <span class="theme-card__title">{{ t.title }}</span>
       <span class="theme-card__text">{{ t.short }}</span>
@@ -83,6 +86,7 @@ body_class: page-home
     {%- endfor %}
   </div>
 </section>
+</div>
 
 <section class="section container" id="news" aria-labelledby="news-title">
   <div class="section-head">

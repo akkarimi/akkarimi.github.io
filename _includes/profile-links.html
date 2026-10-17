@@ -6,7 +6,7 @@
 {%- assign a = site.author -%}
 <ul class="profile-links {{ include.class }}" role="list">
   {%- if a.email %}
-  <li><a href="mailto:{{ a.email }}" aria-label="Email"{% unless include.labels %} title="Email"{% endunless %}>{% include icon.html name="email" %}{% if include.labels %}<span>Email</span>{% endif %}</a></li>
+  <li><a class="profile-links__primary" href="mailto:{{ a.email }}" aria-label="Email"{% unless include.labels %} title="Email"{% endunless %}>{% include icon.html name="email" %}{% if include.labels %}<span>Email</span>{% endif %}</a></li>
   {%- endif %}
   {%- if a.links.scholar != "" and a.links.scholar %}
   <li><a href="{{ a.links.scholar }}" aria-label="Google Scholar"{% unless include.labels %} title="Google Scholar"{% endunless %}>{% include icon.html name="scholar" %}{% if include.labels %}<span>Scholar</span>{% endif %}</a></li>

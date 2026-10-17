@@ -190,7 +190,14 @@ bundle exec jekyll serve      # → http://localhost:4000 (restart after editing
 
 All colours, fonts, sizes and spacing are CSS custom properties at the top of
 `assets/css/site.css` (section 1 = light theme, section 2 = dark theme — keep the two dark blocks identical).
-For example, to switch the accent from navy to oxblood: set `--accent: #6e1f2a;` and `--accent-line: rgba(110, 31, 42, .28);` (and a lighter shade such as `#e3a1a8` in the dark blocks).
+
+- `--accent` (deep teal) is used for links and highlights; `--accent-2` (terracotta) for small touches
+  like the bars above headings and the hero eyebrow.
+- Each research theme has a colour, set with `color:` in `_data/research.yml`
+  (`teal`, `amber`, `plum`, `green` or `indigo`); it is used on its card and on the Research page.
+- Venue badges are coloured by publication type (journal = plum, conference = teal,
+  findings = indigo, workshop = amber).
+- `--footer-bg` sets the dark footer band; `--band` the tinted Research section on the homepage.
 
 ## How it is built
 

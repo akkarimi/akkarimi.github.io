@@ -10,7 +10,7 @@ lead: "I work on making language models reliable outside the lab: under adversar
 <nav class="theme-index" aria-label="Research themes">
   <ol role="list">
     {%- for t in site.data.research %}
-    <li><a href="#{{ t.id }}"><span aria-hidden="true">{{ forloop.index | prepend: "0" }}</span> {{ t.title }}</a></li>
+    <li class="tone-{{ t.color | default: 'teal' }}"><a href="#{{ t.id }}"><span aria-hidden="true">{{ forloop.index | prepend: "0" }}</span> {{ t.title }}</a></li>
     {%- endfor %}
   </ol>
 </nav>
@@ -18,7 +18,7 @@ lead: "I work on making language models reliable outside the lab: under adversar
 {%- for t in site.data.research %}
 {%- assign related = "" | split: "" -%}
 {%- for p in pubs -%}{%- if p.topics contains t.id -%}{%- assign related = related | push: p -%}{%- endif -%}{%- endfor %}
-<section class="theme" id="{{ t.id }}" aria-labelledby="{{ t.id }}-title">
+<section class="theme tone-{{ t.color | default: 'teal' }}" id="{{ t.id }}" aria-labelledby="{{ t.id }}-title">
   <div class="theme__text">
     <p class="theme__num" aria-hidden="true">{{ forloop.index | prepend: "0" }}</p>
     <h2 class="theme__title" id="{{ t.id }}-title">{{ t.title }}</h2>
