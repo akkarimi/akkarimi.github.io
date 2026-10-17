@@ -60,39 +60,7 @@ exclude:
   - .sass-cache
   - .jekyll-cache
   - .claude
-  # ── TEMPORARY: old academicpages template files, kept out of the build
-  # until they are deleted from the repository (see README → "Cleanup").
-  - _posts
-  - _drafts
-  - _publications
-  - _teaching
-  - _talks
-  - _portfolio
-  - _sass
-  - CONTRIBUTING.md
-  - package.json
-  - markdown_generator
-  - scripts
-  - talkmap
-  - talkmap.py
-  - talkmap.ipynb
-  - talkmap_out.ipynb
-  - assets/css/main.scss
-  - assets/css/academicons.css
-  - assets/css/academicons.min.css
-  - assets/css/collapse.css
-  - assets/js/_main.js
-  - assets/js/main.min.js
-  - assets/js/collapse.js
-  - assets/js/theme.js
-  - assets/js/plugins
-  - assets/fonts/academicons.eot
-  - assets/fonts/academicons.svg
-  - assets/fonts/academicons.ttf
-  - assets/fonts/academicons.woff
-  - assets/webfonts
-  - files/._cv.pdf
-  - files/._paper1.pdf
+  # ── TEMPORARY: remaining old template files, kept out of the build until deleted.
   - images/3953273590_704e3899d5_m.jpg
   - images/500x300.png
   - images/bio-photo.jpg
@@ -133,8 +101,6 @@ exclude:
   - _pages/teaching.html
   - _pages/terms.md
   - _pages/year-archive.html
-  - _pages/._about.md
-  - _pages/._portfolio.html
 
 plugins:
   - jekyll-sitemap
