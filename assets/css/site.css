@@ -20,7 +20,7 @@
   --title:      #191970;   /* paper titles (midnight blue) */
   --link:       #2c2c6e;   /* links in running text */
   --link-line:  rgba(44, 44, 110, .45);
-  --small-link: #1f6fa8;   /* (pdf) (code) … */
+  --small-link: #1f6fa8;   /* pdf · code · abstract … */
   --focus:      #1f6fa8;
   --panel:      #eaeae6;   /* abstract / BibTeX panels */
 
@@ -225,7 +225,6 @@ main { padding-block: clamp(2rem, 1rem + 4vw, 4.5rem) clamp(3rem, 2rem + 4vw, 6r
 .pub__title { font-size: 1em; font-weight: 400; line-height: 1.35; }
 .pub__authors { font-size: .95em; color: var(--ink-2); }
 .pub__venue { font-size: .95em; font-style: italic; color: var(--ink-2); }
-.pub__summary { margin-top: .2rem; font-size: .92em; color: var(--muted); line-height: 1.45; }
 .pub__links { margin-top: .15rem; display: flex; flex-wrap: wrap; gap: 0 .7rem; }
 .pub__links > * { white-space: nowrap; }
 .pub__panel { margin-top: .5rem; padding: .8rem 1rem; background: var(--panel); font-size: .92em; line-height: 1.45; }

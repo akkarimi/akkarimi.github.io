@@ -66,7 +66,7 @@ Open `_data/publications.yml` and paste a new entry at the top:
   topics: [robustness]    # ids from _data/topics.yml
   selected: false         # true → also on the homepage (keep 4–6 selected)
   summary: >-
-    One or two sentences in plain language — shown under the title.
+    One or two sentences in plain language (not shown on the site; used by search engines).
   links:
     pdf: https://aclanthology.org/2027.findings-acl.1.pdf
     doi: 10.18653/v1/2027.findings-acl.1   # not shown as a button; used by search engines
@@ -191,7 +191,7 @@ single reading column. All colours, sizes and widths are CSS custom properties a
 `assets/css/site.css` (section 1 = light theme, section 2 = dark theme — keep the two dark blocks identical):
 
 - `--bg` page background, `--ink` text, `--muted` dates and summaries
-- `--title` paper titles (midnight blue), `--link` links in running text, `--small-link` the "(pdf) (code) …" links
+- `--title` paper titles (midnight blue), `--link` links in running text, `--small-link` the "pdf code …" links
 - `--col` width of the reading column, `--side` width of the photo column
 
 ## How it is built

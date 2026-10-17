@@ -11,6 +11,7 @@
 #  badge      short venue label, e.g. "ACL Findings" (not shown; makes search find it)
 #  topics     ids from _data/topics.yml, e.g. [robustness, augmentation]
 #  selected   true → also shown on the homepage (keep 4–6 selected)
+#  summary    optional one-liner (not shown on the site; used by search engines)
 #  links      any of: pdf, code, slides, poster, video, website, arxiv → shown as buttons.
 #             doi (just the 10.xxxx/… part) is not a button; it is used for search engines.
 #             Leave out what you don't have.

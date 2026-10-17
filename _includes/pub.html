@@ -1,6 +1,6 @@
 {%- comment -%}
   One publication on the Publications page. Param: pub — an entry from _data/publications.yml.
-  Optional fields (summary, links, abstract, bibtex) are skipped when missing.
+  Optional fields (links, abstract, bibtex) are skipped when missing.
 {%- endcomment -%}
 {%- assign p = include.pub -%}
 {%- assign uid = p.title | slugify | truncate: 48, "" | prepend: "p-" | append: "-" | append: p.year -%}
@@ -13,19 +13,16 @@
   <h3 class="pub__title">{% if main_url %}<a class="paper-link" href="{{ main_url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
   <p class="pub__authors">{% include author-list.html authors=p.authors %}</p>
   <p class="pub__venue">{{ p.venue }}</p>
-  {%- if p.summary %}
-  <p class="pub__summary">{{ p.summary }}</p>
-  {%- endif %}
   <p class="pub__links">
-    {%- if p.links.pdf %}<a class="small-link" href="{{ p.links.pdf }}">(pdf)</a>{% endif -%}
-    {%- if p.links.arxiv %}<a class="small-link" href="{{ p.links.arxiv }}">(arxiv)</a>{% endif -%}
-    {%- if p.links.code %}<a class="small-link" href="{{ p.links.code }}">(code)</a>{% endif -%}
-    {%- if p.links.slides %}<a class="small-link" href="{{ p.links.slides }}">(slides)</a>{% endif -%}
-    {%- if p.links.poster %}<a class="small-link" href="{{ p.links.poster }}">(poster)</a>{% endif -%}
-    {%- if p.links.video %}<a class="small-link" href="{{ p.links.video }}">(video)</a>{% endif -%}
-    {%- if p.links.website %}<a class="small-link" href="{{ p.links.website }}">(website)</a>{% endif -%}
-    {%- if p.abstract %}<button class="link-btn js-only" type="button" data-toggle="{{ uid }}-abs" aria-controls="{{ uid }}-abs" aria-expanded="false">(abstract)</button>{% endif -%}
-    {%- if p.bibtex %}<button class="link-btn js-only" type="button" data-copy="{{ uid }}-bib">(bibtex)</button>{% endif -%}
+    {%- if p.links.pdf %}<a class="small-link" href="{{ p.links.pdf }}">pdf</a>{% endif -%}
+    {%- if p.links.arxiv %}<a class="small-link" href="{{ p.links.arxiv }}">arxiv</a>{% endif -%}
+    {%- if p.links.code %}<a class="small-link" href="{{ p.links.code }}">code</a>{% endif -%}
+    {%- if p.links.slides %}<a class="small-link" href="{{ p.links.slides }}">slides</a>{% endif -%}
+    {%- if p.links.poster %}<a class="small-link" href="{{ p.links.poster }}">poster</a>{% endif -%}
+    {%- if p.links.video %}<a class="small-link" href="{{ p.links.video }}">video</a>{% endif -%}
+    {%- if p.links.website %}<a class="small-link" href="{{ p.links.website }}">website</a>{% endif -%}
+    {%- if p.abstract %}<button class="link-btn js-only" type="button" data-toggle="{{ uid }}-abs" aria-controls="{{ uid }}-abs" aria-expanded="false">abstract</button>{% endif -%}
+    {%- if p.bibtex %}<button class="link-btn js-only" type="button" data-copy="{{ uid }}-bib">bibtex</button>{% endif -%}
   </p>
   {%- if p.abstract %}
   <div class="pub__panel" id="{{ uid }}-abs" hidden><p>{{ p.abstract }}</p></div>
