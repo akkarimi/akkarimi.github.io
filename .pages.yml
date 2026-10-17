@@ -68,7 +68,6 @@ content:
       fields: [name, level, status]
     fields:
       - { name: name, label: Name, type: string, required: true }
-      - { name: author_names, label: Names in author lists, type: string, list: true, description: "e.g. K Alavi — marks them in publications" }
       - { name: photo, label: Photo, type: image, options: { path: images/people } }
       - name: level
         label: Level

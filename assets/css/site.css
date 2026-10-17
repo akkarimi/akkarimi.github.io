@@ -215,10 +215,8 @@ main { padding-block: clamp(2rem, 1rem + 4vw, 4.5rem) clamp(3rem, 2rem + 4vw, 6r
 .small-link, .pub__links .link-btn { position: relative; }
 .small-link::after, .pub__links .link-btn::after { content: ""; position: absolute; inset: -12px -4px; }
 
-/* Author marks */
+/* Your name in author lists */
 .au-me { font-weight: 600; }
-.au-student { text-decoration: underline dotted; text-underline-offset: .2em; }
-.author-legend { font-size: var(--tiny); color: var(--muted); }
 
 /* Full publication entry */
 .pubs { display: grid; gap: 1.15rem; }

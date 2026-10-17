@@ -85,7 +85,6 @@ Open `_data/publications.yml` and paste a new entry at the top:
 Notes:
 
 - **Your name** is bolded automatically wherever it matches `publication_names` in `_config.yml` (currently `A Karimi`).
-- **Student co-authors** are marked automatically if their spelling in `authors` matches an `author_names` entry in `_data/people.yml`.
 - **BibTeX:** copy it from the paper's ACL Anthology page ("Cite → BibTeX"), Google Scholar, or doi.org. Keep the `|` line and indent every BibTeX line by four spaces.
 - **Slides / posters** can be links, or PDFs you add to `files/` (e.g. `files/slides/…`).
 - **New topic?** Add it to `_data/topics.yml` first (`id` + `label`), then use the id.
@@ -97,7 +96,6 @@ Open `_data/people.yml`. **First delete the six sample entries** (the ones with 
 
 ```yaml
 - name: "Firstname Lastname"
-  author_names: ["F Lastname"]      # how they appear in publication author lists
   photo: "firstname-lastname.jpg"   # in images/people/ — square, at least 400×400
   level: "MSc"                      # PhD | MSc | BSc | Intern
   role: "co-supervisor"             # or supervisor

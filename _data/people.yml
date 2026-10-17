@@ -2,8 +2,6 @@
 #  PEOPLE — students you have supervised or co-supervised. Shown on /people/.
 #
 #  name          full name
-#  author_names  how they appear in publications.yml author lists, e.g. ["K Alavi"];
-#                matching names are marked as students in every author list
 #  photo         file in /images/people/ (e.g. "firstname-lastname.jpg", square, ≥400px);
 #                leave empty for a neutral placeholder
 #  level         PhD | MSc | BSc | Intern | ...
@@ -19,7 +17,6 @@
 #  Example (copy, remove the leading "# ", and fill in):
 #
 # - name: "Firstname Lastname"
-#   author_names: ["F Lastname"]
 #   photo: "firstname-lastname.jpg"
 #   level: "MSc"
 #   role: "co-supervisor"
@@ -32,7 +29,6 @@
 # ─────────────────────────────────────────────────────────────────────
 
 - name: "Khashayar Alavi"
-  author_names: ["K Alavi"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -41,7 +37,6 @@
   status: alumni
 
 - name: "Zhastay Yeltay"
-  author_names: ["Z Yeltay"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -50,7 +45,6 @@
   status: alumni
 
 - name: "Tobias Bystrich"
-  author_names: ["T Bystrich"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -59,7 +53,6 @@
   status: alumni
 
 - name: "Lukas Hamm"
-  author_names: ["L Hamm"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -68,7 +61,6 @@
   status: alumni
 
 - name: "Mohammad Hossein Akbari Monfared"
-  author_names: ["MHA Monfared"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -77,7 +69,6 @@
   status: alumni
 
 - name: "Shivam Rawat"
-  author_names: ["S Rawat"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -86,7 +77,6 @@
   status: alumni
 
 - name: "Simon Welz"
-  author_names: ["S Welz"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -95,7 +85,6 @@
   status: alumni
 
 - name: "Zain Ul Abedin"
-  author_names: ["Z Ul Abedin"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -104,7 +93,6 @@
   status: alumni
 
 - name: "Shahzeb Qamar"
-  author_names: ["S Qamar"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -113,7 +101,6 @@
   status: alumni
 
 - name: "Amirhossein Aliakbarzadeh"
-  author_names: ["A Aliakbarzadeh"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor

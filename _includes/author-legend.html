@@ -1,3 +1,0 @@
-{%- comment -%} Shown only once someone in people.yml has author_names. {%- endcomment -%}
-{%- assign student_names = site.data.people | map: "author_names" | join: "" -%}
-{%- if student_names != "" %}<span class="author-legend"><span class="au-student">Underlined</span>: student I supervised</span>{% endif %}
