@@ -40,8 +40,26 @@
   years: ""
   status: alumni
 
+- name: "Zhastay Yeltay"
+  author_names: ["Z Yeltay"]
+  photo: ""
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists"
+  years: ""
+  status: alumni
+
 - name: "Tobias Bystrich"
   author_names: ["T Bystrich"]
+  photo: ""
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "Can LLM Agents Identify Spoken Dialects like a Linguist?"
+  years: ""
+  status: alumni
+
+- name: "Lukas Hamm"
+  author_names: ["L Hamm"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
@@ -78,6 +96,15 @@
 
 - name: "Zain Ul Abedin"
   author_names: ["Z Ul Abedin"]
+  photo: ""
+  level: ""            # PhD | MSc | BSc
+  role: ""             # supervisor | co-supervisor
+  topic: "ArithmAttack: Evaluating Robustness of LLMs to Noisy Context in Math Problem Solving"
+  years: ""
+  status: alumni
+
+- name: "Shahzeb Qamar"
+  author_names: ["S Qamar"]
   photo: ""
   level: ""            # PhD | MSc | BSc
   role: ""             # supervisor | co-supervisor
