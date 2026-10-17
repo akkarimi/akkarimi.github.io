@@ -1,0 +1,11 @@
+# Labels for the `type` field in publications.yml (used by the Publications filter).
+- id: journal
+  label: "Journal"
+- id: conference
+  label: "Conference"
+- id: findings
+  label: "Findings"
+- id: workshop
+  label: "Workshop"
+- id: preprint
+  label: "Preprint"

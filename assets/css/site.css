@@ -147,6 +147,7 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
   border-radius: 2px;
 }
 main:focus { outline: none; }
+[hidden] { display: none !important; }
 
 .visually-hidden {
   position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0;
@@ -546,6 +547,66 @@ main { display: block; padding-bottom: var(--space-8); }
 @media (min-width: 1024px) {
   .pub--featured { grid-template-columns: 12rem minmax(0, 1fr); gap: var(--space-6); }
 }
+
+/* ── Publications page ── */
+.page-intro { color: var(--ink-2); max-width: var(--measure); }
+
+.pub-filters {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-3);
+  margin-top: var(--space-5); padding: var(--space-4);
+  background: var(--bg-raised); border: 1px solid var(--rule); border-radius: var(--radius);
+  font-family: var(--font-sans); font-size: var(--step--1);
+}
+.pub-filters input, .pub-filters select {
+  width: 100%; min-height: 44px; padding: 0 .8rem;
+  font: inherit; font-size: max(16px, 1em);   /* 16px+ prevents zoom-on-focus on iOS */
+  color: var(--ink); background: var(--bg);
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+}
+.pub-filters select {
+  appearance: none; -webkit-appearance: none; padding-right: 2rem;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-3) 50%), linear-gradient(135deg, var(--ink-3) 50%, transparent 50%);
+  background-position: calc(100% - 1.05rem) 50%, calc(100% - .75rem) 50%;
+  background-size: .3rem .3rem; background-repeat: no-repeat;
+}
+.pub-filters input:focus-visible, .pub-filters select:focus-visible { outline-offset: 0; border-color: var(--focus); }
+.pub-filters__toggle, .pub-filters__reset, .link-btn {
+  min-height: 44px; padding: 0 1rem; cursor: pointer;
+  font: 500 var(--step--1)/1 var(--font-sans);
+  color: var(--ink-2); background: var(--bg);
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+}
+.pub-filters__toggle[aria-expanded="true"], .pub-filters__toggle:hover, .pub-filters__reset:hover { color: var(--accent); border-color: var(--accent-line); }
+.pub-filters__fields { display: none; grid-column: 1 / -1; gap: var(--space-3); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pub-filters.is-open .pub-filters__fields { display: grid; }
+.pub-filters__fields .field:nth-child(3) { grid-column: 1 / -1; }
+.field label { display: block; margin-bottom: .3rem; font-size: var(--step--2); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.pub-filters__reset { align-self: end; }
+@media (min-width: 768px) {
+  .pub-filters { grid-template-columns: minmax(0, 1fr); }
+  .pub-filters__toggle { display: none; }
+  .pub-filters__fields, .pub-filters.is-open .pub-filters__fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; }
+  .pub-filters__fields .field:nth-child(3) { grid-column: auto; }
+}
+.link-btn { min-height: 0; padding: 0; border: 0; background: none; color: var(--accent); text-decoration: underline; text-underline-offset: .18em; font-family: inherit; font-size: inherit; }
+
+.pub-status { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2) var(--space-4); margin: var(--space-5) 0 var(--space-2); font-family: var(--font-sans); font-size: var(--step--1); color: var(--ink-3); }
+.pub-status .author-legend { margin: 0; }
+.pub-year { display: grid; gap: var(--space-3); padding-top: var(--space-6); }
+.pub-year__label {
+  font-size: var(--step-3); font-weight: 400; color: var(--ink-3); line-height: 1;
+  font-variant-numeric: lining-nums; letter-spacing: -.02em;
+}
+@media (min-width: 1024px) {
+  .pub-year { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-6); }
+  .pub-year__label { position: sticky; top: calc(3.25rem + var(--space-5)); align-self: start; }
+}
+.pub-list .pubs { gap: 0; }
+.pub-list .pub { padding-block: var(--space-5); border-bottom: 1px solid var(--rule); }
+.pub-list .pub:first-child { padding-top: var(--space-2); }
+.pub-list .pub__year { display: none; }   /* already shown by the year heading */
+.pub-empty { padding: var(--space-7) 0; color: var(--ink-2); }
+.pub:target .pub__title { color: var(--accent); }
 
 /* Toast (used for "BibTeX copied") */
 .toast {

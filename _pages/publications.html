@@ -1,39 +1,104 @@
 ---
-layout: archive
-title: "Selected Publications"
+title: "Publications"
 permalink: /publications/
-author_profile: true
+description: "Publications by Akbar Karimi on LLM robustness, adversarial NLP, data augmentation, dialect and speech processing, and AI for science."
+scripts: ["/assets/js/publications.js"]
 ---
-For a full list, please have a look at <a href="https://scholar.google.com/citations?user=_qroDmEAAAAJ&hl=en&oi=sra">my Google Scholar page</a>.
+{%- comment -%}
+  Generated from _data/publications.yml. Nothing to edit here when adding papers.
+{%- endcomment -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign years = pubs | map: "year" | uniq | sort | reverse -%}
 
+<p class="page-intro">
+  {{ pubs.size }} papers, newest first. Citation metrics are on
+  <a href="{{ site.author.links.scholar }}">Google Scholar</a>.
+</p>
 
-<!-- {% if site.author.googlescholar %}
-  <div class="wordwrap">You can find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %} -->
+<form class="pub-filters js-only" role="search" aria-label="Filter publications" data-pub-filters>
+  <div class="pub-filters__search">
+    <label class="visually-hidden" for="pub-q">Search publications</label>
+    <input id="pub-q" name="q" type="search" placeholder="Search papers…" autocomplete="off" spellcheck="false">
+  </div>
+  <button class="pub-filters__toggle" type="button" aria-expanded="false" aria-controls="pub-filter-fields" data-filters-toggle>
+    Filter<span class="pub-filters__active" data-filters-active></span>
+  </button>
+  <div class="pub-filters__fields" id="pub-filter-fields">
+    <div class="field">
+      <label for="pub-year">Year</label>
+      <select id="pub-year" name="year">
+        <option value="">All years</option>
+        {%- for y in years %}
+        {%- assign n = pubs | where: "year", y | size %}
+        <option value="{{ y }}">{{ y }} ({{ n }})</option>
+        {%- endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="pub-type">Type</label>
+      <select id="pub-type" name="type">
+        <option value="">All types</option>
+        {%- for t in site.data.pub_types %}
+        {%- assign n = pubs | where: "type", t.id | size %}
+        {%- if n > 0 %}<option value="{{ t.id }}">{{ t.label | escape }} ({{ n }})</option>{% endif %}
+        {%- endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="pub-topic">Topic</label>
+      <select id="pub-topic" name="topic">
+        <option value="">All topics</option>
+        {%- for t in site.data.topics %}
+        {%- assign n = 0 -%}{%- for p in pubs -%}{%- if p.topics contains t.id -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor %}
+        {%- if n > 0 %}<option value="{{ t.id }}">{{ t.label | escape }} ({{ n }})</option>{% endif %}
+        {%- endfor %}
+      </select>
+    </div>
+    <button class="pub-filters__reset" type="reset" data-filters-reset>Clear</button>
+  </div>
+</form>
 
-{% include base_path %}
+<div class="pub-status">
+  <p class="pub-count" aria-live="polite" data-pub-count>{{ pubs.size }} publications</p>
+  {% include author-legend.html %}
+</div>
 
-<!-- New style rendering if publication categories are defined -->
+<div class="pub-list" data-pub-list>
+  {%- for y in years %}
+  <section class="pub-year" data-year-group aria-labelledby="y{{ y }}">
+    <h2 class="pub-year__label" id="y{{ y }}">{{ y }}</h2>
+    <ol class="pubs" role="list">
+      {%- for p in pubs %}{% if p.year == y %}
+      {% include pub.html pub=p mode="list" %}
+      {%- endif %}{% endfor %}
+    </ol>
+  </section>
+  {%- endfor %}
+  <p class="pub-empty" hidden data-pub-empty>No publications match these filters. <button type="button" class="link-btn" data-filters-reset>Clear filters</button></p>
+</div>
 
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+{%- comment -%} schema.org ScholarlyArticle data for search engines {%- endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Publications by {{ site.author.name }}",
+  "itemListElement": [
+    {%- for p in pubs %}
+    {
+      "@type": "ListItem", "position": {{ forloop.index }},
+      "item": {
+        "@type": "ScholarlyArticle",
+        "headline": {{ p.title | jsonify }},
+        "datePublished": "{{ p.year }}",
+        "author": [{% assign names = p.authors | split: "," %}{% for n in names %}{"@type": "Person", "name": {{ n | strip | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+        "isPartOf": {{ p.venue | jsonify }}
+        {%- if p.summary %}, "abstract": {{ p.abstract | default: p.summary | jsonify }}{% endif %}
+        {%- if p.links.pdf %}, "url": {{ p.links.pdf | jsonify }}{% endif %}
+        {%- if p.links.doi %}, "sameAs": {{ "https://doi.org/" | append: p.links.doi | jsonify }}{% endif %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
