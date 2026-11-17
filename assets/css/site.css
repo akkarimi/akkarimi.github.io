@@ -12,7 +12,7 @@
 
 /* ── 1. Tokens — light ───────────────────────────────────────────── */
 :root {
-  --bg:         #f4f4f2;   /* light warm grey page */
+  --bg:         #f9f9f7;   /* light warm grey page */
   --ink:        #111111;   /* text */
   --ink-2:      #3d3d3d;   /* authors, secondary text */
   --muted:      #666660;   /* dates, captions — 5.2:1 on --bg */
