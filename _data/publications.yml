@@ -16,6 +16,40 @@
 #  bibtex     paste from ACL Anthology / Google Scholar. Keep the "|" and indent.
 # ─────────────────────────────────────────────────────────────────────
 
+- title: "What Matters in a Bridge? Analysing Bridge Networks for Molecular Property Prediction"
+  authors: "P Jajoria, Z Zhong, JO Alabi, A Karimi, D Klakow"
+  venue: "ML4Molecules: Agentic Systems for Molecular Sciences Workshop @ NeurIPS 2026"
+  badge: "NeurIPS Workshop"
+  year: 2026
+  type: workshop
+  topics: [science]
+  selected: false
+  links:
+    website: https://openreview.net/forum?id=e32MDWEvPH
+  abstract: >-
+    Large language models (LLMs) often struggle to predict molecular properties on
+    unseen datasets. Bridge networks address this limitation by mapping representations
+    from a frozen encoder into soft tokens for a frozen LLM, but the contribution of each
+    component remains unclear. We present a controlled factorial study of bridge
+    networks for molecular property prediction. Across 72 training runs, we vary four
+    encoders, three bridge architectures, and two LLMs over three seeds, and evaluate
+    them on eight recent tasks selected to reduce data-contamination risk. The best
+    bridge configurations outperform zero-shot LLM baselines on all eight tasks and
+    encoder-only probes on six. The simple MLP bridge performs best overall, whereas the
+    vocabulary-anchored bridge is usually the weakest. Decoder choice explains only about
+    1% of the error variance, while seed variation is the largest source of variance on
+    most regression tasks. We also find that a general-purpose BERT encoder remains
+    competitive with chemistry-specific encoders, raising questions about the
+    information transferred through these bridges.
+  bibtex: |
+    @inproceedings{jajoria2026bridge,
+      title = {What Matters in a Bridge? Analysing Bridge Networks for Molecular Property Prediction},
+      author = {Jajoria, Pushkar and Zhong, Zhiqiang and Alabi, Jesujoba O. and Karimi, Akbar and Klakow, Dietrich},
+      booktitle = {NeurIPS 2026 Workshop on ML4Molecules: Agentic Systems for Molecular Sciences},
+      year = {2026},
+      url = {https://openreview.net/forum?id=e32MDWEvPH}
+    }
+
 - title: "More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists"
   authors: "K Alavi, Z Yeltay, L Flek, A Karimi"
   venue: "Findings of ACL 2026"

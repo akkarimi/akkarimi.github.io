@@ -7,6 +7,11 @@
 #  link   optional — adds a "More →" link after the text (link_text changes the label)
 # ─────────────────────────────────────────────────────────────────────
 
+- date: 2026-11-01
+  text: >-
+    Paper accepted to ML4Molecules: Agentic Systems for Molecular Sciences Workshop @ NeurIPS 2026:
+    *What Matters in a Bridge? Analysing Bridge Networks for Molecular Property Prediction*.
+
 - date: 2026-09-01
   text: >-
     Attending German Conference in Bioinformatics (GCB) in Saarland Informatics Campus
